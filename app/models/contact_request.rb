@@ -1,4 +1,4 @@
 class ContactRequest < ApplicationRecord
-  belongs_to :guide
-  belongs_to :explorer
+  belongs_to :guide, class_name: "User"
+  belongs_to :explorer, class_name: "User"
 end
