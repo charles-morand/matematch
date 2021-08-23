@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     resources :activities, only: [:index] do
       resources :matchings, only: [:new, :index]
     end
-    resouces :matchings, only: [:show] do
+    resources :matchings, only: [:show] do
       resources :contact_requests, only: [:create]
     end
     resources :contact_requests, only: [:index]
