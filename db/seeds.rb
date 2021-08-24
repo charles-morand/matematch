@@ -10,34 +10,97 @@
 ContactRequest.destroy_all
 User.destroy_all
 
-explorer_pawel = User.create!(first_name: "Pawel", last_name: "Lewanski", bio: "Hello, my name is Pawel. I come from Poland and I am a student in design. I will be in Nantes for the next year. I like football, let's meet!",
-birth_date: "1999-02-20", gender: "Male", email: "pawel@example.com", password: "password", phone_number: "0606060606", role: "Explorer", languages: ["FR", "GB", "DE"],
-hobbies: ["Football", "Plants", "Skateboard", "Piano", "Travel"], chosen_activities: ["Arts"])
+explorer_pawel = User.create!(first_name: "Pawel",
+                              last_name: "Lewanski",
+                              bio: "Hello, my name is Pawel. I come from Poland and I am a student in design. I will be in Nantes for the next year. I like football, let's meet!",
+                              birth_date: "1999-02-20",
+                              gender: "Male",
+                              email: "pawel@example.com",
+                              password: "password",
+                              phone_number: "0606060606",
+                              role: "Explorer",
+                              languages: ["FR", "GB", "DE"],
+                              hobbies: ["Football", "Plants", "Skateboard", "Piano", "Travel"],
+                              chosen_activities: ["Arts"])
 
-explorer_dirk = User.create!(first_name: "Dirk", last_name: "Nowitzki", bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to metting you soon!",
-birth_date: "1997-04-14", gender: "Male", email: "dirk@example.com", password: "password", phone_number: "0606060606", role: "Explorer", languages: ["DE", "GB"],
-hobbies: ["Plants", "Football", "Skateboard", "Culture", "Travel"], chosen_activities: ["Sports"])
+explorer_dirk = User.create!(first_name: "Dirk",
+                             last_name: "Nowitzki",
+                             bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to metting you soon!",
+                             birth_date: "1997-04-14",
+                             gender: "Male",
+                             email: "dirk@example.com",
+                             password: "password",
+                             phone_number: "0606060606",
+                             role: "Explorer",
+                             languages: ["DE", "GB"],
+                             hobbies: ["Plants", "Football", "Skateboard", "Culture", "Travel"],
+                             chosen_activities: ["Sports"])
 
-explorer_toby = User.create!(first_name: "Toby", last_name: "Johnson", bio: "Hello, my name is Toby. I come from England and I am a student. I have arrived in France for 3 months. I like football.",
-birth_date: "2001-04-14", gender: "Male", email: "dirk@example.com", password: "password", phone_number: "0606060606", role: "Explorer", languages: ["RU", "GB"],
-hobbies: ["Plants", "Piano", "Skateboard", "Culture", "Travel"], chosen_activities: ["Sports"])
+explorer_toby = User.create!(first_name: "Toby",
+                             last_name: "Johnson",
+                             bio: "Hello, my name is Toby. I come from England and I am a student. I have arrived in France for 3 months. I like football.",
+                             birth_date: "2001-04-14",
+                             gender: "Male",
+                             email: "dirk@example.com",
+                             password: "password",
+                             phone_number: "0606060606",
+                             role: "Explorer",
+                             languages: ["RU", "GB"],
+                             hobbies: ["Plants", "Piano", "Skateboard", "Culture", "Travel"],
+                             chosen_activities: ["Sports"])
 
 
-guide_thomas = User.create!(first_name: "Thomas", last_name: "Petit", bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's meet!",
-birth_date: "1995-03-24", gender: "Male", email: "thomas@example.com", password: "password", phone_number: "+33601020304", role: "Guide", languages: ["FR", "GB", "DE"],
-hobbies: ["Football", "Piano", "Plants", "Ecology"], chosen_activities: ["Arts", "Sports", "Hanging out"])
+guide_thomas = User.create!(first_name: "Thomas",
+                            last_name: "Petit",
+                            bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's meet!",
+                            birth_date: "1995-03-24",
+                            gender: "Male",
+                            email: "thomas@example.com",
+                            password: "password",
+                            phone_number: "+33601020304",
+                            role: "Guide",
+                            languages: ["FR", "GB", "DE"],
+                            hobbies: ["Football", "Piano", "Plants", "Ecology"],
+                            chosen_activities: ["Arts", "Sports", "Hanging out"])
 
-guide_julien = User.create!(first_name: "Julien", last_name: "Vincent", bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
-birth_date: "1999-08-08", gender: "Male", email: "julien@example.com", password: "password", phone_number: "+33601020304", role: "Guide", languages: ["FR", "GB", "DE"],
-hobbies: ["Culture", "Ecology", "Beers", "Ecology"], chosen_activities: ["Arts", "Sports", "Hanging out"])
+guide_julien = User.create!(first_name: "Julien",
+                            last_name: "Vincent",
+                            bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
+                            birth_date: "1999-08-08",
+                            gender: "Male",
+                            email: "julien@example.com",
+                            password: "password",
+                            phone_number: "+33601020304",
+                            role: "Guide",
+                            languages: ["FR", "GB", "DE"],
+                            hobbies: ["Culture", "Ecology", "Beers", "Ecology"],
+                            chosen_activities: ["Arts", "Sports", "Hanging out"])
 
-guide_aymeric = User.create!(first_name: "Aymeric", last_name: "Marcel", bio: "Hi, I am Aymeric. I am student in physical education. I like bodybuilding, cinema and beer. Let's meet to work out together!",
-birth_date: "1990-02-14", gender: "Male", email: "aymeric@example.com", password: "password", phone_number: "+33601020304", role: "Guide", languages: ["FR", "GB", "CN"],
-hobbies: ["Going out", "Rock", "Drawing", "Ecology"], chosen_activities: ["Arts", "Sports", "Hanging out"])
+guide_aymeric = User.create!(first_name: "Aymeric",
+                             last_name: "Marcel",
+                             bio: "Hi, I am Aymeric. I am student in physical education. I like bodybuilding, cinema and beer. Let's meet to work out together!",
+                             birth_date: "1990-02-14",
+                             gender: "Male",
+                             email: "aymeric@example.com",
+                             password: "password",
+                             phone_number: "+33601020304",
+                             role: "Guide",
+                             languages: ["FR", "GB", "CN"],
+                             hobbies: ["Going out", "Rock", "Drawing", "Ecology"],
+                             chosen_activities: ["Arts", "Sports", "Hanging out"])
 
-guide_laura = User.create!(first_name: "Laura", last_name: "Rodriguez", bio: "Hello everyone, my name is Laura. I study biology. I like basketball, surf and mexican cuisine. Let's meet!",
-birth_date: "1996-01-16", gender: "Female", email: "laura@example.com", password: "password", phone_number: "+33601020304", role: "Guide", languages: ["FR", "GB", "ES"],
-hobbies: ["Swimming", "Plants", "Culture", "Ecology"], chosen_activities: ["Arts", "Sports", "Hanging out"])
+guide_laura = User.create!(first_name: "Laura",
+                           last_name: "Rodriguez",
+                           bio: "Hello everyone, my name is Laura. I study biology. I like basketball, surf and mexican cuisine. Let's meet!",
+                           birth_date: "1996-01-16",
+                           gender: "Female",
+                           email: "laura@example.com",
+                           password: "password",
+                           phone_number: "+33601020304",
+                           role: "Guide",
+                           languages: ["FR", "GB", "ES"],
+                           hobbies: ["Swimming", "Plants", "Culture", "Ecology"],
+                           chosen_activities: ["Arts", "Sports", "Hanging out"])
 
 guide_marie = User.create!(first_name: "Marie", last_name: "Cotiello", bio: "Hi everyone, my name is Marie. I study general medecine. I like football, tourism and spanish cuisine. Let's meet!",
 birth_date: "1997-06-10", gender: "Female", email: "marie@example.com", password: "password", phone_number: "+33601020304", role: "Guide", languages: ["FR", "GB", "ES"],
