@@ -1,17 +1,10 @@
 .activity_img {
-  position: relative;
-}
-
-// .activities_cards {
-//   height: 216px;
-//   width: 346px;
-//   border-radius: 20px;
-// }
-
-.activity_img {
   text-align: center;
+  position: relative;
   h2 {
     text-align: center;
+    color: white;
+    font-weight: bold;
   }
 }
 
@@ -19,4 +12,7 @@
   height: 216px;
   width: 346px;
   border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  opacity: 40%;
+  color: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }

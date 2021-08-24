@@ -1,14 +1,15 @@
 <div class="container">
   <div class="activities_header">
-    <h1>My activities</h1>
+    <h1>What are you up to?</h1>
   </div>
 
   <div class="activities_cards">
     <% @explorer_activities.each do |explorer_activity| %>
-      <div class="activity_name">
-        <h2><%= explorer_activity %></h2>
-      </div>
+
       <div class="activity_img">
+        <div class="activity_name">
+          <h2><%= explorer_activity %></h2>
+        </div>
         <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
       </div>
     <% end %>
