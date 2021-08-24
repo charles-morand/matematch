@@ -3,9 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   GENDERS = ["Male", "Female", "Undefined"]
   ROLES = ["Guide", "Explorer"]
-  LANGUAGES = ["FR", "ES", "DE", "IT", "SP", "PT", "NL", "RU", "PL", "CN", "JP", "KR", "GB"]
-  HOBBIES = ["Hiking", "Guitar", "Drawing", "Singing", "Football", "Sneakers", "Beers", "Rock", "Culture", "Ecology", "Plants", "Travel", "Swimming", "Skateboard", "Piano", "Travel", "Basketball", "Surf", "Cooking", "Cycling", "DIY", "Theater", "Pastry", "Roller"]
-  ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Musique"]
+  LANGUAGES = ["FR", "ES", "DE", "IT", "PT", "NL", "RU", "PL", "CN", "JP", "KR", "GB"]
+  HOBBIES = ["Hiking", "Guitar", "Drawing", "Singing", "Football", "Shopping", "Tastings", "Rock", "Culture", "Ecology", "Plants", "Travel", "Swimming", "Skateboard", "Piano", "Travel", "Basketball", "Surf", "Cooking", "Cycling", "DIY", "Theater", "Pastry", "Roller"]
+  ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Music"]
 
 
   devise :database_authenticatable, :registerable,
@@ -15,7 +15,6 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :bio, presence: true, length: { minimum: 100 }
-  validates :age, presence: true
   validates :birth_date, presence: true
   validates :gender, presence: true, inclusion: { in: GENDERS }
   validates :phone_number, presence: true
