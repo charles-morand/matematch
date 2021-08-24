@@ -23,25 +23,37 @@ class User < ApplicationRecord
   validates :hobbies, presence: true, length: { in: 1..5 }
   validates :chosen_activities, presence: true
 
-  validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list
+  validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list, :selected_number_of_hobbies_between_1_and_5, :selected_number_of_languages_between_1_and_5
 
   private
 
   def languages_are_included_in_list
     if languages.any? { |language| !LANGUAGES.include?(language) }
-      record.errors.add :languages, :inclusion
+      errors.add :languages, :inclusion
     end
   end
 
   def hobbies_are_included_in_list
     if hobbies.any? { |hobby| !HOBBIES.include?(hobby) }
-      record.errors.add :hobbies, :inclusion
+      errors.add :hobbies, :inclusion
     end
   end
 
   def chosen_activities_are_included_in_list
     if activities.any? { |activity| !ACTIVITIES.include?(activity) }
-      record.errors.add :activities, :inclusion
+      errors.add :activities, :inclusion
+    end
+  end
+
+  def selected_number_of_hobbies_between_1_and_5
+    unless (1..5).include?(hobbies.count)
+      errors.add :hobbies, "Please choose between 1 and 5 hobbies"
+    end
+  end
+
+  def selected_number_of_languages_between_1_and_5
+    unless (1..3).include?(languages.count)
+      errors.add :languages, "Please choose between 1 and 3 languages"
     end
   end
 end
