@@ -7,10 +7,10 @@
     <% @explorer_activities.each do |explorer_activity| %>
 
       <div class="activity_img">
+        <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
         <div class="activity_name">
           <h2><%= explorer_activity %></h2>
         </div>
-        <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
       </div>
     <% end %>
   </div>
