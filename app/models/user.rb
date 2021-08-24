@@ -7,11 +7,10 @@ class User < ApplicationRecord
   HOBBIES = ["Hiking", "Guitar", "Drawing", "Singing", "Football", "Shopping", "Tastings", "Rock", "Culture", "Ecology", "Plants", "Travel", "Swimming", "Skateboard", "Piano", "Travel", "Basketball", "Surf", "Cooking", "Cycling", "DIY", "Theater", "Pastry", "Roller"]
   ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Music"]
 
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :contact_requests, foreign_key: :explorer_id
-  has_many :received_contact_requests, foreign_key: :guide_id, class_name: "ContactRequest"
+  has_many :contact_requests, foreign_key: :explorer_id, dependent: :destroy
+  has_many :received_contact_requests, foreign_key: :guide_id, class_name: "ContactRequest", dependent: :destroy
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :bio, presence: true, length: { minimum: 100 }
@@ -40,8 +39,8 @@ class User < ApplicationRecord
   end
 
   def chosen_activities_are_included_in_list
-    if activities.any? { |activity| !ACTIVITIES.include?(activity) }
-      errors.add :activities, :inclusion
+    if chosen_activities.any? { |activity| !ACTIVITIES.include?(activity) }
+      errors.add :chosen_activities, :inclusion
     end
   end
 

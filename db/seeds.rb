@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 ContactRequest.destroy_all
 User.destroy_all
 
@@ -131,3 +130,4 @@ hobbies: ["Travel", "Beers", "Piano", "Ecology"], chosen_activities: ["Sports", 
 ContactRequest.create!(guide: guide_thomas, explorer: explorer_pawel, activity: "Sports", status: "Pending")
 ContactRequest.create!(guide: guide_thomas, explorer: explorer_dirk, activity: "Sports", status: "Accepted")
 ContactRequest.create!(guide: guide_thomas, explorer: explorer_toby, activity: "Travel", status: "Declined")
+
