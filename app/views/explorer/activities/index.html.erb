@@ -1,6 +1,12 @@
-<h1>My activities</h1>
+<div class="container">
+  <div class="activities_header">
+    <h1>My activities</h1>
+   </div>
 
-<% @explorer_activities.each do |explorer_activity| %>
-  <%= explorer_activity %>
-  <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
-<% end %>
+   <div class="activities_cards">
+    <% @explorer_activities.each do |explorer_activity| %>
+      <p><%= explorer_activity %></p>
+      <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
+    <% end %>
+  </div>
+</div>
