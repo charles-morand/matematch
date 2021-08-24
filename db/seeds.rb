@@ -6,32 +6,39 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+ContactRequest.destroy_all
+User.destroy_all
+
+puts "All seeds were destroyed"
+
 guide = User.create!(first_name: "John",
                      last_name: "Doe",
-                     bio: "blablablablablablablablablablablablablablablablablablablablablablablablablablablabla",
-                     age: 19,
+                     bio: "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla",
                      birth_date: Date.new(2003, 5, 17),
-                     gender: "male",
+                     gender: "Male",
                      email: "john@example.com",
                      password: "password",
                      phone_number: "0102030405",
                      role: "Guide",
                      languages: ["FR", "GB"],
-                     hobbies: ["Tennis", "Football"],
+                     hobbies: ["Skateboard", "Football"],
                      chosen_activities: ["Arts"])
 
 explorer = User.create!(first_name: "Andrea",
                         last_name: "Gia",
-                        bio: "blablablablablablablablablablablablablablablablablablablablablablablablablablablabla",
-                        age: 26,
+                        bio: "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla",
                         birth_date: Date.new(1995, 5, 17),
-                        gender: "female",
+                        gender: "Female",
                         email: "andrea@example.com",
                         password: "password",
                         phone_number: "0102030405",
                         role: "Explorer",
                         languages: ["FR", "ES"],
-                        hobbies: ["Skate", "Football"],
+                        hobbies: ["Skateboard", "Football"],
                         chosen_activities: ["Arts"])
 
-ContactRequest.create!(guide_id: guide.id, explorer_id: explorer.id, activity: "Arts", status: "Pending")
+puts "Users created"
+
+ContactRequest.create!(guide: guide, explorer: explorer, activity: "Arts", status: "Pending")
+
+puts "Requests created"

@@ -1,0 +1,6 @@
+<h1>My activities</h1>
+
+<% @explorer_activities.each do |explorer_activity| %>
+  <%= explorer_activity %>
+  <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
+<% end %>
