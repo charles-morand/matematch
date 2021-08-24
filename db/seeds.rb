@@ -18,7 +18,7 @@ guide = User.create!(first_name: "John",
                      role: "Guide",
                      languages: ["FR", "GB"],
                      hobbies: ["Tennis", "Football"],
-                     chosen_activities: ["Art"])
+                     chosen_activities: ["Arts"])
 
 explorer = User.create!(first_name: "Andrea",
                         last_name: "Gia",
@@ -32,4 +32,6 @@ explorer = User.create!(first_name: "Andrea",
                         role: "Explorer",
                         languages: ["FR", "ES"],
                         hobbies: ["Skate", "Football"],
-                        chosen_activities: ["Art"])
+                        chosen_activities: ["Arts"])
+
+ContactRequest.create!(guide_id: guide.id, explorer_id: explorer.id, activity: "Arts", status: "Pending")
