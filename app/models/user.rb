@@ -1,11 +1,3 @@
-class ChosenActivitiesValidator < ActiveModel::EachValidator
-  def validate_each(record, attribute, value)
-    unless value == ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Musique"]
-      record.errors.add attribute, (options[:message] || "is not an available activity for now...")
-    end
-  end
-end
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -32,7 +24,7 @@ class User < ApplicationRecord
   validates :hobbies, presence: true, length: { in: 1..5 }
   validates :chosen_activities, presence: true
 
-  validate :languages_are_included_in_list,
+  validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list
 
   private
 
