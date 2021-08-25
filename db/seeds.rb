@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Destroying seeds"
 
 ContactRequest.destroy_all
 User.destroy_all
 
-puts "All seeds destroyed"
+puts "Seeds destroyed"
 
 explorer_pawel = User.create!(first_name: "Pawel",
                               last_name: "Lewanski",
@@ -22,7 +23,8 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               role: "Explorer",
                               languages: ["FR", "GB", "DE"],
                               hobbies: ["Football", "Plants", "Skateboard", "Piano", "Travel"],
-                              chosen_activities: ["Arts"])
+                              chosen_activities: ["Arts"],
+                              address: "Nantes")
 
 explorer_dirk = User.create!(first_name: "Dirk",
                              last_name: "Nowitzki",
@@ -35,7 +37,8 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              role: "Explorer",
                              languages: ["DE", "GB"],
                              hobbies: ["Plants", "Football", "Skateboard", "Culture", "Travel"],
-                             chosen_activities: ["Sports"])
+                             chosen_activities: ["Sports"],
+                             address: "Nantes")
 
 explorer_toby = User.create!(first_name: "Toby",
                              last_name: "Johnson",
@@ -48,7 +51,8 @@ explorer_toby = User.create!(first_name: "Toby",
                              role: "Explorer",
                              languages: ["RU", "GB"],
                              hobbies: ["Plants", "Piano", "Skateboard", "Culture", "Travel"],
-                             chosen_activities: ["Sports"])
+                             chosen_activities: ["Sports"],
+                             address: "Nantes")
 
 puts "Explorers created"
 
@@ -63,7 +67,8 @@ guide_thomas = User.create!(first_name: "Thomas",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
                             hobbies: ["Football", "Piano", "Plants", "Ecology"],
-                            chosen_activities: ["Arts", "Sports", "Hanging out"])
+                            chosen_activities: ["Arts", "Sports", "Hanging out"],
+                           address: "Nantes")
 
 guide_julien = User.create!(first_name: "Julien",
                             last_name: "Vincent",
@@ -76,7 +81,8 @@ guide_julien = User.create!(first_name: "Julien",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
                             hobbies: ["Culture", "Ecology", "Tastings", "Travel"],
-                            chosen_activities: ["Arts", "Sports", "Hanging out"])
+                            chosen_activities: ["Arts", "Sports", "Hanging out"],
+                            address: "Nantes")
 
 guide_aymeric = User.create!(first_name: "Aymeric",
                              last_name: "Marcel",
@@ -89,7 +95,8 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
                              hobbies: ["Skateboard", "Rock", "Drawing", "Ecology"],
-                             chosen_activities: ["Arts", "Sports", "Hanging out"])
+                             chosen_activities: ["Arts", "Sports", "Hanging out"],
+                             address: "Nantes")
 
 guide_laura = User.create!(first_name: "Laura",
                            last_name: "Rodriguez",
@@ -102,7 +109,8 @@ guide_laura = User.create!(first_name: "Laura",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
                            hobbies: ["Swimming", "Plants", "Culture", "Ecology"],
-                           chosen_activities: ["Arts", "Sports", "Hanging out"])
+                           chosen_activities: ["Arts", "Sports", "Hanging out"],
+                           address: "Nantes")
 
 guide_marie = User.create!(first_name: "Marie",
                            last_name: "Cotiello",
@@ -115,7 +123,8 @@ guide_marie = User.create!(first_name: "Marie",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
                            hobbies: ["Football", "Travel", "Cooking", "Ecology"],
-                           chosen_activities: ["Arts", "Sports", "Hanging out"])
+                           chosen_activities: ["Arts", "Sports", "Hanging out"],
+                           address: "Nantes")
 
 guide_simon = User.create!(first_name: "Simon",
                            last_name: "Gilles",
@@ -128,7 +137,8 @@ guide_simon = User.create!(first_name: "Simon",
                            role: "Guide",
                            languages: ["FR", "GB", "RU"],
                            hobbies: ["Culture", "Shopping", "Drawing", "Ecology"],
-                           chosen_activities: ["Sports", "Cinema", "Music"])
+                           chosen_activities: ["Sports", "Cinema", "Music"],
+                           address: "Nantes")
 
 guide_wilfrid = User.create!(first_name: "Wilfrid",
                              last_name: "Dampierre",
@@ -141,7 +151,8 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
                              hobbies: ["Singing", "Piano", "Swimming", "Ecology"],
-                             chosen_activities: ["Sports", "Cinema", "Music"])
+                             chosen_activities: ["Sports", "Cinema", "Music"],
+                             address: "Nantes")
 
 guide_mohamed = User.create!(first_name: "Mohamed",
                              last_name: "Abdaoui",
@@ -154,7 +165,8 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              role: "Guide",
                              languages: ["FR", "GB", "RU"],
                              hobbies: ["Football", "Roller", "Singing", "Ecology"],
-                             chosen_activities: ["Sports", "Cinema", "Music"])
+                             chosen_activities: ["Sports", "Cinema", "Music"],
+                             address: "Nantes")
 
 guide_nicolas = User.create!(first_name: "Nicolas",
                              last_name: "Dupont",
@@ -167,7 +179,8 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              role: "Guide",
                              languages: ["FR", "GB", "KR"],
                              hobbies: ["Football", "DIY", "Guitar", "Ecology"],
-                             chosen_activities: ["Sports", "Cinema", "Music"])
+                             chosen_activities: ["Sports", "Cinema", "Music"],
+                             address: "Nantes")
 
 guide_james = User.create!(first_name: "James",
                            last_name: "Robinson",
@@ -180,7 +193,8 @@ guide_james = User.create!(first_name: "James",
                            role: "Guide",
                            languages: ["FR", "GB", "DE"],
                            hobbies: ["Travel", "Culture", "Piano", "Ecology"],
-                           chosen_activities: ["Sports", "Cinema", "Music"])
+                           chosen_activities: ["Sports", "Cinema", "Music"],
+                           address: "Nantes")
 
 puts "Guides created"
 
