@@ -9,9 +9,9 @@
         <% end %>
       </div>
 
-      <div class="picked-city">
-        <%= text_field_tag :query,
-            params[:query],
+      <div id="picked-city">
+        <%= text_field_tag :city,
+            params[:city],
             class: "form-control",
             placeholder: "Type a city..."%>
       </div>
@@ -19,11 +19,15 @@
 
       <div class="picked-genders">
         <% User::GENDERS.each do |gender| %>
-          <%= check_box_tag "genders[]", gender, false, id: "gender-#{gender}" %>
+          <%= check_box_tag "genders", gender, false, id: "gender-#{gender}" %>
           <%= label_tag "gender-#{gender}", gender %>
         <% end %>
       </div>
 
+      <div class="chosen-age">
+        <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
+        <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
+      </div>
 
       <div class="picked-hobbies">
         <% User::HOBBIES.each do |hobby| %>

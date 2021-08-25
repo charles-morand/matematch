@@ -25,6 +25,9 @@ class User < ApplicationRecord
 
   validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list, :selected_number_of_hobbies_between_1_and_5, :selected_number_of_languages_between_1_and_5
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   private
 
   def languages_are_included_in_list
