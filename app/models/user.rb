@@ -7,6 +7,8 @@ class User < ApplicationRecord
   HOBBIES = ["Hiking", "Guitar", "Drawing", "Singing", "Football", "Shopping", "Tastings", "Rock", "Culture", "Ecology", "Plants", "Travel", "Swimming", "Skateboard", "Piano", "Travel", "Basketball", "Surf", "Cooking", "Cycling", "DIY", "Theater", "Pastry", "Roller"]
   ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Music"]
 
+  has_one_attached :photo
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :contact_requests, foreign_key: :explorer_id, dependent: :destroy
