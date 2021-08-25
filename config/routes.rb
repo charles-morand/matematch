@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   authenticate :user, ->(user) { user.role == "Explorer" } do
-    root to: "explorer/sent_requests#index", as: :explorer_root
+    root to: "explorer/dashboards#index", as: :explorer_root
   end
 
   authenticate :user, ->(user) { user.role == "Guide" } do
