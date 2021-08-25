@@ -1,13 +1,10 @@
 <%= simple_form_for(@selected_activity) do |f| %>
-    <%= f.input :language %> </br>
-    <%= f.text_field :title %>
-    <%= f.input :description %>
-    <%= f.input :photo, as: :file %>
-    <%= f.label :Adresse %> </br>
-    <%= f.text_field :address %> </br>
-    <%= f.label :"Prix/jour" %> </br>
-    <%= f.text_field :price_per_day %>
-    <%= f.input :chair_type, collection: Chair::AUTHORIZED_TYPES %>
-    <%= f.submit "Soumettez votre assise !", class: "btn" %>
+    <%= f.input :language, collection: User::LANGUAGES %>
+    <%= f.input :address %> </br>
+    <%= f.input :gender, collection: User::GENDERS %> </br>
+    <%= f.input :age %> </br>
+    <%= f.input :hobbies, collection: User::HOBBIES %>
+    <%= f.hidden_field @selected_activity %>
+    <%= f.submit "Game, set and match!", class: "btn" %>
   <% end %>
-  <%= link_to("Retour aux chaises", chairs_path) %>
+  <%= link_to("Back to activities", explorer_activities_path) %>
