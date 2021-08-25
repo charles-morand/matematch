@@ -2,12 +2,12 @@
 
   <div class="home-dashboard-landing">
     <div class="home-dashboard-background">
-      <%= image_tag("home-background.png", id:"home-background", alt:"Van jaune sur la route dans le désert")%>
+      <%= image_tag("backgrounds/home-background.png", id:"home-background", alt:"Van jaune sur la route dans le désert")%>
     </div>
 
     <div class="home-dashboard-header">
       <div class="home-dashboard-logo">
-         <%= image_tag("logo-blanc.png", id:"logo-white", alt:"logo de matematch écrit en blanc")%>
+         <%= image_tag("logos/logo-blanc.png", id:"logo-white", alt:"logo de matematch écrit en blanc")%>
       </div>
       <div class="icon-my-profile">
         <i class="fas fa-user-circle"></i>
@@ -26,7 +26,7 @@
         <div class="home-dashboard-requests-card">
           <div class="home-dashboard-requests-card-infos">
             <div class="home-dashboard-requests-card-avatar">
-              <%= request.guide.photo %>
+              <%= image_tag(url_for(request.guide.photo), width: 300) %>
             </div>
             <div class="home-dashboard-requests-card-name-activity">
               <div class="home-dashboard-requests-card-name">
@@ -47,6 +47,7 @@
 
   <div class="long-button-gold sticky-bottom">
   <%# Le bouton doit reprendre le bouton long couleur gold et avoir un comportement sticky d'où la deuxième classe %>
+    <%= link_to "Find an experience", explorer_activities_path %>
   </div>
 
 </div>
