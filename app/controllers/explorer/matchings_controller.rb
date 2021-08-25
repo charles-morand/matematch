@@ -3,4 +3,7 @@ class Explorer::MatchingsController < ApplicationController
     @explorer_activities = User::ACTIVITIES
     @selected_activity = params[:activity]
   end
+
+  def index
+  end
 end
