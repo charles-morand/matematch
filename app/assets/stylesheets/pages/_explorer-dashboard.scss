@@ -28,3 +28,19 @@
 .home-dashboard-requests {
   margin: 0 20px;
 }
+
+
+.home-dashboard-requests-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-dashboard-requests-card-name-activity {
+  display: grid;
+  place-content: center;
+}
+
+.home-dashboard-requests-card-status {
+  display: grid;
+  place-content: center;
+}
