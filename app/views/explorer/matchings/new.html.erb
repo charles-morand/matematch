@@ -7,9 +7,13 @@
         <%= label_tag "language-#{language}", language %>
       <% end %>
 
-      <%# <%= text_field_tag :query,
-        params[:query],
-        class: "form-control" %>
+       <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a city..."%>
+
+
+
     </div>
     <div>
       <%= submit_tag "Chercher", class: "btn" %>
