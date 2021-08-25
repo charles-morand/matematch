@@ -2,6 +2,9 @@
     <%= f.input :language, collection: User::LANGUAGES %>
     <%= f.input :address %> </br>
     <%= f.input :gender, collection: User::GENDERS %> </br>
+    <%= f.label :"Start age" %>
+    <%= f.input :age %> </br>
+    <%= f.label :"End age" %>
     <%= f.input :age %> </br>
     <%= f.input :hobbies, collection: User::HOBBIES %>
     <%= f.hidden_field @selected_activity %>
