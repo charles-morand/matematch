@@ -7,7 +7,8 @@
     <% @explorer_activities.each do |explorer_activity| %>
 
       <div class="activity_img">
-        <%= image_tag "#{explorer_activity.parameterize}.jpg" %>
+        <%= image_tag "#{explorer_activity.parameterize}.jpg"  %>
+        <%= link_to explorer_activity, new_explorer_matching_path(activity: explorer_activity) %>
         <div class="activity_name">
           <h2><%= explorer_activity %></h2>
         </div>
