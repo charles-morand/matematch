@@ -26,18 +26,22 @@
         <div class="home-dashboard-requests-card">
           <div class="home-dashboard-requests-card-infos">
             <div class="home-dashboard-requests-card-avatar">
-              <% request.photo %>
+              <%= request.guide.photo %>
             </div>
             <div class="home-dashboard-requests-card-name-activity">
               <div class="home-dashboard-requests-card-name">
+                <%= request.guide.first_name %>
               </div>
               <div class="home-dashboard-requests-card-activity">
+                <%= request.activity %>
               </div>
             </div>
           </div>
           <div class="home-dashboard-requests-card-status">
+            <%= request.status %>
           </div>
         </div>
+       <% end %>
     </div>
   </div>
 
