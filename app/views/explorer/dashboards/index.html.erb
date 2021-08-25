@@ -17,23 +17,27 @@
 
   <div class="home-dashboard-requests">
     <div class="home-dashboard-requests-title">
+      <h3>My requests</h3>
     </div>
 
     <div class="home-dashboard-requests-cards">
-      <div class="home-dashboard-requests-card">
-        <div class="home-dashboard-requests-card-infos">
-          <div class="home-dashboard-requests-card-avatar">
+        <% @sent_requests.each do |request|%>
+
+        <div class="home-dashboard-requests-card">
+          <div class="home-dashboard-requests-card-infos">
+            <div class="home-dashboard-requests-card-avatar">
+              <% request.photo %>
+            </div>
+            <div class="home-dashboard-requests-card-name-activity">
+              <div class="home-dashboard-requests-card-name">
+              </div>
+              <div class="home-dashboard-requests-card-activity">
+              </div>
+            </div>
           </div>
-          <div class="home-dashboard-requests-card-name-activity">
-            <div class="home-dashboard-requests-card-name">
-            </div>
-            <div class="home-dashboard-requests-card-activity">
-            </div>
+          <div class="home-dashboard-requests-card-status">
           </div>
         </div>
-        <div class="home-dashboard-requests-card-status">
-        </div>
-      </div>
     </div>
   </div>
 
