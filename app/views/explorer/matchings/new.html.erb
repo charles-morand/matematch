@@ -14,6 +14,11 @@
 
 
 
+      <% User::HOBBIES.each do |hobby| %>
+        <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}" %>
+        <%= label_tag "hobby-#{hobby}", hobby %>
+      <% end %>
+
     </div>
     <div>
       <%= submit_tag "Chercher", class: "btn" %>
