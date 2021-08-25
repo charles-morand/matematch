@@ -2,10 +2,8 @@
     <%= f.input :language, collection: User::LANGUAGES %>
     <%= f.input :address %> </br>
     <%= f.input :gender, collection: User::GENDERS %> </br>
-    <%= f.label :"Start age" %>
-    <%= f.input :age %> </br>
-    <%= f.label :"End age" %>
-    <%= f.input :age %> </br>
+    <%= f.input :age, label: "Start age" %> </br>
+    <%= f.input :age, label: "End age" %> </br>
     <%= f.input :hobbies, collection: User::HOBBIES %>
     <%= f.hidden_field @selected_activity %>
     <%= f.submit "Game, set and match!", class: "btn" %>
