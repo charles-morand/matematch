@@ -26,6 +26,10 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               chosen_activities: ["Arts"],
                               address: "Nantes")
 
+explorer_pawel_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_pawel.jpg'))
+explorer_pawel.photo.attach(io: explorer_pawel_file, filename: 'explorer_pawel.jpg', content_type: 'image/jpg')
+explorer_pawel.save!
+
 explorer_dirk = User.create!(first_name: "Dirk",
                              last_name: "Nowitzki",
                              bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to metting you soon!",
@@ -40,6 +44,10 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
+explorer_dirk_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_dirk.jpg'))
+explorer_dirk.photo.attach(io: explorer_dirk_file, filename: 'explorer_dirk.jpg', content_type: 'image/jpg')
+explorer_dirk.save!
+
 explorer_toby = User.create!(first_name: "Toby",
                              last_name: "Johnson",
                              bio: "Hello, my name is Toby. I come from England and I am a student. I have arrived in France for 3 months. I like football.",
@@ -53,6 +61,10 @@ explorer_toby = User.create!(first_name: "Toby",
                              hobbies: ["Plants", "Piano", "Skateboard", "Culture", "Travel"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
+
+explorer_toby_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_toby.jpg'))
+explorer_toby.photo.attach(io: explorer_toby_file, filename: 'explorer_toby.jpg', content_type: 'image/jpg')
+explorer_toby.save!
 
 puts "Explorers created"
 
@@ -70,6 +82,10 @@ guide_thomas = User.create!(first_name: "Thomas",
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
+guide_thomas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_thomas.jpg'))
+guide_thomas.photo.attach(io: guide_thomas_file, filename: 'guide_thomas.jpg', content_type: 'image/jpg')
+guide_thomas.save!
+
 guide_julien = User.create!(first_name: "Julien",
                             last_name: "Vincent",
                             bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
@@ -83,6 +99,10 @@ guide_julien = User.create!(first_name: "Julien",
                             hobbies: ["Culture", "Ecology", "Tastings", "Travel"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
+
+guide_julien_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_julien.jpg'))
+guide_julien.photo.attach(io: guide_julien_file, filename: 'guide_julien.jpg', content_type: 'image/jpg')
+guide_julien.save!
 
 guide_aymeric = User.create!(first_name: "Aymeric",
                              last_name: "Marcel",
@@ -98,6 +118,10 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
                              address: "Nantes")
 
+guide_aymeric_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_aymeric.jpg'))
+guide_aymeric.photo.attach(io: guide_aymeric_file, filename: 'guide_aymeric.jpg', content_type: 'image/jpg')
+guide_aymeric.save!
+
 guide_laura = User.create!(first_name: "Laura",
                            last_name: "Rodriguez",
                            bio: "Hello everyone, my name is Laura. I study biology. I like basketball, surf and mexican cuisine. Let's meet!",
@@ -111,6 +135,10 @@ guide_laura = User.create!(first_name: "Laura",
                            hobbies: ["Swimming", "Plants", "Culture", "Ecology"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
+
+guide_laura_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_laura.jpg'))
+guide_laura.photo.attach(io: guide_laura_file, filename: 'guide_laura.jpg', content_type: 'image/jpg')
+guide_laura.save!
 
 guide_marie = User.create!(first_name: "Marie",
                            last_name: "Cotiello",
@@ -126,6 +154,10 @@ guide_marie = User.create!(first_name: "Marie",
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
+guide_marie_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_marie.jpg'))
+guide_marie.photo.attach(io: guide_marie_file, filename: 'guide_marie.jpg', content_type: 'image/jpg')
+guide_marie.save!
+
 guide_simon = User.create!(first_name: "Simon",
                            last_name: "Gilles",
                            bio: "Hello everyone, my name is Simon. I am student in arts. I like to go at museum, beer and paint. Let's meet!",
@@ -139,6 +171,10 @@ guide_simon = User.create!(first_name: "Simon",
                            hobbies: ["Culture", "Shopping", "Drawing", "Ecology"],
                            chosen_activities: ["Sports", "Cinema", "Music"],
                            address: "Nantes")
+
+guide_simon_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_simon.jpg'))
+guide_simon.photo.attach(io: guide_simon_file, filename: 'guide_simon.jpg', content_type: 'image/jpg')
+guide_simon.save!
 
 guide_wilfrid = User.create!(first_name: "Wilfrid",
                              last_name: "Dampierre",
@@ -154,6 +190,10 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
 
+guide_wilfrid_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_wilfrid.jpg'))
+guide_wilfrid.photo.attach(io: guide_wilfrid_file, filename: 'guide_wilfrid.jpg', content_type: 'image/jpg')
+guide_wilfrid.save!
+
 guide_mohamed = User.create!(first_name: "Mohamed",
                              last_name: "Abdaoui",
                              bio: "Hi everyone, my name is Mohamed. I am student in science. I like basketball and French food. Let's meet!",
@@ -167,6 +207,10 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              hobbies: ["Football", "Roller", "Singing", "Ecology"],
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
+
+guide_mohamed_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_mohamed.jpg'))
+guide_mohamed.photo.attach(io: guide_mohamed_file, filename: 'guide_mohamed.jpg', content_type: 'image/jpg')
+guide_mohamed.save!
 
 guide_nicolas = User.create!(first_name: "Nicolas",
                              last_name: "Dupont",
@@ -182,6 +226,10 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
 
+guide_nicolas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_nicolas.jpg'))
+guide_nicolas.photo.attach(io: guide_nicolas_file, filename: 'guide_nicolas.jpg', content_type: 'image/jpg')
+guide_nicolas.save!
+
 guide_james = User.create!(first_name: "James",
                            last_name: "Robinson",
                            bio: "Hello everyone, I am James. I am student in tourism. I like spy movies, sports and music mostly the rock and roll. Let's meet!",
@@ -195,6 +243,10 @@ guide_james = User.create!(first_name: "James",
                            hobbies: ["Travel", "Culture", "Piano", "Ecology"],
                            chosen_activities: ["Sports", "Cinema", "Music"],
                            address: "Nantes")
+
+guide_james_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_james.jpg'))
+guide_james.photo.attach(io: guide_james_file, filename: 'guide_james.jpg', content_type: 'image/jpg')
+guide_james.save!
 
 puts "Guides created"
 
