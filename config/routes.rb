@@ -26,9 +26,8 @@ Rails.application.routes.draw do
   end
 
   namespace :explorer do
-    resources :activities, only: [:index] do
-      resources :matchings, only: [:new, :index]
-    end
+    resources :activities, only: [:index]
+    resources :matchings, only: [:new, :index]
     resources :matchings, only: [:show] do
       resources :contact_requests, only: [:create]
     end

@@ -21,6 +21,7 @@ class User < ApplicationRecord
   validates :languages, presence: true
   validates :hobbies, presence: true, length: { in: 1..5 }
   validates :chosen_activities, presence: true
+  validates :address, presence: true
 
   validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list, :selected_number_of_hobbies_between_1_and_5, :selected_number_of_languages_between_1_and_5
 
