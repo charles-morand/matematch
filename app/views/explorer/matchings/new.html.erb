@@ -1,10 +1,10 @@
 <%= simple_form_for(@selected_activity) do |f| %>
-    <%= f.input :language, collection: User::LANGUAGES %>
-    <%= f.input :address %> </br>
-    <%= f.input :gender, collection: User::GENDERS %> </br>
-    <%= f.input :age, label: "Start age" %> </br>
-    <%= f.input :age, label: "End age" %> </br>
-    <%= f.input :hobbies, collection: User::HOBBIES %>
+    <%= f.input :language, collection: User::LANGUAGES, wrapper_html: { class: 'languages' } %>
+    <%= f.input :address, wrapper_html: { class: 'address' } %> </br>
+    <%= f.input :gender, collection: User::GENDERS, wrapper_html: { class: 'gender' } %> </br>
+    <%= f.input :age, label: "Start age", wrapper_html: { class: 'age' } %> </br>
+    <%= f.input :age, label: "End age", wrapper_html: { class: 'age' } %> </br>
+    <%= f.input :hobbies, collection: User::HOBBIES, wrapper_html: { class: 'hobbies' } %>
     <%= f.hidden_field @selected_activity %>
     <%= f.submit "Game, set and match!", class: "btn" %>
   <% end %>
