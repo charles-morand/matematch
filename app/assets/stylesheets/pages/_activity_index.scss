@@ -1,6 +1,16 @@
-.activity_img {
+.activity_card {
   text-align: center;
   position: relative;
+  height: 12rem;
+  width: 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: grid;
+  place-content: center;
+  margin-bottom: 1.5rem;
+
   h2 {
     text-align: center;
     color: white;
@@ -8,10 +18,14 @@
   }
 }
 
-.activity_img img {
-  height: 216px;
-  width: 346px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  opacity: 40%;
+.activities_header {
+  text-align: center;
+}
+
+#logo-black {
+  text-align: center;
+}
+
+body {
+  background-color: #FDF7F1;
 }
