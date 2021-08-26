@@ -22,7 +22,7 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               phone_number: "0606060606",
                               role: "Explorer",
                               languages: ["FR", "GB", "DE"],
-                              hobbies: ["Football", "Plants", "Skateboard", "Piano", "Travel"],
+                              hobbies: ["Football", "Skateboard", "Piano", "Travel"],
                               chosen_activities: ["Arts"],
                               address: "Nantes")
 
@@ -40,7 +40,7 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["DE", "GB"],
-                             hobbies: ["Plants", "Football", "Skateboard", "Culture", "Travel"],
+                             hobbies: ["Plants", "Skateboard", "Culture"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -58,7 +58,7 @@ explorer_toby = User.create!(first_name: "Toby",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["RU", "GB"],
-                             hobbies: ["Plants", "Piano", "Skateboard", "Culture", "Travel"],
+                             hobbies: ["Plants", "Skateboard", "Culture"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -78,7 +78,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
-                            hobbies: ["Football", "Piano", "Plants", "Ecology"],
+                            hobbies: ["Football", "Plants", "Ecology"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -114,7 +114,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
-                             hobbies: ["Skateboard", "Rock", "Drawing", "Ecology"],
+                             hobbies: ["Skateboard", "Rock", "Drawing"],
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
                              address: "Nantes")
 
@@ -132,7 +132,7 @@ guide_laura = User.create!(first_name: "Laura",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
-                           hobbies: ["Swimming", "Plants", "Culture", "Ecology"],
+                           hobbies: ["Swimming", "Plants", "Ecology"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -150,7 +150,7 @@ guide_marie = User.create!(first_name: "Marie",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
-                           hobbies: ["Football", "Travel", "Cooking", "Ecology"],
+                           hobbies: ["Football", "Cooking", "Ecology"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -168,7 +168,7 @@ guide_simon = User.create!(first_name: "Simon",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "RU"],
-                           hobbies: ["Culture", "Shopping", "Drawing", "Ecology"],
+                           hobbies: ["Culture", "Shopping", "Drawing"],
                            chosen_activities: ["Sports", "Cinema", "Music"],
                            address: "Nantes")
 
@@ -186,8 +186,8 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
-                             hobbies: ["Singing", "Piano", "Swimming", "Ecology"],
-                             chosen_activities: ["Sports", "Cinema", "Music"],
+                             hobbies: ["Singing", "Swimming", "Ecology"],
+                             chosen_activities: ["Sports", "Cinema"],
                              address: "Nantes")
 
 guide_wilfrid_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_wilfrid.jpg'))
@@ -204,7 +204,7 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "RU"],
-                             hobbies: ["Football", "Roller", "Singing", "Ecology"],
+                             hobbies: ["Football", "Roller", "Singing"],
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
 
@@ -222,7 +222,7 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "KR"],
-                             hobbies: ["Football", "DIY", "Guitar", "Ecology"],
+                             hobbies: ["Football", "DIY", "Ecology"],
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
 
@@ -240,7 +240,7 @@ guide_james = User.create!(first_name: "James",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "DE"],
-                           hobbies: ["Travel", "Culture", "Piano", "Ecology"],
+                           hobbies: ["Travel", "Culture", "Piano"],
                            chosen_activities: ["Sports", "Cinema", "Music"],
                            address: "Nantes")
 
