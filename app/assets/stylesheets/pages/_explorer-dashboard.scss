@@ -32,6 +32,7 @@
 
 .home-dashboard-requests-cards {
   margin: 5px 0;
+  padding-bottom: 4rem;
 }
 
 
@@ -42,12 +43,16 @@
   // couleur à variabiliser selon l'état
   border: 3px solid #E3A96D;
   border-radius: 6px;
-  height: 60px;
+  padding: 0.5rem;
 }
 
 .home-dashboard-requests-card-name {
   display: grid;
   place-content: center;
+
+  h4 {
+    margin: 0px;
+  }
 }
 
 .home-dashboard-requests-card-activity {
@@ -72,7 +77,8 @@
 
 
 .sticky-bottom {
-  position: sticky;
-  bottom: 10px;
-  // Marche pas
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
