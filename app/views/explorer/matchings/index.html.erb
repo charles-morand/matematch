@@ -4,7 +4,7 @@
   <div class="index-guides-header-cards">
 
       <div class="index-guides-header">
-        <h2>Find a guide <%= params[:city] %></h2>
+        <h2>Find a guide in <%= params[:city] %></h2>
         <%# Au dessus ça ne marche pas je pense, sur quoi on appelle pour mettre la ville? %>
       </div>
 
@@ -13,7 +13,7 @@
 
         <div class="index-guides-card">
           <div class="index-guides-card-avatar avatar-guide">
-            <%# réparer pour mettre la photo %>
+            <%= image_tag(url_for(matched_user.photo)) %>
           </div>
 
           <div class="index-guides-card-infos">
@@ -23,15 +23,23 @@
               </div>
 
               <div class="index-guides-card-infos-age">
-                <%= matched_user.age %> age à venir
+                <%= matched_user.age %>
               </div>
             </div>
 
             <div class="index-guides-card-infos-languages">
-              <%= matched_user.languages %>
+              <% matched_user.languages.each do |language| %>
+                <div class="index-guides-card-infos-language">
+                  <%= language %>
+                </div>
+              <% end %>
             </div>
             <div class="index-guides-card-infos-hobbies">
-              <%= matched_user.hobbies %>
+              <% matched_user.hobbies.each do |hobby| %>
+                <div class="index-guides-card-infos-hobby">
+                  <%= hobby %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

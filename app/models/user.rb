@@ -21,7 +21,7 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :role, presence: true, inclusion: { in: ROLES }
   validates :languages, presence: true
-  validates :hobbies, presence: true
+  validates :hobbies, presence: true, length: { in: 1..3 }
   validates :chosen_activities, presence: true
   validates :address, presence: true
 
@@ -29,6 +29,10 @@ class User < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  def age
+    ((DateTime.now - birth_date) / 365).to_i
+  end
 
   private
 
