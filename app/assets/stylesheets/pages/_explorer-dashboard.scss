@@ -33,11 +33,11 @@
 .home-dashboard-requests-card {
   display: flex;
   justify-content: space-between;
-  padding: 0 7px;
   background: #FFFFFF;
   // couleur à variabiliser selon l'état
   border: 3px solid rgba(227, 169, 109, 0.7);
   border-radius: 6px;
+  height: 60px;
 }
 
 .home-dashboard-requests-card-infos {
@@ -52,11 +52,15 @@
 .home-dashboard-requests-card-status {
   display: grid;
   place-content: center;
+  padding-right: 7px;
+}
+
+.home-dashboard-requests-card-name-activity{
+  padding: 0 10px;
 }
 
 .sticky-bottom {
-  a{
   position: sticky;
   bottom: 10px;
-  }
+  // Marche pas
 }
