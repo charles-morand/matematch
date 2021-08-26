@@ -1,26 +1,24 @@
 .home-dashboard {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: #FDF7F1;
-  // Couleur pas sur toute la page pourquoi ?
 }
 
 .home-dashboard-background {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('backgrounds/home-background.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  img{
-    object-fit: fill;
-    width: 100%;
-    background: linear-gradient(to right, #000000, #000001);
-    // Il faut ajouter un gradient black
-
-  }
+  height: 15rem;
+  align-items: baseline;
+  padding: 0 1rem;
 }
 
 .home-dashboard-header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  // Comment mettre le texte sur le background
 }
 
 .icon-my-profile {
