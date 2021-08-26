@@ -80,7 +80,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             languages: ["FR", "GB", "DE"],
                             hobbies: ["Football", "Piano", "Plants", "Ecology"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
-                           address: "Nantes")
+                            address: "Nantes")
 
 guide_thomas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_thomas.jpg'))
 guide_thomas.photo.attach(io: guide_thomas_file, filename: 'guide_thomas.jpg', content_type: 'image/jpg')

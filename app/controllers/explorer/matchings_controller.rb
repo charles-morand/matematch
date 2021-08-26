@@ -5,5 +5,15 @@ class Explorer::MatchingsController < ApplicationController
   end
 
   def index
+    # if params[:query].present?
+      # sql_query = "user.address ILIKE :query"
+      # @matching = User.where(sql_query, query: "%#{params[:city]}%") && User.where(user.languages = "#{params[:languages]}" && User.where(user.genders = "#{params[:genders]}")
+      # User.where('languages IN (?) AND hobbies IN (?)', ["FR", "ES"], ["Hiking", "Guitar"])
+      # User.where("hobbies @> ? OR hobbies @> ?", "{Football}", "{Piano}")
+
+    @matchings = User.where("hobbies && ARRAY[?]::varchar[] AND languages &&  ARRAY[?]::varchar[]", params[:hobbies], params[:languages]).where(address: params[:city])
+    # else
+    #   redirect_to explorer_activities_path
+    # end
   end
 end
