@@ -3,10 +3,13 @@
     <div class="search-input">
 
       <div class="picked-languages">
-        <% User::LANGUAGES.each do |language| %>
-          <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
-          <%= label_tag "language-#{language}", language %>
-        <% end %>
+        <div class="languages-title">
+          <h4>Language</h4>
+        </div>
+          <% User::LANGUAGES.each do |language| %>
+            <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
+            <%= label_tag "language-#{language}", language %>
+          <% end %>
       </div>
 
       <div id="picked-city">
