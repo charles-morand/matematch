@@ -1,3 +1,46 @@
-<% @matched_users.each do |matched_user| %>
-  <%= matched_user.first_name %>
-<% end %>
+<i class="fas fa-arrow-left"></i>
+
+
+
+  <% end %>
+
+
+
+
+<div class="index-guides">
+
+  <div class="index-guides-header-cards">
+    <div class="index-guides-header">
+      <h2>Find a guide in <%= matchings.address %></h2>
+      <%# Au dessus ça ne marche pas je pense, sur quoi on appelle ? %>
+    </div>
+
+    <div class="index-guides-cards">
+      <% @matched_users.each do |matched_user| %>
+        <div class="index-guides-card">
+          <div class="index-guides-card-avatar">
+          </div>
+
+          <div class="index-guides-card-infos">
+            <div class="index-guides-card-infos-name-age">
+              <div class="index-guides-card-infos-name">
+                <%= matched_user.first_name %>
+              </div>
+
+              <div class="index-guides-card-infos-age">
+                <%= matched_user.age %>
+              </div>
+            </div>
+
+            <div class="index-guides-card-infos-languages">
+              <%= matched_user.languages %>
+            </div>
+            <div class="index-guides-card-infos-hobbies">
+              <%= matched_user.hobbies %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
