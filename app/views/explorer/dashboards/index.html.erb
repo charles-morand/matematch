@@ -2,7 +2,7 @@
 
   <div class="home-dashboard-background", id="home-background", alt="Van jaune sur la route dans le désert">
     <div class="home-dashboard-logo">
-        <%= link_to( image_tag("logos/logo-blanc.png", id:"logo-white", alt:"logo de matematch écrit en blanc"), profile_path) %>
+        <%= link_to( image_tag("logos/logo-blanc.svg", id:"logo-white", alt:"logo de matematch écrit en blanc"), profile_path) %>
     </div>
     <div class="icon-my-profile">
       <i class="fas fa-user-circle"></i>
@@ -17,7 +17,7 @@
     <div class="home-dashboard-requests-cards">
       <% @sent_requests.each do |request|%>
 
-        <div class="home-dashboard-requests-card">
+        <div class="home-dashboard-requests-card <%= request.status.downcase %>">
           <div class="home-dashboard-requests-card-infos">
             <div class="home-dashboard-requests-card-avatar avatar-request">
               <%= image_tag(url_for(request.guide.photo)) %>

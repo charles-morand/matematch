@@ -16,7 +16,7 @@
     </div>
 
     <div class="index-guides-cards">
-      <% @matchings.each do |matching| %>
+      <% @matched_users.each do |matched_user| %>
         <div class="index-guides-card">
           <div class="index-guides-card-avatar">
           </div>
@@ -24,19 +24,19 @@
           <div class="index-guides-card-infos">
             <div class="index-guides-card-infos-name-age">
               <div class="index-guides-card-infos-name">
-                <%= matching.first_name %>
+                <%= matched_user.first_name %>
               </div>
 
               <div class="index-guides-card-infos-age">
-                <%= matching.age %>
+                <%= matched_user.age %>
               </div>
             </div>
 
             <div class="index-guides-card-infos-languages">
-              <%= matching.languages %>
+              <%= matched_user.languages %>
             </div>
             <div class="index-guides-card-infos-hobbies">
-              <%= matching.hobbies %>
+              <%= matched_user.hobbies %>
             </div>
           </div>
         </div>
