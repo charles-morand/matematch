@@ -42,6 +42,15 @@
   height: 60px;
 }
 
+.home-dashboard-requests-card-name {
+  display: grid;
+  place-content: center;
+}
+
+.home-dashboard-requests-card-activity {
+  color: #E3A96D;
+}
+
 .home-dashboard-requests-card-infos {
   display: flex;
 }
@@ -51,7 +60,6 @@
   place-content: center;
   padding: 0 10px;
 }
-
 
 .home-dashboard-requests-card-status {
   display: grid;
