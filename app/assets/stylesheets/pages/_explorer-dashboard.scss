@@ -1,6 +1,7 @@
 .home-dashboard {
   width: 100vh;
   height: 100vh;
+  background-color: #FDF7F1;
 }
 
 .home-dashboard-background {
@@ -9,7 +10,6 @@
     object-fit: fill;
     width: 100%;
     // Il faut ajouter un gradient black
-
 
   }
 }
@@ -52,4 +52,11 @@
 .home-dashboard-requests-card-status {
   display: grid;
   place-content: center;
+}
+
+.sticky-bottom {
+  a{
+  position: sticky;
+  bottom: 10px;
+  }
 }
