@@ -3,3 +3,31 @@
     color: white;
   }
 }
+
+
+// Icon de statuts dans les cards du Dashboard explorer
+.fa-check {
+  color: white;
+}
+.fa-times{
+  color: white;
+}
+.fa-ellipsis-h{
+  color: white;
+}
+
+
+.icon-request{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #E3A96D;
+  display: grid;
+  place-content: center;
+  .pending {
+    opacity: 30%;
+  }
+  .declined {
+    opacity: 70%;
+  }
+}

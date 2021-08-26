@@ -21,7 +21,7 @@
     </div>
 
     <div class="home-dashboard-requests-cards">
-        <% @sent_requests.each do |request|%>
+      <% @sent_requests.each do |request|%>
 
         <div class="home-dashboard-requests-card">
           <div class="home-dashboard-requests-card-infos">
@@ -38,7 +38,19 @@
             </div>
           </div>
           <div class="home-dashboard-requests-card-status">
-            <%= request.status %>
+            <% if request.status == "Accepted" %>
+              <div class="icon-request accepted">
+                <i class="fas fa-check"></i>
+              </div>
+            <% elsif request.status == "Declined" %>
+              <div class="icon-request declined">
+                 <i class="fas fa-times"></i>
+              </div>
+            <% else %>
+              <div class="icon-request pending">
+                <i class="fas fa-ellipsis-h"></i>
+              </div>
+            <% end %>
           </div>
         </div>
        <% end %>
