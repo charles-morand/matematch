@@ -40,7 +40,7 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["DE", "GB"],
-                             hobbies: ["Plants","Skateboard", "Culture"],
+                             hobbies: ["Plants", "Skateboard", "Culture"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -78,7 +78,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
-                            hobbies: ["Football", "Piano", "Plants", "Ecology"],
+                            hobbies: ["Football", "Plants", "Ecology"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -114,7 +114,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
-                             hobbies: ["Skateboard", "Rock", "Drawing", "Ecology"],
+                             hobbies: ["Skateboard", "Rock", "Drawing"],
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
                              address: "Nantes")
 
@@ -132,7 +132,7 @@ guide_laura = User.create!(first_name: "Laura",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
-                           hobbies: ["Swimming", "Plants", "Culture", "Ecology"],
+                           hobbies: ["Swimming", "Plants", "Ecology"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -150,7 +150,7 @@ guide_marie = User.create!(first_name: "Marie",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "ES"],
-                           hobbies: ["Football", "Travel", "Cooking", "Ecology"],
+                           hobbies: ["Football", "Cooking", "Ecology"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -186,7 +186,7 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
-                             hobbies: ["Singing", "Piano", "Swimming", "Ecology"],
+                             hobbies: ["Singing", "Swimming", "Ecology"],
                              chosen_activities: ["Sports", "Cinema"],
                              address: "Nantes")
 
@@ -222,7 +222,7 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "KR"],
-                             hobbies: ["Football", "DIY", "Guitar", "Ecology"],
+                             hobbies: ["Football", "DIY", "Ecology"],
                              chosen_activities: ["Sports", "Cinema", "Music"],
                              address: "Nantes")
 
