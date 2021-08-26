@@ -15,6 +15,7 @@
       </div>
 
       <div id="picked-city">
+        <h4>location</h4>
         <div class="location">
           <%= text_field_tag :city,
             params[:city],
@@ -25,6 +26,7 @@
 
 
       <div class="picked-genders">
+        <h4>Gender</h4>
         <% User::GENDERS.each do |gender| %>
           <%= check_box_tag "genders", gender, false, id: "gender-#{gender}" %>
           <%= label_tag "gender-#{gender}", gender %>
@@ -32,11 +34,13 @@
       </div>
 
       <div class="chosen-age">
+        <h4>Age</h4>
         <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
         <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
       </div>
 
       <div class="picked-hobbies">
+        <h4>Hobbies</h4>
         <% User::HOBBIES.each do |hobby| %>
           <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}" %>
           <%= label_tag "hobby-#{hobby}", hobby %>
