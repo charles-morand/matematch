@@ -1,18 +1,20 @@
 <div class="container">
+  <div id="logo-black">
+    <%= image_tag("logos/logo-noir.png", id:"logo-noir", alt:"logo de matematch écrit en noir")%>
+  </div>
   <div class="activities_header">
-    <h1>What are you up to?</h1>
+    <h3>What are you up to?</h3>
   </div>
 
   <div class="activities_cards">
     <% @explorer_activities.each do |explorer_activity| %>
 
-      <div class="activity_img">
-        <%= image_tag "activities/#{explorer_activity.parameterize}.jpg"  %>
-        <%= link_to explorer_activity, new_explorer_matching_path(activity: explorer_activity) %>
-        <div class="activity_name">
+      <%= link_to new_explorer_matching_path(activity: explorer_activity) do %>
+        <div class="activity_card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path("activities/#{explorer_activity.parameterize}.jpg" ) %>);">
           <h2><%= explorer_activity %></h2>
         </div>
-      </div>
+      <% end %>
+
     <% end %>
   </div>
 </div>
