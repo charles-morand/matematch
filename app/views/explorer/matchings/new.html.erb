@@ -44,8 +44,17 @@
       </div>
 
     </div>
-    <div>
-      <%= submit_tag "Match", class: "btn" %>
+    <div class= "pages-buttons">
+      <div class="previous-page">
+        <%= link_to explorer_activities_path do%>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+      </div>
+      <div class="next-page">
+        <%= button_tag type: 'submit', class: "button postfix" do%>
+         <i class="fas fa-arrow-circle-right"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>
