@@ -3,17 +3,24 @@
     <div class="search-input">
 
       <div class="picked-languages">
-        <% User::LANGUAGES.each do |language| %>
-          <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
-          <%= label_tag "language-#{language}", language %>
-        <% end %>
+        <div class="languages-title">
+          <h4>Language</h4>
+        </div>
+        <div class="displayed-languages">
+          <% User::LANGUAGES.each do |language| %>
+            <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
+            <%= label_tag "language-#{language}", language %>
+            <% end %>
+        </div>
       </div>
 
       <div id="picked-city">
-        <%= text_field_tag :city,
+        <div class="location">
+          <%= text_field_tag :city,
             params[:city],
             class: "form-control",
             placeholder: "Type a city..."%>
+          </div>
       </div>
 
 
@@ -37,8 +44,17 @@
       </div>
 
     </div>
-    <div>
-      <%= submit_tag "Match", class: "btn" %>
+    <div class= "pages-buttons">
+      <div class="previous-page">
+        <%= link_to explorer_activities_path do%>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+      </div>
+      <div class="next-page">
+        <%= button_tag type: 'submit', class: "button postfix" do%>
+         <i class="fas fa-arrow-circle-right"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>
