@@ -1,7 +1,7 @@
 <i class="fas fa-arrow-left"></i>
 
-<% @matchings.each do |matching| %>
-  <%= matching.first_name %>
+
+
   <% end %>
 
 
@@ -11,25 +11,36 @@
 
   <div class="index-guides-header-cards">
     <div class="index-guides-header">
-
+      <h2>Find a guide in <%= matchings.address %></h2>
+      <%# Au dessus ça ne marche pas je pense, sur quoi on appelle ? %>
     </div>
 
     <div class="index-guides-cards">
-      <div class="index-guides-card">
-        <div class="index-guides-card-avatar">
-        </div>
+      <% @matchings.each do |matching| %>
+        <div class="index-guides-card">
+          <div class="index-guides-card-avatar">
+          </div>
 
-        <div class="index-guides-card-infos">
-          <div class="index-guides-card-infos-name">
-          </div>
-          <div class="index-guides-card-infos-languages">
-          </div>
-          <div class="index-guides-card-infos-hobbies">
+          <div class="index-guides-card-infos">
+            <div class="index-guides-card-infos-name-age">
+              <div class="index-guides-card-infos-name">
+                <%= matching.first_name %>
+              </div>
+
+              <div class="index-guides-card-infos-age">
+                <%= matching.age %>
+              </div>
+            </div>
+
+            <div class="index-guides-card-infos-languages">
+              <%= matching.languages %>
+            </div>
+            <div class="index-guides-card-infos-hobbies">
+              <%= matching.hobbies %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
-
   </div>
-
 </div>
