@@ -33,6 +33,15 @@
 .home-dashboard-requests-card {
   display: flex;
   justify-content: space-between;
+  padding: 0 7px;
+  background: #FFFFFF;
+  // couleur à variabiliser selon l'état
+  border: 3px solid rgba(227, 169, 109, 0.7);
+  border-radius: 6px;
+}
+
+.home-dashboard-requests-card-infos {
+  display: flex;
 }
 
 .home-dashboard-requests-card-name-activity {
