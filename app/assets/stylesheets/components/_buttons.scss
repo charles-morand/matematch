@@ -53,29 +53,9 @@
   }
 }
 
-
 .gold-pill {
   background-color: #E3A96D;
   border-radius: 10px;
   color: black;
   font-size: 12px;
-}
-
-.checkbox-button {
-  cursor: pointer;
-  background: #FFFFFF;
-  border: 2px solid rgba(227, 169, 109, 0.2);
-  border-radius: 20px;
-  width: 95px;
-  margin: 0.5rem;
-  .label-checkbox{
-    display: grid;
-    place-content: center;
-  }
-}
-
-.checkbox-button:checked {
-  background: #FFFFFF;
-  border: 2px solid #E3A96D;
-  border-radius: 20px;
 }

@@ -8,10 +8,8 @@
         </div>
         <div class="displayed-languages">
           <% User::LANGUAGES.each do |language| %>
-            <div class="checkbox-button">
-              <span class="hid-checkbox"><%= check_box_tag "languages[]", language, false, id: "language-#{language}" %></span>
-              <span class="label-checkbox"><%= label_tag "language-#{language}", language %></span>
-            </div>
+            <%= check_box_tag "languages[]", language, false, id: "language-#{language}", class:"form-checkbox" %>
+            <%= label_tag "language-#{language}", language %>
           <% end %>
         </div>
       </div>
@@ -31,10 +29,8 @@
         <h4>Gender</h4>
         <div class="displayed-genders">
           <% User::GENDERS.each do |gender| %>
-            <div class="checkbox-button">
-              <span class="hid-checkbox"><%= check_box_tag "genders", gender, false, id: "gender-#{gender}" %></span>
-              <span class="label-checkbox"><%= label_tag "gender-#{gender}", gender %></span>
-            </div>
+            <%= check_box_tag "genders", gender, false, id: "gender-#{gender}", class:"form-checkbox" %>
+            <%= label_tag "gender-#{gender}", gender %>
           <% end %>
         </div>
       </div>
@@ -51,10 +47,8 @@
         <h4>Hobbies</h4>
         <div class="displayed-hobbies">
           <% User::HOBBIES.each do |hobby| %>
-            <div class="checkbox-button">
-              <span class="hid-checkbox"><%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}" %></span>
-              <span class="label-checkbox"><%= label_tag "hobby-#{hobby}", hobby %></span>
-            </div>
+            <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}", class:"form-checkbox check-hobbies" %>
+            <%= label_tag "hobby-#{hobby}", hobby %>
           <% end %>
         </div>
       </div>
