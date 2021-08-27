@@ -8,9 +8,11 @@
         </div>
         <div class="displayed-languages">
           <% User::LANGUAGES.each do |language| %>
-            <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
-            <%= label_tag "language-#{language}", language %>
-            <% end %>
+            <div class="checkbox-button">
+              <span class="hid-checkbox"><%= check_box_tag "languages[]", language, false, id: "language-#{language}" %></span>
+              <span class="label-checkbox"><%= label_tag "language-#{language}", language %></span>
+            </div>
+          <% end %>
         </div>
       </div>
 

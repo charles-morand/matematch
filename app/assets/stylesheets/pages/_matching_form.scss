@@ -1,5 +1,5 @@
 .search-input {
-  padding: 3rem;
+  padding: 1.5rem;
   h4 {
     margin-top: 1rem;
   }
@@ -16,4 +16,15 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.hid-checkbox {
+  position: absolute;
+  transform: scale(0);
+}
+
+.displayed-languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

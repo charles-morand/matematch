@@ -58,3 +58,21 @@
   color: black;
   font-size: 12px;
 }
+
+.checkbox-button {
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 2px solid rgba(227, 169, 109, 0.2);
+  border-radius: 20px;
+  width: 100px;
+  .label-checkbox{
+    display: grid;
+    place-content: center;
+  }
+}
+
+.checkbox-button:checked {
+  background: #FFFFFF;
+  border: 2px solid #E3A96D;
+  border-radius: 20px;
+}
