@@ -22,7 +22,7 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               phone_number: "0606060606",
                               role: "Explorer",
                               languages: ["FR", "GB", "DE"],
-                              hobbies: ["Football", "Skateboard", "Piano"],
+                              hobbies: ["Football", "Skateboard", "Travel"],
                               chosen_activities: ["Arts"],
                               address: "Nantes")
 
