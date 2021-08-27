@@ -42,4 +42,19 @@
 .next-page button{
   border:0;
   background:none;
+  color: #E3A96D;
+  font-size: 3rem;
+}
+
+.pages-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.previous-page {
+  color: #E3A96D;
+  font-size: 3rem;
 }
