@@ -32,7 +32,7 @@
   </div>
 
   <div class="guide-profile-button-send">
-    <%= simple_form_for([:explorer, @contact_request]) do |f| %>
+    <%= simple_form_for(@contact_request, url: explorer_matching_contact_requests_path(@matched_user)) do |f| %>
       <%= f.submit "Send a request", class: "btn" %>
     <% end %>
   </div>
