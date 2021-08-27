@@ -28,3 +28,25 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.displayed-genders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.displayed-hobbies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// En attendant de mettre du JS pour le slider de l'age
+
+.age-pill input{
+  background: #FFFFFF;
+  border: 2px solid rgba(227, 169, 109, 0.2);
+  border-radius: 20px;
+  width: 90px;
+  margin: 0.5rem;
+}
