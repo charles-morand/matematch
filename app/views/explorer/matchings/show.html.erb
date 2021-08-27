@@ -16,14 +16,13 @@
     <div class="guide-bio">
       <p><%= @matched_user.bio %></p>
     </div>
+
+    <div class="language">
+      <p><%= @matched_user.languages %></p>
+    </div>
   </div>
 
-
-  <div class="language">
-    <p><%= @matched_user.languages %></p>
-  </div>
-
-  <div class="adress">
+  <div class="address">
     <p><%= @matched_user.address %></p>
   </div>
 
@@ -31,9 +30,9 @@
     <p><%= @matched_user.gender %></p>
   </div>
 
-  <div class="guide-profile-button-send">
+  <div class="button-send">
     <%= simple_form_for([:explorer, @contact_request]) do |f| %>
-      <%= f.submit "Send a request", class: "btn" %>
+      <p class="text-center"><%= f.submit "Send a request", class: "btn" %></p>
     <% end %>
   </div>
 
