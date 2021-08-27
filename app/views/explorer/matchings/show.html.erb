@@ -2,25 +2,39 @@
 
   <div class="guide-profile">
     <div id="profile-photo">
-
     </div>
-    <div class="guide-bio">
 
+    <div class="name-age">
+      <h1><%= @matched_user.first_name %></h1>
+      <h2><%= @matched_user.age %></h2>
+    </div>
+
+    <div class="hobbies">
+      <p><%= @matched_user.hobbies %></p>
+    </div>
+
+    <div class="guide-bio">
+      <p><%= @matched_user.bio %></p>
     </div>
   </div>
 
 
+  <div class="language">
+    <p><%= @matched_user.languages %></p>
+  </div>
 
-  <div class="city">
-
+  <div class="adress">
+    <p><%= @matched_user.address %></p>
   </div>
 
   <div class="gender">
-
+    <p><%= @matched_user.gender %></p>
   </div>
 
   <div class="guide-profile-button-send">
-    <p>Send a request</p>
+    <%= simple_form_for([:explorer, @contact_request]) do |f| %>
+      <%= f.submit "Send a request", class: "btn" %>
+    <% end %>
   </div>
 
 </div>
