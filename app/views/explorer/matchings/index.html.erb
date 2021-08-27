@@ -10,38 +10,40 @@
     <div class="index-guides-cards">
       <% @matched_users.each do |matched_user| %>
 
-        <div class="index-guides-card">
-          <div class="index-guides-card-avatar avatar-guide">
-            <%= image_tag(url_for(matched_user.photo)) %>
-          </div>
+        <%= link_to explorer_matching_path(matched_user), class:"card-guide-link" do %>
+          <div class="index-guides-card">
+            <div class="index-guides-card-avatar avatar-guide">
+              <%= image_tag(url_for(matched_user.photo)) %>
+            </div>
 
-          <div class="index-guides-card-infos">
-            <div class="index-guides-card-infos-name-age">
-              <div class="index-guides-card-infos-name">
-                <h4><%= matched_user.first_name %></h4>
+            <div class="index-guides-card-infos">
+              <div class="index-guides-card-infos-name-age">
+                <div class="index-guides-card-infos-name">
+                  <h4><%= matched_user.first_name %></h4>
+                </div>
+
+                <div class="index-guides-card-infos-age">
+                  <%= matched_user.age %> yrs
+                </div>
               </div>
 
-              <div class="index-guides-card-infos-age">
-                <%= matched_user.age %>
+              <div class="index-guides-card-infos-languages">
+                <p><% matched_user.languages.each do |language| %></p>
+                  <div class="index-guides-card-infos-language">
+                    <%= language %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="index-guides-card-infos-hobbies">
+                <% matched_user.hobbies.each do |hobby| %>
+                  <div class="index-guides-card-infos-hobby gold-pill">
+                    <%= hobby %>
+                  </div>
+                <% end %>
               </div>
             </div>
-
-            <div class="index-guides-card-infos-languages">
-              <% matched_user.languages.each do |language| %>
-                <div class="index-guides-card-infos-language">
-                  <%= language %>
-                </div>
-              <% end %>
-            </div>
-            <div class="index-guides-card-infos-hobbies">
-              <% matched_user.hobbies.each do |hobby| %>
-                <div class="index-guides-card-infos-hobby">
-                  <%= hobby %>
-                </div>
-              <% end %>
-            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
