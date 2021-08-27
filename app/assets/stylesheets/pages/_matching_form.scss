@@ -1,5 +1,5 @@
 .search-input {
-  padding: 1.5rem;
+  padding: 1rem;
   h4 {
     margin-top: 1rem;
   }
@@ -27,18 +27,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .displayed-genders {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .displayed-hobbies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 // En attendant de mettre du JS pour le slider de l'age
