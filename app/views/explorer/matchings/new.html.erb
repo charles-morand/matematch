@@ -8,9 +8,11 @@
         </div>
         <div class="displayed-languages">
           <% User::LANGUAGES.each do |language| %>
-            <%= check_box_tag "languages[]", language, false, id: "language-#{language}" %>
-            <%= label_tag "language-#{language}", language %>
-            <% end %>
+            <div class="checkbox-button">
+              <span class="hid-checkbox"><%= check_box_tag "languages[]", language, false, id: "language-#{language}" %></span>
+              <span class="label-checkbox"><%= label_tag "language-#{language}", language %></span>
+            </div>
+          <% end %>
         </div>
       </div>
 
@@ -27,38 +29,51 @@
 
       <div class="picked-genders">
         <h4>Gender</h4>
-        <% User::GENDERS.each do |gender| %>
-          <%= check_box_tag "genders", gender, false, id: "gender-#{gender}" %>
-          <%= label_tag "gender-#{gender}", gender %>
-        <% end %>
+        <div class="displayed-genders">
+          <% User::GENDERS.each do |gender| %>
+            <div class="checkbox-button">
+              <span class="hid-checkbox"><%= check_box_tag "genders", gender, false, id: "gender-#{gender}" %></span>
+              <span class="label-checkbox"><%= label_tag "gender-#{gender}", gender %></span>
+            </div>
+          <% end %>
+        </div>
       </div>
 
       <div class="chosen-age">
         <h4>Age</h4>
-        <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
-        <%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true %>
+        <div class="displayed-age">
+          <span class="age-pill"><%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true, placeholder: "Min" %></span>
+          <span class="age-pill"><%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true, placeholder: "Max" %></span>
+        </div>
       </div>
 
       <div class="picked-hobbies">
         <h4>Hobbies</h4>
-        <% User::HOBBIES.each do |hobby| %>
-          <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}" %>
-          <%= label_tag "hobby-#{hobby}", hobby %>
-        <% end %>
+        <div class="displayed-hobbies">
+          <% User::HOBBIES.each do |hobby| %>
+            <div class="checkbox-button">
+              <span class="hid-checkbox"><%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}" %></span>
+              <span class="label-checkbox"><%= label_tag "hobby-#{hobby}", hobby %></span>
+            </div>
+          <% end %>
+        </div>
       </div>
 
     </div>
     <div class= "pages-buttons">
+
       <div class="previous-page">
         <%= link_to explorer_activities_path do%>
           <i class="fas fa-arrow-circle-left"></i>
         <% end %>
       </div>
+
       <div class="next-page">
         <%= button_tag type: 'submit', class: "button postfix" do%>
          <i class="fas fa-arrow-circle-right"></i>
         <% end %>
       </div>
+
     </div>
   </div>
 <% end %>

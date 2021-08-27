@@ -1,5 +1,5 @@
 .search-input {
-  padding: 3rem;
+  padding: 1rem;
   h4 {
     margin-top: 1rem;
   }
@@ -16,4 +16,40 @@
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.hid-checkbox {
+  position: absolute;
+  transform: scale(0);
+}
+
+.displayed-languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.displayed-genders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.displayed-hobbies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// En attendant de mettre du JS pour le slider de l'age
+
+.age-pill input{
+  background: #FFFFFF;
+  border: 2px solid rgba(227, 169, 109, 0.2);
+  border-radius: 20px;
+  width: 90px;
+  margin: 0.5rem;
 }
