@@ -10,6 +10,14 @@
   border: 1px solid #E3A96D;
 }
 
+.picked-languages,
+#picked-city,
+.picked-genders,
+.chosen-age,
+.picked-hobbies {
+  margin-bottom: 2rem;
+}
+
 .pages-buttons {
   display: flex;
   justify-content: space-between;
@@ -18,26 +26,35 @@
   padding-right: 2rem;
 }
 
-.hid-checkbox {
+.form-checkbox {
   position: absolute;
   transform: scale(0);
 }
 
-.displayed-languages {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+.check-hobbies+label {
+  width: 8.5rem !important;
+  margin: 0.4rem 0.9rem !important;
 }
 
-.displayed-genders {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+.form-checkbox+label {
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 2px solid rgba(227, 169, 109, 0.2);
+  border-radius: 20px;
+  width: 6rem;
+  margin: 0.3rem;
+  display: grid;
+  place-content: center;
+  padding: .5rem;
 }
 
-.displayed-hobbies {
+.form-checkbox:checked+label {
+  background: #FFFFFF;
+  border: 2px solid #E3A96D;
+  border-radius: 20px;
+}
+
+.displayed-languages, .displayed-genders, .displayed-hobbies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
