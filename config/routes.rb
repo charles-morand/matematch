@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
   devise_for :users
 
   unauthenticated :user do
@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   namespace :explorer do
     resources :activities, only: [:index]
     resources :matchings, only: [:new, :index]
-    resources :matchings, only: [:show] do
+    resources :matchings, only: [:show]
+    resources :matching, only: [], param: :user_id do
       resources :contact_requests, only: [:create]
     end
     resources :contact_requests, only: [:index]
