@@ -18,4 +18,27 @@ class Explorer::MatchingsController < ApplicationController
     #   redirect_to explorer_activities_path
     # end
   end
+
+  def show
+    @matched_user = User.find(params[:id])
+    @contact_request = ContactRequest.new
+  end
+
+  def create
+    @contact_request = ContactRequest.new
+    @contact_request.status = "pending"
+    @contact_request.user = current_user
+    # @contact_request.user = User.find(params[:user_id])
+    @matched_user = User.find(params[:user_id])
+
+    if @contact_request.save
+      redirect_to explorer_contact_requests_path
+    else
+      render 'new'
+    end
+
+  end
+  def contact_request_params
+    params.require(:contact_request).permit(:start_date, :end_date)
+  end
 end
