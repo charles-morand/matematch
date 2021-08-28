@@ -10,7 +10,9 @@
     </div>
 
     <div class="hobbies">
-      <p><%= @matched_user.hobbies %></p>
+      <% @matched_user.hobbies.each do |hobby| %>
+        <%= hobby %>
+      <% end %>
     </div>
 
     <div class="guide-bio">
@@ -18,7 +20,9 @@
     </div>
 
     <div class="language">
-      <p><%= @matched_user.languages %></p>
+      <% @matched_user.languages.each do |language|%>
+        <%= language %>
+      <% end %>
     </div>
   </div>
 
