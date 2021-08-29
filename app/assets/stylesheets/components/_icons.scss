@@ -22,15 +22,10 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #E3A96D;
+  background-color: $gold;
+  opacity: 50%;
   display: grid;
   place-content: center;
-  .pending {
-    opacity: 30%;
-  }
-  .declined {
-    opacity: 70%;
-  }
 }
 
 // Icon flèche de retour
