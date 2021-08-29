@@ -1,13 +1,19 @@
 <div class="container-guide-profile">
-
+  <div class="previous-page">
+    <%= link_to explorer_matchings_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  </div>
   <div class="guide-profile">
     <div id="profile-photo">
       <%= image_tag(url_for(@matched_user.photo)) %>
     </div>
 
-    <div class="name-age">
-      <h1><%= @matched_user.first_name %></h1>
-      <h2><%= @matched_user.age %></h2>
+    <div class="guide-name">
+      <h3><%= @matched_user.first_name %></h3>
+    </div>
+    <div class="guide-age">
+      <h4><%= @matched_user.age %></h4><p>yrs</p>
     </div>
 
     <div class="hobbies">
@@ -16,7 +22,7 @@
       <% end %>
     </div>
 
-    <div class="guide-bio">
+    <div class="guide-bio mt-2">
       <p><%= @matched_user.bio %></p>
     </div>
 
@@ -28,17 +34,19 @@
   </div>
 
   <div class="address">
-   <p><span><i class="fas fa-map-marker-alt"></i></span><span>Lives in <strong><%= @matched_user.address %></strong></span></p>
+   <p><span><i class="fas fa-map-marker-alt"></i></span><span> Lives in <strong><%= @matched_user.address %></strong></span></p>
   </div>
 
   <div class="gender">
     <p><span><i class="far fa-user"></i></span><span><%= @matched_user.gender %></span></p>
   </div>
 
-  <div class="guide-profile-button-send">
-    <%= simple_form_for(@contact_request, url: explorer_matching_contact_requests_path(@matched_user)) do |f| %>
-      <%= f.submit "Send a request", class: "btn" %>
-    <% end %>
+  <div class="send-button-container">
+    <div class="guide-profile-button-send">
+      <%= simple_form_for(@contact_request, url: explorer_matching_contact_requests_path(@matched_user)) do |f| %>
+        <%= f.submit "Send a request", class: "btn" %>
+      <% end %>
+    </div>
   </div>
 
 </div>
