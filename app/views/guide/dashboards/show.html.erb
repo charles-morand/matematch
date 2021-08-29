@@ -1,0 +1,63 @@
+<div class="home-dashboard">
+
+  <div class="home-dashboard-background", id="home-background", alt="Van jaune sur la route dans le désert">
+    <div class="home-dashboard-header">
+      <div class="home-dashboard-logo">
+          <%= image_tag "logos/logo-blanc.svg", id:"logo-white", alt:"logo de matematch écrit en blanc" %>
+      </div>
+      <%= link_to profile_path do %>
+        <div class="icon-my-profile">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="home-dashboard-requests">
+    <div class="home-dashboard-requests-title">
+      <h3>My demands</h3>
+    </div>
+
+    <div class="home-dashboard-requests-cards">
+      <% @received_requests.each do |request|%>
+
+        <div class="home-dashboard-requests-card <%= request.status.downcase %>">
+          <div class="home-dashboard-requests-card-infos">
+            <div class="home-dashboard-requests-card-avatar avatar-request">
+              <%= image_tag(url_for(request.guide.photo)) %>
+            </div>
+            <div class="home-dashboard-requests-card-name-activity">
+              <div class="home-dashboard-requests-card-name">
+                <h4><%= request.guide.first_name %></h4>
+              </div>
+              <div class="home-dashboard-requests-card-activity">
+                <%= request.activity %>
+              </div>
+            </div>
+          </div>
+          <div class="home-dashboard-requests-card-status">
+            <% if request.status == "Accepted" %>
+              <div class="icon-request accepted">
+                <i class="fas fa-check"></i>
+              </div>
+            <% elsif request.status == "Declined" %>
+              <div class="icon-request declined">
+                 <i class="fas fa-times"></i>
+              </div>
+            <% else %>
+              <div class="icon-request pending">
+                <i class="fas fa-hourglass"></i>
+              </div>
+            <% end %>
+          </div>
+        </div>
+       <% end %>
+    </div>
+  </div>
+
+  <div class="long-button-gold sticky-bottom">
+  <%# iL FAUT TERMINER LE LIEN POUR OUVRIR UNE POP UP %>
+    <%# <%= link_to "Find an experience", %> %>
+  </div>
+
+</div>
