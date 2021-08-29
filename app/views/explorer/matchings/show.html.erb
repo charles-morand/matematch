@@ -13,7 +13,12 @@
       <h3><%= @matched_user.first_name %></h3>
     </div>
     <div class="guide-age">
-      <h4><%= @matched_user.age %></h4><p>yrs</p>
+      <div class="first-part-age">
+        <h4><%= @matched_user.age %></h4>
+      </div>
+      <div class="second-part-age">
+        <p>yrs</p>
+      </div>
     </div>
 
     <div class="hobbies">
