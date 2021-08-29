@@ -22,3 +22,13 @@
     padding: 7px;
   }
 }
+
+#profile-photo {
+  img{
+    object-fit: cover;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+}

@@ -2,6 +2,7 @@
 
   <div class="guide-profile">
     <div id="profile-photo">
+      <%= image_tag(url_for(@matched_user.photo)) %>
     </div>
 
     <div class="name-age">
@@ -10,7 +11,9 @@
     </div>
 
     <div class="hobbies">
-      <p><%= @matched_user.hobbies %></p>
+      <% @matched_user.hobbies.each do |hobby| %>
+        <%= hobby %>
+      <% end %>
     </div>
 
     <div class="guide-bio">
@@ -18,16 +21,18 @@
     </div>
 
     <div class="language">
-      <p><%= @matched_user.languages %></p>
+      <% @matched_user.languages.each do |language|%>
+        <%= language %>
+      <% end %>
     </div>
   </div>
 
   <div class="address">
-    <p><%= @matched_user.address %></p>
+   <p><span><i class="fas fa-map-marker-alt"></i></span><span>Lives in <strong><%= @matched_user.address %></strong></span></p>
   </div>
 
   <div class="gender">
-    <p><%= @matched_user.gender %></p>
+    <p><span><i class="far fa-user"></i></span><span><%= @matched_user.gender %></span></p>
   </div>
 
   <div class="guide-profile-button-send">
