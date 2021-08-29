@@ -39,3 +39,15 @@
   display: flex;
   justify-content: center;
 }
+
+.guide-hobbies, .guide-languages {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profile-page-hobbies {
+  height: 2rem;
+  width: 4.6rem;
+  justify-content: center;
+  align-items: center;
+}

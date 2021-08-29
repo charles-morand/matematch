@@ -27,9 +27,11 @@
       </div>
     </div>
 
-    <div class="hobbies">
+    <div class="guide-hobbies">
       <% @matched_user.hobbies.each do |hobby| %>
-        <%= hobby %>
+        <div class="gold-pill profile-page-hobbies">
+          <%= hobby %>
+        </div>
       <% end %>
     </div>
 
@@ -37,9 +39,11 @@
       <p><%= @matched_user.bio %></p>
     </div>
 
-    <div class="language">
+    <div class="guide-languages">
       <% @matched_user.languages.each do |language|%>
-        <%= language %>
+        <div class="index-guides-card-infos-language">
+          <%= language %>
+        </div>
       <% end %>
     </div>
   </div>
