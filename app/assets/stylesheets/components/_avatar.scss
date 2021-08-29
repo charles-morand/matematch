@@ -1,16 +1,19 @@
 .avatar-profile {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 3px solid #FFFFFF;
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    object-fit: cover;
+  }
 }
 .avatar-guide {
   img{
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  object-fit: cover;
-  padding: 7px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 7px;
   }
 }
 .avatar-request{
@@ -20,16 +23,5 @@
     width: 55px;
     border-radius: 50%;
     padding: 7px;
-  }
-}
-
-#profile-photo {
-  img{
-    object-fit: cover;
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    padding: 1rem;
-    margin-top: 4rem;
   }
 }

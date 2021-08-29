@@ -22,3 +22,20 @@
   display: flex;
   justify-content: center;
 }
+
+.orange-background {
+  background-color: $gold;
+  height: 8rem;
+  width: 85%;
+  border-radius: 1rem;
+  margin: 1rem auto 0 auto;
+}
+
+.place-avatar-profile {
+  margin-top: - 6.5rem;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+}

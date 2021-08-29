@@ -4,10 +4,16 @@
     <i class="fas fa-arrow-left"></i>
   <% end %>
   </div>
-  <div class="guide-profile">
-    <div id="profile-photo">
+
+  <div class="orange-background">
+  </div>
+  <div class="profile-photo">
+    <div class="avatar-profile place-avatar-profile">
       <%= image_tag(url_for(@matched_user.photo)) %>
     </div>
+  </div>
+
+  <div class="guide-profile">
 
     <div class="guide-name">
       <h3><%= @matched_user.first_name %></h3>
@@ -38,7 +44,7 @@
     </div>
   </div>
 
-  <div class="address">
+  <div class="address mt-2">
    <p><span><i class="fas fa-map-marker-alt"></i></span><span> Lives in <strong><%= @matched_user.address %></strong></span></p>
   </div>
 
