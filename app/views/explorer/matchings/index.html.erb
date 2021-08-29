@@ -1,13 +1,14 @@
 <div class="index-guides">
-
-   <%= link_to explorer_activities_path do %>
-    <i class="fas fa-arrow-left"></i>
-  <% end %>
+  <div class="upper-back-arrow">
+    <%= link_to explorer_activities_path do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+  </div>
 
   <div class="index-guides-header-cards">
 
-      <div class="index-guides-header">
-        <h2>Find a guide in <%= params[:city] %></h2>
+      <div class="index-guides-header mt-4">
+        <h3>Find a guide in <%= params[:city] %></h3>
       </div>
 
     <div class="index-guides-cards">
