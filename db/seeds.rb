@@ -22,7 +22,7 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               phone_number: "0606060606",
                               role: "Explorer",
                               languages: ["PL", "GB", "FR"],
-                              hobbies: ["Pastry", "Skateboard", "Travel"],
+                              hobbies: ["Culture", "Music", "Travel"],
                               chosen_activities: ["Arts"],
                               address: "Nantes")
 
@@ -40,7 +40,7 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["DE", "GB"],
-                             hobbies: ["Plants", "Skateboard", "Culture"],
+                             hobbies: ["DIY", "Hiking", "Culture"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -58,7 +58,7 @@ explorer_toby = User.create!(first_name: "Toby",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["RU", "GB"],
-                             hobbies: ["Plants", "Skateboard", "Culture"],
+                             hobbies: ["Surf", "Skateboard", "Theater"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -78,7 +78,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
-                            hobbies: ["Football", "Plants", "Skateboard"],
+                            hobbies: ["Football", "Fitness", "Skateboard"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -96,7 +96,7 @@ guide_julien = User.create!(first_name: "Julien",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "IT"],
-                            hobbies: ["Culture", "Ecology", "Pastry"],
+                            hobbies: ["Travel", "Ecology", "Cooking"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -114,7 +114,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
-                             hobbies: ["Skateboard", "Rock", "Drawing"],
+                             hobbies: ["Skateboard", "Music", "Ecology"],
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
                              address: "Nantes")
 
@@ -131,8 +131,8 @@ guide_laura = User.create!(first_name: "Laura",
                            password: "password",
                            phone_number: "+33601020304",
                            role: "Guide",
-                           languages: ["JP", "GB", "ES"],
-                           hobbies: ["Pastry", "Plants", "Hiking"],
+                           languages: ["ES", "GB", "JP"],
+                           hobbies: ["Cooking", "Cycling", "Tennis"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -150,7 +150,7 @@ guide_marie = User.create!(first_name: "Marie",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["IT", "GB", "ES"],
-                           hobbies: ["Football", "Cooking", "Travel"],
+                           hobbies: ["Football", "Basketball", "Travel"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -168,7 +168,7 @@ guide_simon = User.create!(first_name: "Simon",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "RU"],
-                           hobbies: ["Travel", "Piano", "Basketball"],
+                           hobbies: ["Travel", "Music", "Basketball"],
                            chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                            address: "Nantes")
 
@@ -186,7 +186,7 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
-                             hobbies: ["Singing", "Swimming", "Pastry"],
+                             hobbies: ["Music", "Swimming", "Cooking"],
                              chosen_activities: ["Sports", "Cinema", "Arts"],
                              address: "Nantes")
 
@@ -204,7 +204,7 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "RU"],
-                             hobbies: ["Skateboard", "Roller", "Theater"],
+                             hobbies: ["Skateboard", "Surf", "Theater"],
                              chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                              address: "Nantes")
 
@@ -222,7 +222,7 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "KR"],
-                             hobbies: ["Pastry", "DIY", "Guitar"],
+                             hobbies: ["Cooking", "DIY", "Music"],
                              chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                              address: "Nantes")
 

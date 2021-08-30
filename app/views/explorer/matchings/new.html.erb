@@ -4,7 +4,7 @@
 
       <div class="picked-languages">
         <div class="languages-title">
-          <h4>Language</h4>
+          <h4>Prefered languages</h4>
         </div>
         <div class="displayed-languages">
           <% User::LANGUAGES.each do |language| %>
@@ -15,7 +15,7 @@
       </div>
 
       <div id="picked-city">
-        <h4>Location</h4>
+        <h4>Meeting location</h4>
         <div class="location">
           <%= text_field_tag :city,
             params[:city],
@@ -26,7 +26,7 @@
 
 
       <div class="picked-genders">
-        <h4>Gender</h4>
+        <h4>Gender preferences</h4>
         <div class="displayed-genders">
           <% User::GENDERS.each do |gender| %>
             <%= check_box_tag "genders", gender, false, id: "gender-#{gender}", class:"form-checkbox" %>
@@ -44,7 +44,7 @@
       </div>
 
       <div class="picked-hobbies">
-        <h4>Hobbies</h4>
+        <h4>Discussion topics</h4>
         <div class="displayed-hobbies">
           <% User::HOBBIES.each do |hobby| %>
             <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}", class:"form-checkbox check-hobbies" %>

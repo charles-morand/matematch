@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   GENDERS = ["Male", "Female", "Undefined"]
   ROLES = ["Guide", "Explorer"]
-  LANGUAGES = ["FR", "ES", "DE", "IT", "PT", "NL", "RU", "PL", "CN", "JP", "KR", "GB"]
-  HOBBIES = ["Hiking", "Guitar", "Drawing", "Singing", "Football", "Shopping", "Tastings", "Rock", "Culture", "Ecology", "Plants", "Travel", "Swimming", "Skateboard", "Piano", "Travel", "Basketball", "Surf", "Cooking", "Cycling", "DIY", "Theater", "Pastry", "Roller"]
+  LANGUAGES = ["GB", "FR", "ES", "DE", "IT", "PT", "NL", "RU", "PL", "CN", "JP", "KR"]
+  HOBBIES = ["Culture", "Ecology", "Travel", "DIY", "Cooking", "Drawing", "Music", "Theater", "Hiking", "Cycling", "Surf", "Skateboard", "Football", "Basketball", "Tennis", "Fitness"]
   ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Music"]
 
   has_one_attached :photo
