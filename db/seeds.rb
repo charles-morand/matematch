@@ -32,7 +32,7 @@ explorer_pawel.save!
 
 explorer_dirk = User.create!(first_name: "Dirk",
                              last_name: "Nowitzki",
-                             bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to metting you soon!",
+                             bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to meeting you soon!",
                              birth_date: "1997-04-14",
                              gender: "Male",
                              email: "dirk@example.com",
@@ -70,7 +70,7 @@ puts "Explorers created"
 
 guide_thomas = User.create!(first_name: "Thomas",
                             last_name: "Petit",
-                            bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's meet!",
+                            bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's met!",
                             birth_date: "1997-03-24",
                             gender: "Male",
                             email: "thomas@example.com",
@@ -88,7 +88,7 @@ guide_thomas.save!
 
 guide_julien = User.create!(first_name: "Julien",
                             last_name: "Vincent",
-                            bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
+                            bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
                             birth_date: "1994-08-08",
                             gender: "Male",
                             email: "julien@example.com",
@@ -106,7 +106,7 @@ guide_julien.save!
 
 guide_aymeric = User.create!(first_name: "Aymeric",
                              last_name: "Marcel",
-                             bio: "Hi, I am Aymeric. I am student in physical education. I like bodybuilding, cinema and beer. Let's meet to work out together!",
+                             bio: "Hi, I am Aymeric. I am student in physical education. I like bodybuilding, cinema and beer. Let's meet to work out together!",
                              birth_date: "1990-02-14",
                              gender: "Male",
                              email: "aymeric@example.com",
@@ -124,7 +124,7 @@ guide_aymeric.save!
 
 guide_laura = User.create!(first_name: "Laura",
                            last_name: "Rodriguez",
-                           bio: "Hello everyone, my name is Laura. I study biology. I like basketball, surf and mexican cuisine. Let's meet!",
+                           bio: "Hello everyone, my name is Laura. I study biology. I like basketball, surf and mexican cuisine. Let's meet!",
                            birth_date: "1996-01-16",
                            gender: "Female",
                            email: "laura@example.com",
@@ -160,7 +160,7 @@ guide_marie.save!
 
 guide_simon = User.create!(first_name: "Simon",
                            last_name: "Gilles",
-                           bio: "Hello everyone, my name is Simon. I am student in arts. I like to go at museum, beer and paint. Let's meet!",
+                           bio: "Hello everyone, my name is Simon. I am student in arts. I like to go at museum, beer and paint. Let's meet!",
                            birth_date: "1999-11-05",
                            gender: "Male",
                            email: "simon@example.com",
@@ -178,7 +178,7 @@ guide_simon.save!
 
 guide_wilfrid = User.create!(first_name: "Wilfrid",
                              last_name: "Dampierre",
-                             bio: "Hi, I am Wilfrid. I study computer programing science. I like singing, travel and swimming. Let's meet!",
+                             bio: "Hi, I am Wilfrid. I study computer programing science. I like singing, travel and swimming. Let's meet!",
                              birth_date: "1991-01-11",
                              gender: "Male",
                              email: "wilfrid@example.com",
@@ -196,7 +196,7 @@ guide_wilfrid.save!
 
 guide_mohamed = User.create!(first_name: "Mohamed",
                              last_name: "Abdaoui",
-                             bio: "Hi everyone, my name is Mohamed. I am student in science. I like basketball and French food. Let's meet!",
+                             bio: "Hi everyone, my name is Mohamed. I am student in science. I like basketball and French food. Let's meet!",
                              birth_date: "1992-01-24",
                              gender: "Undefined",
                              email: "mohamed@example.com",
@@ -214,7 +214,7 @@ guide_mohamed.save!
 
 guide_nicolas = User.create!(first_name: "Nicolas",
                              last_name: "Dupont",
-                             bio: "Hi everyone, my name is Nicolas. I study physical, education and sport. I like handball and another sports and play with musical instrument. Let's meet!",
+                             bio: "Hi everyone, my name is Nicolas. I study physical, education and sport. I like handball and another sports and play with musical instrument. Let's meet!",
                              birth_date: "1999-06-04",
                              gender: "Undefined",
                              email: "nicolas@example.com",
@@ -232,7 +232,7 @@ guide_nicolas.save!
 
 guide_james = User.create!(first_name: "James",
                            last_name: "Robinson",
-                           bio: "Hello everyone, I am James. I am student in tourism. I like to travel to the ocean side and spend my day surfing. Let's meet!",
+                           bio: "Hello everyone, I am James. I am student in tourism. I like to travel to the ocean side and spend my day surfing. Let's meet!",
                            birth_date: "1999-07-07",
                            gender: "Male",
                            email: "james@example.com",
