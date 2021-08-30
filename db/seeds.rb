@@ -186,7 +186,7 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
-                             hobbies: ["Music", "Swimming", "Cooking"],
+                             hobbies: ["Music", "Surf", "Cooking"],
                              chosen_activities: ["Sports", "Cinema", "Arts"],
                              address: "Nantes")
 
@@ -232,7 +232,7 @@ guide_nicolas.save!
 
 guide_james = User.create!(first_name: "James",
                            last_name: "Robinson",
-                           bio: "Hello everyone, I am James. I am student in tourism. I like spy movies, sports and music mostly the rock and roll. Let's meet!",
+                           bio: "Hello everyone, I am James. I am student in tourism. I like to travel to the ocean side and spend my day surfing. Let's meet!",
                            birth_date: "1999-07-07",
                            gender: "Male",
                            email: "james@example.com",
@@ -252,7 +252,7 @@ puts "Guides created"
 
 ContactRequest.create(guide: guide_thomas, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
 ContactRequest.create(guide: guide_marie, explorer: explorer_pawel, activity: 'Arts', status: 'Accepted')
-ContactRequest.create(guide: guide_laura, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
+ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
 ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 'Cinema', status: 'Declined')
 
 
