@@ -2,7 +2,7 @@
 .home-dashboard {
   width: 100vw;
   height: 100vh;
-  background-color: #FDF7F1;
+  background-color: $beige;
 }
 
 // -------------------------------------Partie supèrieure---------------------
@@ -51,7 +51,7 @@
 .home-dashboard-requests-card {
   display: flex;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: white;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -66,7 +66,7 @@
 }
 
 .home-dashboard-requests-card-activity {
-  color: #E3A96D;
+  color: $gold;
 }
 
 .home-dashboard-requests-card-infos {
@@ -92,7 +92,7 @@
   border: 3px solid rgba(227, 169, 109, 0.4);
 }
 .accepted{
-    border: 3px solid #E3A96D;
+    border: 3px solid $gold;
 }
 .declined {
   opacity: 40%;
