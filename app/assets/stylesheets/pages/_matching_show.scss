@@ -23,6 +23,10 @@
   justify-content: center;
 }
 
+.guide-bio {
+  word-wrap: break-word;
+}
+
 .orange-background {
   background-color: $gold;
   height: 8rem;
@@ -48,6 +52,7 @@
 .profile-page-hobbies {
   height: 2rem;
   width: 4.6rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
