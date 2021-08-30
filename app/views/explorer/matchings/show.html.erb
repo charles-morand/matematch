@@ -42,7 +42,7 @@
     <div class="guide-languages">
       <% @matched_user.languages.each do |language|%>
         <div class="index-guides-card-infos-language">
-          <%= language %>
+          <%= flag_icon(language)%>
         </div>
       <% end %>
     </div>
