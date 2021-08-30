@@ -35,7 +35,7 @@
       <% end %>
     </div>
 
-    <div class="guide-bio mt-2">
+    <div class="guide-bio">
       <p><%= @matched_user.bio %></p>
     </div>
 
@@ -48,12 +48,12 @@
     </div>
   </div>
 
-  <div class="address mt-2">
-   <p><span><i class="fas fa-map-marker-alt"></i></span><span> Lives in <strong><%= @matched_user.address %></strong></span></p>
+  <div class="guide-address">
+   <p><span><i class="fas fa-map-marker-alt"></i></span>&nbsp<span>Lives in <strong><%= @matched_user.address %></strong></span></p>
   </div>
 
-  <div class="gender">
-    <p><span><i class="far fa-user"></i></span><span><%= @matched_user.gender %></span></p>
+  <div class="guide-gender">
+    <p><span><i class="far fa-user"></i></span>&nbsp<span><%= @matched_user.gender %></span></p>
   </div>
 
   <div class="send-button-container">
