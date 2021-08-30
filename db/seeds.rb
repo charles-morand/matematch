@@ -22,7 +22,7 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               phone_number: "0606060606",
                               role: "Explorer",
                               languages: ["PL", "GB", "FR"],
-                              hobbies: ["Pastry", "Skateboard", "Travel"],
+                              hobbies: ["Culture", "Music", "Travel"],
                               chosen_activities: ["Arts"],
                               address: "Nantes")
 
@@ -40,7 +40,7 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["DE", "GB"],
-                             hobbies: ["Plants", "Skateboard", "Culture"],
+                             hobbies: ["DIY", "Hiking", "Culture"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -58,7 +58,7 @@ explorer_toby = User.create!(first_name: "Toby",
                              phone_number: "0606060606",
                              role: "Explorer",
                              languages: ["RU", "GB"],
-                             hobbies: ["Plants", "Skateboard", "Culture"],
+                             hobbies: ["Surf", "Skateboard", "Theater"],
                              chosen_activities: ["Sports"],
                              address: "Nantes")
 
@@ -71,14 +71,14 @@ puts "Explorers created"
 guide_thomas = User.create!(first_name: "Thomas",
                             last_name: "Petit",
                             bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's meet!",
-                            birth_date: "1995-03-24",
+                            birth_date: "1997-03-24",
                             gender: "Male",
                             email: "thomas@example.com",
                             password: "password",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
-                            hobbies: ["Football", "Plants", "Skateboard"],
+                            hobbies: ["Football", "Fitness", "Skateboard"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -89,14 +89,14 @@ guide_thomas.save!
 guide_julien = User.create!(first_name: "Julien",
                             last_name: "Vincent",
                             bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
-                            birth_date: "1999-08-08",
+                            birth_date: "1994-08-08",
                             gender: "Male",
                             email: "julien@example.com",
                             password: "password",
                             phone_number: "+33601020304",
                             role: "Guide",
                             languages: ["FR", "GB", "IT"],
-                            hobbies: ["Culture", "Ecology", "Pastry"],
+                            hobbies: ["Travel", "Ecology", "Cooking"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
                             address: "Nantes")
 
@@ -114,7 +114,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
-                             hobbies: ["Skateboard", "Rock", "Drawing"],
+                             hobbies: ["Skateboard", "Music", "Ecology"],
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
                              address: "Nantes")
 
@@ -131,8 +131,8 @@ guide_laura = User.create!(first_name: "Laura",
                            password: "password",
                            phone_number: "+33601020304",
                            role: "Guide",
-                           languages: ["JP", "GB", "ES"],
-                           hobbies: ["Pastry", "Plants", "Hiking"],
+                           languages: ["ES", "GB", "JP"],
+                           hobbies: ["Cooking", "Cycling", "Tennis"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -150,7 +150,7 @@ guide_marie = User.create!(first_name: "Marie",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["IT", "GB", "ES"],
-                           hobbies: ["Football", "Cooking", "Travel"],
+                           hobbies: ["Football", "Basketball", "Travel"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
                            address: "Nantes")
 
@@ -168,7 +168,7 @@ guide_simon = User.create!(first_name: "Simon",
                            phone_number: "+33601020304",
                            role: "Guide",
                            languages: ["FR", "GB", "RU"],
-                           hobbies: ["Travel", "Piano", "Basketball"],
+                           hobbies: ["Travel", "Music", "Basketball"],
                            chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                            address: "Nantes")
 
@@ -186,7 +186,7 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "PT"],
-                             hobbies: ["Singing", "Swimming", "Pastry"],
+                             hobbies: ["Music", "Surf", "Cooking"],
                              chosen_activities: ["Sports", "Cinema", "Arts"],
                              address: "Nantes")
 
@@ -204,7 +204,7 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "RU"],
-                             hobbies: ["Skateboard", "Roller", "Theater"],
+                             hobbies: ["Skateboard", "Surf", "Theater"],
                              chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                              address: "Nantes")
 
@@ -222,7 +222,7 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              phone_number: "+33601020304",
                              role: "Guide",
                              languages: ["FR", "GB", "KR"],
-                             hobbies: ["Pastry", "DIY", "Guitar"],
+                             hobbies: ["Cooking", "DIY", "Music"],
                              chosen_activities: ["Sports", "Cinema", "Music", "Arts"],
                              address: "Nantes")
 
@@ -232,8 +232,8 @@ guide_nicolas.save!
 
 guide_james = User.create!(first_name: "James",
                            last_name: "Robinson",
-                           bio: "Hello everyone, I am James. I am student in tourism. I like spy movies, sports and music mostly the rock and roll. Let's meet!",
-                           birth_date: "2003-07-07",
+                           bio: "Hello everyone, I am James. I am student in tourism. I like to travel to the ocean side and spend my day surfing. Let's meet!",
+                           birth_date: "1999-07-07",
                            gender: "Male",
                            email: "james@example.com",
                            password: "password",
@@ -252,7 +252,7 @@ puts "Guides created"
 
 ContactRequest.create(guide: guide_thomas, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
 ContactRequest.create(guide: guide_marie, explorer: explorer_pawel, activity: 'Arts', status: 'Accepted')
-ContactRequest.create(guide: guide_laura, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
+ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'Pending')
 ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 'Cinema', status: 'Declined')
 
 

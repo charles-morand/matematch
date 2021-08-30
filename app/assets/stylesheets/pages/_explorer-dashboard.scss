@@ -23,6 +23,11 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+.button-home-position {
+  margin-top: -1.3rem;
+}
+
 // -------------------------------------------------------------------Title
 
 .home-dashboard-requests-title {
@@ -38,13 +43,14 @@
   place-content: center;
 }
 
-.home-dashboard-requests {
-  margin: 0 0.63rem;
+  margin: 0 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .home-dashboard-requests-cards {
-  margin: 0.31rem 0;
-  padding-bottom: 4rem;
+  margin: 1.5rem 0;
+  padding-top: 0.5rem;
 }
 
 // ---------------------Contenu d'une card--------------------------------------
@@ -103,9 +109,8 @@
 
 
 // ---------------Bouton pour aller vers activité------------------------------
-.sticky-bottom {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
+// .sticky-bottom {
+//   text-align: center;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }

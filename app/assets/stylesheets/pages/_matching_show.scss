@@ -1,11 +1,23 @@
+.container-guide-profile {
+  height: 100vh;
+}
+
 .guide-profile {
   text-align: center;
   overflow-wrap: break-word;
   padding: 0 1rem;
 }
 
-.address, .gender {
+.guide-address, .guide-gender {
   margin-left: 2rem;
+}
+
+.guide-address {
+  margin-top: 1rem;
+}
+
+.guide-gender {
+margin-top: -1rem;
 }
 
 .send-button-container {
@@ -16,11 +28,17 @@
 .guide-profile-button-send .btn {
   background-color: black;
   color: white;
+  margin-bottom: 1rem;
 }
 
 .guide-age {
   display: flex;
   justify-content: center;
+}
+
+.guide-bio {
+  word-wrap: break-word;
+  margin-top: 1.5rem;
 }
 
 .orange-background {
@@ -46,8 +64,10 @@
 }
 
 .profile-page-hobbies {
+  margin-top: 0.6rem;
   height: 2rem;
   width: 4.6rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
