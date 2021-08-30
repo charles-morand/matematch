@@ -48,6 +48,7 @@
     </div>
   </div>
 
+
   <div class="guide-address">
    <p><span><i class="fas fa-map-marker-alt"></i></span>&nbsp<span>Lives in <strong><%= @matched_user.address %></strong></span></p>
   </div>
@@ -56,7 +57,7 @@
     <p><span><i class="far fa-user"></i></span>&nbsp<span><%= @matched_user.gender %></span></p>
   </div>
 
-  <div class="send-button-container">
+  <div class="long-button-black display-bottom-center">
     <div class="guide-profile-button-send">
       <%= simple_form_for(@contact_request, url: explorer_matching_contact_requests_path(@matched_user)) do |f| %>
         <%= f.submit "Send a request", class: "btn" %>

@@ -30,7 +30,19 @@
         <div class="displayed-genders">
           <% User::GENDERS.each do |gender| %>
             <%= check_box_tag "genders", gender, false, id: "gender-#{gender}", class:"form-checkbox" %>
-            <%= label_tag "gender-#{gender}", gender %>
+            <% if gender === "Male" %>
+              <%= label_tag "gender-#{gender}", gender do %>
+               <i class="fas fa-mars"></i>
+              <% end %>
+            <% elsif gender === "Female" %>
+              <%= label_tag "gender-#{gender}", gender do %>
+                <i class="fas fa-venus"></i>
+              <% end %>
+            <% else %>
+              <%= label_tag "gender-#{gender}", gender do %>
+                <i class="fas fa-venus-mars"></i>
+              <% end %>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -38,8 +50,19 @@
       <div class="chosen-age">
         <h4>Age</h4>
         <div class="displayed-age">
-          <span class="age-pill"><%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true, placeholder: "Min" %></span>
-          <span class="age-pill"><%= number_field_tag "age[]", :ages, in: 18..99, step: 1, multiple: true, placeholder: "Max" %></span>
+
+          <span id="age_display_begin">20</span>
+          <%= number_field_tag "", :ages,
+            type: "range",
+            in: 18..99,
+            step: 1,
+            multiple: true,
+            id: "range" %>
+          <span id="age_display_end">40</span>
+
+          <input type="number" name="age[]" id="age_range_begin" value="18" hidden="true">
+          <input type="number" name="age[]" id="age_range_end" value="99" hidden="true">
+
         </div>
       </div>
 
