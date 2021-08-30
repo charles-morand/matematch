@@ -9,7 +9,7 @@
         <div class="displayed-languages">
           <% User::LANGUAGES.each do |language| %>
             <%= check_box_tag "languages[]", language, false, id: "language-#{language}", class:"form-checkbox" %>
-            <%= label_tag "language-#{language}", language %>
+            <%= label_tag "language-#{language}", flag_icon(language) %>
           <% end %>
         </div>
       </div>
