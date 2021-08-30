@@ -4,9 +4,11 @@
   padding: 0 1rem;
 }
 
-.address, .gender {
-  margin-left: 2rem;
+.address-gender {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
 }
+
 
 .send-button-container {
   display: flex;
@@ -50,4 +52,8 @@
   width: 4.6rem;
   justify-content: center;
   align-items: center;
+}
+
+.display-bottom-center {
+  margin: 9rem auto 0 auto;
 }
