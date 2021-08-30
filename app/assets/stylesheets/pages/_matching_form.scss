@@ -7,7 +7,7 @@
 
 .form-control{
   border-radius: 1rem;
-  border: 1px solid $gold;
+  border: 0.06rem solid $gold;
 }
 
 .picked-languages,
@@ -39,8 +39,8 @@
 .form-checkbox+label {
   cursor: pointer;
   background: white;
-  border: 2px solid rgba(227, 169, 109, 0.2);
-  border-radius: 20px;
+  border: 0.13rem solid rgba(227, 169, 109, 0.2);
+  border-radius: 1.25rem;
   width: 6rem;
   margin: 0.3rem;
   display: grid;
@@ -50,8 +50,8 @@
 
 .form-checkbox:checked+label {
   background: white;
-  border: 2px solid $gold;
-  border-radius: 20px;
+  border: 0.13rem solid $gold;
+  border-radius: 1.25rem;
 }
 
 .displayed-languages, .displayed-genders, .displayed-hobbies {
@@ -65,8 +65,8 @@
 
 .age-pill input{
   background: white;
-  border: 2px solid rgba(227, 169, 109, 0.2);
-  border-radius: 20px;
-  width: 90px;
+  border: 0.13rem solid rgba(227, 169, 109, 0.2);
+  border-radius: 1.25rem;
+  width: 5.63rem;
   margin: 0.5rem;
 }
