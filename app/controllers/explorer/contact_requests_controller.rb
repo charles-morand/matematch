@@ -4,7 +4,8 @@ module Explorer
       @matched_user = User.find(params[:matching_user_id])
       @contact_request = current_user.contact_requests.build(
         status: "pending",
-        guide: @matched_user
+        guide: @matched_user,
+        activity: matching_criteria[:activity]
       )
 
       if @contact_request.save
