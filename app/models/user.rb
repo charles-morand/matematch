@@ -66,8 +66,8 @@ class User < ApplicationRecord
   end
 
   def selected_number_of_activities_between_1_and_3
-    unless (1..3).include?(activities.count)
-      errors.add :activities, "Please choose between 1 and 3 activities"
+    unless (1..3).include?(chosen_activities.count)
+      errors.add :chosen_activities, "Please choose between 1 and 3 activities"
     end
   end
 
