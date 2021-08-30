@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  include AlgoliaSearch
+
   GENDERS = ["Male", "Female", "Undefined"]
   ROLES = ["Guide", "Explorer"]
   LANGUAGES = ["GB", "FR", "ES", "DE", "IT", "PT", "NL", "RU", "PL", "CN", "JP", "KR"]
@@ -32,6 +35,10 @@ class User < ApplicationRecord
 
   def age
     ((DateTime.now - birth_date) / 365).to_i
+  end
+
+  algoliasearch do
+    geoloc :latitude, :longitude
   end
 
   private

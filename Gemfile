@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 gem 'geocoder'
+gem "algoliasearch-rails"
 
 
 gem 'autoprefixer-rails', '10.2.5'
