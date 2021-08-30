@@ -11,6 +11,20 @@
       </div>
       <% end %>
     </div>
+    <div class="guide-current-activities">
+      <% current_user.chosen_activities.each do |activity| %>
+        <div class="guide-dashboard-activity">
+          <%= activity %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="explorer-home-button-flex">
+    <div class="long-button-gold button-home-position">
+    <%# Le bouton doit reprendre le bouton long couleur gold et se retrouver au centre de l'image %>
+      <%= link_to "Change activities", explorer_activities_path %>
+    </div>
   </div>
 
   <div class="home-dashboard-requests">
@@ -54,10 +68,4 @@
        <% end %>
     </div>
   </div>
-
-  <div class="long-button-gold sticky-bottom">
-  <%# iL FAUT TERMINER LE LIEN POUR OUVRIR UNE POP UP %>
-    <%# <%= link_to "Find an experience", %>
-  </div>
-
 </div>
