@@ -16,10 +16,11 @@
 
       <div id="picked-city">
         <h4>Meeting location</h4>
-        <div class="location">
+        <div id="location-form">
           <%= text_field_tag :city,
             params[:city],
             class: "form-control",
+            id: "chosen-location",
             placeholder: "Type a city..."%>
           </div>
       </div>
