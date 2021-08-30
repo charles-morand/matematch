@@ -12,10 +12,16 @@
       <% end %>
     </div>
   </div>
+  <div class="explorer-home-button-flex">
+    <div class="long-button-gold button-home-position">
+    <%# Le bouton doit reprendre le bouton long couleur gold et se retrouver au centre de l'image %>
+      <%= link_to "Find an experience", explorer_activities_path %>
+    </div>
+  </div>
 
   <div class="home-dashboard-requests">
     <div class="home-dashboard-requests-title">
-      <h3>My demands</h3>
+      <h3>My beloved guides</h3>
     </div>
 
     <div class="home-dashboard-requests-cards">
@@ -55,9 +61,5 @@
     </div>
   </div>
 
-  <div class="long-button-gold sticky-bottom">
-  <%# Le bouton doit reprendre le bouton long couleur gold et avoir un comportement sticky d'où la deuxième classe %>
-    <%= link_to "Find an experience", explorer_activities_path %>
-  </div>
 
 </div>
