@@ -35,27 +35,26 @@
       <% end %>
     </div>
 
-    <div class="guide-bio mt-2">
+    <div class="guide-bio">
       <p><%= @matched_user.bio %></p>
     </div>
 
     <div class="guide-languages">
       <% @matched_user.languages.each do |language|%>
-        <div class="index-guides-card-infos-language">
-          <%= flag_icon(language)%>
+        <div class="show-guides-card-infos-language">
+          <%= flag_icon(language) %>
         </div>
       <% end %>
     </div>
   </div>
 
-  <div class="address-gender">
-    <div class="address">
-      <span><i class="fas fa-map-marker-alt"></i></span><span> Lives in <strong><%= @matched_user.address %></strong></span>
-    </div>
 
-    <div class="gender">
-      <span><i class="far fa-user"></i></span><span><%= @matched_user.gender %></span>
-    </div>
+  <div class="guide-address">
+   <p><span><i class="fas fa-map-marker-alt"></i></span>&nbsp<span>Lives in <strong><%= @matched_user.address %></strong></span></p>
+  </div>
+
+  <div class="guide-gender">
+    <p><span><i class="far fa-user"></i></span>&nbsp<span><%= @matched_user.gender %></span></p>
   </div>
 
   <div class="long-button-black display-bottom-center">

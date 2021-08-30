@@ -76,6 +76,10 @@
         </div>
       </div>
 
+      <div class="activities-params">
+        <% hidden_field_tag "activities", @selected_activity %>
+      </div>
+
     </div>
     <div class= "pages-buttons">
 
@@ -85,9 +89,6 @@
         <% end %>
       </div>
 
-      <div class="activities-params">
-
-      </div>
 
       <div class="next-page">
         <%= button_tag type: 'submit', class: "button postfix" do%>

@@ -8,7 +8,7 @@
 
 .form-control{
   border-radius: 1rem;
-  border: 1px solid #E3A96D;
+  border: 0.06rem solid $gold;
 }
 
 .picked-languages,
@@ -104,6 +104,7 @@
   border-radius: 20px;
   color: white;
   font-weight: bolder;
+
 }
 
 .displayed-languages, .displayed-genders, .displayed-hobbies {
@@ -116,9 +117,9 @@
 // En attendant de mettre du JS pour le slider de l'age
 
 .age-pill input{
-  background: #FFFFFF;
-  border: 2px solid rgba(227, 169, 109, 0.2);
-  border-radius: 20px;
-  width: 90px;
+  background: white;
+  border: 0.13rem solid rgba(227, 169, 109, 0.2);
+  border-radius: 1.25rem;
+  width: 5.63rem;
   margin: 0.5rem;
 }

@@ -3,10 +3,10 @@
   position: relative;
   height: 12rem;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background-size: cover;
   background-position: bottom;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0.94rem rgba(0,0,0,0.2);
   display: grid;
   place-content: center;
   margin-bottom: 1.5rem;
@@ -27,5 +27,5 @@
 }
 
 body {
-  background-color: #FDF7F1;
+  background-color: $beige;
 }

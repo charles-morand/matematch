@@ -1,9 +1,9 @@
 // Long button
 .long-button-gold {
   width: 60vw;
-  height: 40px;
-  border-radius: 8px;
-  background-color: #E3A96D;
+  height: 2.5em;
+  border-radius: 0.5rem;
+  background-color: $gold;
   display: grid;
   place-content: center;
   font-weight: bolder;
@@ -22,8 +22,8 @@
 
 .long-button-black {
   width: 60vw;
-  height: 40px;
-  border-radius: 8px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
   background-color: black;
   display: grid;
   place-content: center;
@@ -43,15 +43,15 @@
 // Boutons de navigation
 // ------------------------Next page--------------------------
 .next-page button{
-  border:0;
-  background:none;
-  color: #E3A96D;
+  border: 0;
+  background: none;
+  color: $gold;
   font-size: 3rem;
 }
 // ------------------------Previous page---------------------------
 .previous-page {
   i {
-  color: #E3A96D;
+  color: $gold;
   font-size: 3rem;
   }
 }
@@ -60,10 +60,10 @@
 // Pillules des hobbies------------------------------------------------------
 
 .gold-pill {
-  background-color: #E3A96D;
-  border-radius: 10px;
+  background-color: $gold;
+  border-radius: 0.63rem;
   color: black;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .guide-profile-button-send .btn {
