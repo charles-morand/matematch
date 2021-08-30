@@ -25,7 +25,12 @@ class User < ApplicationRecord
   validates :chosen_activities, presence: true
   validates :address, presence: true
 
-  validate :languages_are_included_in_list, :hobbies_are_included_in_list, :chosen_activities_are_included_in_list, :selected_number_of_hobbies_between_1_and_3, :selected_number_of_languages_between_1_and_5
+  validate :languages_are_included_in_list,
+           :hobbies_are_included_in_list,
+           :chosen_activities_are_included_in_list,
+           :selected_number_of_hobbies_between_1_and_3,
+           :selected_number_of_languages_between_1_and_5,
+           :selected_number_of_activities_between_1_and_3
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -57,6 +62,12 @@ class User < ApplicationRecord
   def selected_number_of_hobbies_between_1_and_3
     unless (1..3).include?(hobbies.count)
       errors.add :hobbies, "Please choose between 1 and 3 hobbies"
+    end
+  end
+
+  def selected_number_of_activities_between_1_and_3
+    unless (1..3).include?(activities.count)
+      errors.add :activities, "Please choose between 1 and 3 activities"
     end
   end
 
