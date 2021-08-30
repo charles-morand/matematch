@@ -142,7 +142,7 @@ guide_laura.save!
 
 guide_marie = User.create!(first_name: "Marie",
                            last_name: "Cotiello",
-                           bio: "Hi everyone, my name is Marie. I study general medecine. I like football, tourism and spanish cuisine. Let's meet!",
+                           bio: "Hi everyone, my name is Marie. I study general medecine. I like football, tourism and spanish cuisine. Let's meet!",
                            birth_date: "1997-06-10",
                            gender: "Female",
                            email: "marie@example.com",

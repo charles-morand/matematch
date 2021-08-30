@@ -71,3 +71,19 @@ margin-top: -1rem;
   justify-content: center;
   align-items: center;
 }
+
+.guide-languages {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.show-guides-card-infos-language {
+  background: white;
+  border: 2px solid rgba(227, 169, 109, 0.2);
+  border-radius: 20px;
+  width: 6rem;
+  margin: 0.3rem;
+  display: grid;
+  place-content: center;
+  padding: .5rem;
+}
