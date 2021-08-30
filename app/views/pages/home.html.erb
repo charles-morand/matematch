@@ -1,8 +1,8 @@
 <div class="container-home-visitor">
 
   <div class="home-visitor-header">
-    <div class="logo-white">
-      <%= image_tag("logos/logo-blanc.svg", alt:"logo de matematch écrit en blanc")%>
+    <div class="logo-black">
+      <%= image_tag("logos/logo-noir.svg", alt:"logo de matematch écrit en noir")%>
     </div>
     <div class="home-visitor-slogan">
       <p>Share local experiences</p>
@@ -10,8 +10,8 @@
   </div>
 
   <div class="home-visitor-buttons">
-    <div class="home-visitor-button-login">
-      <p>Log in</p>
+    <div class="long-button-black">
+      <%= link_to "Log in", new_user_session_path%>
     </div>
 
     <div class="home-visitor-button-signup">
