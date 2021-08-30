@@ -3,7 +3,7 @@
   width: 60vw;
   height: 40px;
   border-radius: 8px;
-  background-color: #E3A96D;
+  background-color: $gold;
   display: grid;
   place-content: center;
   font-weight: bolder;
@@ -45,13 +45,13 @@
 .next-page button{
   border:0;
   background:none;
-  color: #E3A96D;
+  color: $gold;
   font-size: 3rem;
 }
 // ------------------------Previous page---------------------------
 .previous-page {
   i {
-  color: #E3A96D;
+  color: $gold;
   font-size: 3rem;
   }
 }
@@ -60,7 +60,7 @@
 // Pillules des hobbies------------------------------------------------------
 
 .gold-pill {
-  background-color: #E3A96D;
+  background-color: $gold;
   border-radius: 10px;
   color: black;
   font-size: 12px;

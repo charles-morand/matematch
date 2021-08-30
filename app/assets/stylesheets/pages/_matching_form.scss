@@ -7,7 +7,7 @@
 
 .form-control{
   border-radius: 1rem;
-  border: 1px solid #E3A96D;
+  border: 1px solid $gold;
 }
 
 .picked-languages,
@@ -38,7 +38,7 @@
 
 .form-checkbox+label {
   cursor: pointer;
-  background: #FFFFFF;
+  background: white;
   border: 2px solid rgba(227, 169, 109, 0.2);
   border-radius: 20px;
   width: 6rem;
@@ -49,8 +49,8 @@
 }
 
 .form-checkbox:checked+label {
-  background: #FFFFFF;
-  border: 2px solid #E3A96D;
+  background: white;
+  border: 2px solid $gold;
   border-radius: 20px;
 }
 
@@ -64,7 +64,7 @@
 // En attendant de mettre du JS pour le slider de l'age
 
 .age-pill input{
-  background: #FFFFFF;
+  background: white;
   border: 2px solid rgba(227, 169, 109, 0.2);
   border-radius: 20px;
   width: 90px;
