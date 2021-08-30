@@ -15,7 +15,7 @@
 
   <div class="home-dashboard-requests">
     <div class="home-dashboard-requests-title">
-      <h3>My demands</h3>
+      <h3>My beloved explorers</h3>
     </div>
 
     <div class="home-dashboard-requests-cards">
@@ -24,11 +24,11 @@
         <div class="home-dashboard-requests-card <%= request.status.downcase %>">
           <div class="home-dashboard-requests-card-infos">
             <div class="home-dashboard-requests-card-avatar avatar-request">
-              <%= image_tag(url_for(request.guide.photo)) %>
+              <%= image_tag(url_for(request.explorer.photo)) %>
             </div>
             <div class="home-dashboard-requests-card-name-activity">
               <div class="home-dashboard-requests-card-name">
-                <h4><%= request.guide.first_name %></h4>
+                <h4><%= request.explorer.first_name %></h4>
               </div>
               <div class="home-dashboard-requests-card-activity">
                 <%= request.activity %>
@@ -57,7 +57,7 @@
 
   <div class="long-button-gold sticky-bottom">
   <%# iL FAUT TERMINER LE LIEN POUR OUVRIR UNE POP UP %>
-    <%# <%= link_to "Find an experience", %> %>
+    <%# <%= link_to "Find an experience", %>
   </div>
 
 </div>

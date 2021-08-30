@@ -258,5 +258,7 @@ ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 
 
 ContactRequest.create(guide: guide_thomas, explorer: explorer_dirk, activity: 'Sports', status: 'Accepted')
 ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Travel', status: 'Declined')
+ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Hanging out', status: 'Pending')
+
 
 puts "ContactRequests created"
