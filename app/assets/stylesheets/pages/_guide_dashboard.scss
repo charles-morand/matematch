@@ -31,6 +31,8 @@
     background-color: rgba(227, 169, 109, 0.5);
     border: none;
     opacity: 1;
+  }
+}
 
 .modal-content {
   background-color: white;
@@ -67,6 +69,7 @@
     padding: .5rem;
     margin-bottom: 0;
   }
+
   .form-checkbox:checked+label {
     background: $gold;
     border: 2px solid $gold;
@@ -86,7 +89,7 @@
       border-radius: 20px;
       color: white;
       font-weight: bold;
-
+    }
     i {
       color: $gold;
     }
@@ -128,7 +131,6 @@
     .btn {
       color: white;
       background-color: black;
-
     }
   }
 }
