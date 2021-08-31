@@ -91,15 +91,16 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <% @activities.each do |activity| %>
+      <div class="displayed-activities">
+        <% User::ACTIVITIES.each do |activity| %>
           <div class="guide-activities">
-            <%= activity %>
+            <%= check_box_tag "activities[]", activity, false, id: "activity-#{activity}", class:"form-checkbox check-hobbies" %>
+            <%= label_tag "activity-#{activity}", activity %>
           </div>
         <% end %>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer guide-profile-button-send">
+        <%= button_tag type: 'submit', class: "btn"%>
       </div>
     </div>
   </div>

@@ -77,43 +77,6 @@
   padding-right: 2rem;
 }
 
-.form-checkbox {
-  position: absolute;
-  transform: scale(0);
-}
-
-.check-hobbies+label {
-  width: 9rem !important;
-}
-
-.form-checkbox+label {
-  cursor: pointer;
-  background: rgba($gold, 0.2);
-  border: 2px solid rgba($gold, 0.5);
-  border-radius: 20px;
-  width: 6rem;
-  height: 3rem;
-  display: grid;
-  place-content: center;
-  padding: .5rem;
-}
-
-.form-checkbox:checked+label {
-  background: $gold;
-  border: 2px solid $gold;
-  border-radius: 20px;
-  color: white;
-  font-weight: bolder;
-
-}
-
-.displayed-languages, .displayed-genders, .displayed-hobbies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 // En attendant de mettre du JS pour le slider de l'age
 
 .age-pill input{
