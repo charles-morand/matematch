@@ -97,6 +97,11 @@
 // ---------------------------------Adaptation de la card en fonction de l'état
 .pending {
   border: 0.19rem solid rgba(227, 169, 109, 0.4);
+
+  .icon-request {
+    background-color: rgba(227, 169, 109, 0.4);
+    border: none;
+  }
 }
 .accepted{
     border: 0.19rem solid $gold;
@@ -106,7 +111,6 @@
   border: 0.19rem solid rgba(227, 169, 109, 0.4);
   margin-left: 0.5rem;
 }
-
 
 
 

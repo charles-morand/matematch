@@ -71,16 +71,19 @@
                   </div>
                 <% end %>
               </div>
+<%# ACCEPTE %>
             <% else %>
               <% if request.status == "Accepted" %>
-                <div class="icon-request accepted">
+                <div class="icon-request guide-accepted">
                   <i class="fas fa-check"></i>
                 </div>
+<%# REFUSE %>
               <% elsif request.status == "Declined" %>
-                <div class="icon-request declined">
+                <div class="icon-request guide-declined">
                   <i class="fas fa-times"></i>
                 </div>
               <% end %>
+
             <% end %>
           </div>
         </div>
