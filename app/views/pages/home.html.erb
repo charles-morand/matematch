@@ -9,14 +9,25 @@
     </div>
   </div>
 
-  <div class="home-visitor-buttons">
-    <div class="long-button-black">
-      <%= link_to "Log in", new_user_session_path%>
-    </div>
+  <div>
+    <div class="home-visitor-buttons">
+      <% if user_signed_in? %>
+        <div class="long-button-gold">
+          <% if current_user.role == "Guide" %>
+            <%= link_to "Start now", guide_dashboard_path %>
+          <% elsif current_user.role == "Explorer" %>
+            <%= link_to "Start now", explorer_dashboard_path %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="long-button-black">
+          <%= link_to "Log in", new_user_session_path %>
+        </div>
 
-    <div class="long-button-gold">
-      <%= link_to "Sign Up", new_user_session_path%>
+        <div class="long-button-gold">
+          <%= link_to "Sign Up", new_user_registration_path %>
+        </div>
+      <% end %>
     </div>
   </div>
-
 </div>
