@@ -91,17 +91,19 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="displayed-activities">
-        <% User::ACTIVITIES.each do |activity| %>
-          <div class="guide-activities">
-            <%= check_box_tag "activities[]", activity, false, id: "activity-#{activity}", class:"form-checkbox check-activities" %>
-            <%= label_tag "activity-#{activity}", activity %>
-          </div>
-        <% end %>
-      </div>
-      <div class="modal-footer guide-profile-button-send">
-        <%= button_tag type: 'submit', class: "btn"%>
-      </div>
+      <%= simple_form_for current_user, url: guide_chosen_activities_path, method: :patch do |f| %>
+        <div class="displayed-activities">
+          <% User::ACTIVITIES.each do |activity| %>
+            <div class="guide-activities">
+              <%= check_box_tag "user[chosen_activities][]", activity, false, id: "activity-#{activity.parameterize}", requrired: true, class:"form-checkbox check-activities" %>
+              <%= label_tag "activity-#{activity.parameterize}", activity %>
+            </div>
+          <% end %>
+        </div>
+        <div class="modal-footer guide-profile-button-send">
+          <%= f.submit value: "validate", class: "btn", data: { disable_with: "updating..." } %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
