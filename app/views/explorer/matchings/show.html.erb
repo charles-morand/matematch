@@ -1,13 +1,13 @@
 <div class="container-guide-profile">
 
-  <div class="upper-back-arrow">
+  <div class="orange-background">
+    <div class="upper-back-arrow">
     <%= link_to explorer_matchings_path do %>
-      <i class="fas fa-arrow-left"></i>
+      <i class="fas fa-arrow-left arrow-white"></i>
     <% end %>
   </div>
-
-  <div class="orange-background">
   </div>
+
   <div class="profile-photo">
     <div class="avatar-profile place-avatar-profile">
       <%= image_tag(url_for(@matched_user.photo)) %>
@@ -19,6 +19,7 @@
     <div class="guide-name">
       <h3><%= @matched_user.first_name %></h3>
     </div>
+
     <div class="guide-age">
       <div class="first-part-age">
         <p><%= @matched_user.age %></p>
@@ -47,18 +48,27 @@
         </div>
       <% end %>
     </div>
+
+    <div class="guide-address">
+      <div class="icon-address">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="text-address">
+        <p>Lives in <strong><%= @matched_user.address %></strong></p>
+      </div>
+    </div>
+
+    <div class="guide-gender">
+      <div class="icon-gender">
+        <i class="far fa-user"></i>
+      </div>
+      <div class="text-gender">
+        <%= @matched_user.gender %>
+      </div>
+    </div>
   </div>
 
-
-  <div class="guide-address">
-   <p><span><i class="fas fa-map-marker-alt"></i></span>&nbsp<span>Lives in <strong><%= @matched_user.address %></strong></span></p>
-  </div>
-
-  <div class="guide-gender">
-    <p><span><i class="far fa-user"></i></span>&nbsp<span><%= @matched_user.gender %></span></p>
-  </div>
-
-  <div class="long-button-black display-bottom-center">
+  <div class="long-button display-bottom-center">
     <div class="guide-profile-button-send">
       <%= simple_form_for(@contact_request, url: explorer_matching_contact_requests_path(@matched_user)) do |f| %>
         <%= f.submit "Send a request", class: "btn" %>
