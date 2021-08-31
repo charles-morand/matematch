@@ -89,3 +89,22 @@
   color: black;
   font-size: 0.75rem;
 }
+
+// Button devise
+.button-devise-login {
+  width: 60vw;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.log-in-form a {
+  color: $gold;
+}
