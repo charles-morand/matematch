@@ -5,16 +5,24 @@
       <div class="home-dashboard-logo">
           <%= image_tag "logos/logo-blanc.svg", id:"logo-white", alt:"logo de matematch écrit en blanc" %>
       </div>
+
       <%= link_to profile_path do %>
         <div class="icon-my-profile">
-        <i class="fas fa-user-circle"></i>
-      </div>
+          <i class="fas fa-user-circle"></i>
+        </div>
       <% end %>
+
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <div class="icon-my-profile">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+      <% end %>
+
     </div>
   </div>
+
   <div class="explorer-home-button-flex">
     <div class="long-button-gold button-home-position">
-    <%# Le bouton doit reprendre le bouton long couleur gold et se retrouver au centre de l'image %>
       <%= link_to "Find an experience", explorer_activities_path %>
     </div>
   </div>

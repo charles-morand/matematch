@@ -1,4 +1,4 @@
-<div class="home-dashboard">
+<div class="home-dashboard guide-dashboard">
 
   <div class="home-dashboard-background", id="home-background", alt="Van jaune sur la route dans le désert">
     <div class="home-dashboard-header">
@@ -7,8 +7,14 @@
       </div>
       <%= link_to profile_path do %>
         <div class="icon-my-profile">
-        <i class="fas fa-user-circle"></i>
-      </div>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      <% end %>
+
+       <%= link_to destroy_user_session_path, method: :delete do %>
+        <div class="icon-my-profile">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
       <% end %>
     </div>
     <div class="guide-current-activities">
@@ -65,16 +71,19 @@
                   </div>
                 <% end %>
               </div>
+<%# ACCEPTE %>
             <% else %>
               <% if request.status == "Accepted" %>
-                <div class="icon-request accepted">
+                <div class="icon-request guide-accepted">
                   <i class="fas fa-check"></i>
                 </div>
+<%# REFUSE %>
               <% elsif request.status == "Declined" %>
-                <div class="icon-request declined">
+                <div class="icon-request guide-declined">
                   <i class="fas fa-times"></i>
                 </div>
               <% end %>
+
             <% end %>
           </div>
         </div>

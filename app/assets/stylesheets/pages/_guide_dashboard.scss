@@ -1,34 +1,36 @@
-.guide-current-activities {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+.guide-dashboard {
+  .guide-current-activities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.guide-dashboard-activity {
-  background: white;
-  border: 0.13rem solid rgba(227, 169, 109, 0.2);
-  border-radius: 1.25rem;
-  width: 5.5rem;
-  height: 2.5rem;
-  margin: 2rem 0.5rem 0rem 0.5rem;
-  display: grid;
-  place-content: center;
-  padding: .5rem;
-  color: $gold;
-  font-size: 0.8rem;
-  text-align: center;
-  font-weight: bold;
-}
+  .guide-dashboard-activity {
+    background: white;
+    border: 0.13rem solid rgba(227, 169, 109, 0.2);
+    border-radius: 1.25rem;
+    width: 5.5rem;
+    height: 2.5rem;
+    margin: 2rem 0.5rem 0rem 0.5rem;
+    display: grid;
+    place-content: center;
+    padding: .5rem;
+    color: $gold;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+  }
 
-.confirm-request-guide {
-  display: flex;
-}
+  .home-dashboard-requests-card-name {
+    display: grid;
+    place-content: baseline !important;
+  }
 
-.modal-footer {
-  display: flex;
-  justify-content: center;
-}
+  .pending .icon-request {
+    background-color: rgba(227, 169, 109, 0.5);
+    border: none;
+    opacity: 1;
 
 .modal-content {
   background-color: white;
@@ -84,6 +86,49 @@
       border-radius: 20px;
       color: white;
       font-weight: bold;
+
+    i {
+      color: $gold;
+    }
+  }
+
+  .confirm-request-guide {
+    display: flex;
+    width: 4.5rem;
+    justify-content: space-between;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    height: 50vh;
+    width: 85vw;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .displayed-activities {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .guide-activities {
+    padding: 0.3rem;
+  }
+
+  .activities-popup-header {
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+    .btn {
+      color: white;
+      background-color: black;
+
     }
   }
 }
