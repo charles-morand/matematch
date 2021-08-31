@@ -12,7 +12,11 @@ class ApplicationController < ActionController::Base
   def matching_criteria
     @matching_criteria ||= begin
       ContactRequest::MATCHING_CRITERIA.each_with_object({}) do |criteria, h|
-        h[criteria] = (session[criteria] ||= params[criteria])
+        h[criteria] = if params[criteria].present?
+                        (session[criteria] = params[criteria])
+                      else
+                        session[criteria]
+                      end
       end
     end
   end

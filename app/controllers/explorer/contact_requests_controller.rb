@@ -9,7 +9,7 @@ module Explorer
       )
 
       if @contact_request.save
-        redirect_to explorer_root_path
+        redirect_to explorer_dashboard_path
       else
         render "explorer/matchings/show"
       end
