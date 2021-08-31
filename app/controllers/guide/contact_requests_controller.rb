@@ -9,6 +9,7 @@ class Guide::ContactRequestsController < ApplicationController
   def decline
     contact_request = ContactRequest.find(params[:id])
     contact_request.status = "Declined"
-    contact_request.save
+    contact_request.destroy
+    redirect_to guide_dashboard_path
   end
 end
