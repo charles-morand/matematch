@@ -1,0 +1,37 @@
+.container-home-visitor {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("backgrounds/home-visitor-background.png");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .home-visitor-header {
+    padding: 0 1rem;
+
+    .logo-blanc {
+      color: white;
+      text-align: center;
+      margin-top: 3rem !important;
+      margin: 0 auto;
+    }
+  }
+
+  .home-visitor-slogan {
+    color: white;
+    position: absolute;
+    top: 10rem;
+
+    p {
+      font-size: x-large;
+    }
+  }
+
+  .home-visitor-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    margin-bottom: 5rem;
+  }
+}

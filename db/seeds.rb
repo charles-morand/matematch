@@ -24,7 +24,7 @@ explorer_pawel = User.create!(first_name: "Pawel",
                               languages: ["PL", "GB", "FR"],
                               hobbies: ["Culture", "Music", "Travel"],
                               chosen_activities: ["Arts"],
-                              address: "Nantes")
+                              address: "Nantes, Pays-de-la-Loire, France")
 
 explorer_pawel_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_pawel.jpg'))
 explorer_pawel.photo.attach(io: explorer_pawel_file, filename: 'explorer_pawel.jpg', content_type: 'image/jpg')
@@ -32,7 +32,7 @@ explorer_pawel.save!
 
 explorer_dirk = User.create!(first_name: "Dirk",
                              last_name: "Nowitzki",
-                             bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to metting you soon!",
+                             bio: "Hello, my name is Dirk. I come from Germany and I am a French letters student. I really like France and I hope staying here for a long time!. I look forward to meeting you soon!",
                              birth_date: "1997-04-14",
                              gender: "Male",
                              email: "dirk@example.com",
@@ -42,7 +42,7 @@ explorer_dirk = User.create!(first_name: "Dirk",
                              languages: ["DE", "GB"],
                              hobbies: ["DIY", "Hiking", "Culture"],
                              chosen_activities: ["Sports"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 explorer_dirk_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_dirk.jpg'))
 explorer_dirk.photo.attach(io: explorer_dirk_file, filename: 'explorer_dirk.jpg', content_type: 'image/jpg')
@@ -60,7 +60,7 @@ explorer_toby = User.create!(first_name: "Toby",
                              languages: ["RU", "GB"],
                              hobbies: ["Surf", "Skateboard", "Theater"],
                              chosen_activities: ["Sports"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 explorer_toby_file = File.open(Rails.root.join('db/seeds/user_avatars/explorer_toby.jpg'))
 explorer_toby.photo.attach(io: explorer_toby_file, filename: 'explorer_toby.jpg', content_type: 'image/jpg')
@@ -70,7 +70,7 @@ puts "Explorers created"
 
 guide_thomas = User.create!(first_name: "Thomas",
                             last_name: "Petit",
-                            bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's meet!",
+                            bio: "Hello, my name is Thomas. I work in Nantes since 2018. I like music, environment and asian food. Let's met!",
                             birth_date: "1997-03-24",
                             gender: "Male",
                             email: "thomas@example.com",
@@ -80,7 +80,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             languages: ["FR", "GB", "DE"],
                             hobbies: ["Football", "Fitness", "Skateboard"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
-                            address: "Nantes")
+                            address: "Nantes, Pays-de-la-Loire, France")
 
 guide_thomas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_thomas.jpg'))
 guide_thomas.photo.attach(io: guide_thomas_file, filename: 'guide_thomas.jpg', content_type: 'image/jpg')
@@ -98,7 +98,7 @@ guide_julien = User.create!(first_name: "Julien",
                             languages: ["FR", "GB", "IT"],
                             hobbies: ["Travel", "Ecology", "Cooking"],
                             chosen_activities: ["Arts", "Sports", "Hanging out"],
-                            address: "Nantes")
+                            address: "Nantes, Pays-de-la-Loire, France")
 
 guide_julien_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_julien.jpg'))
 guide_julien.photo.attach(io: guide_julien_file, filename: 'guide_julien.jpg', content_type: 'image/jpg')
@@ -116,7 +116,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              languages: ["FR", "GB", "CN"],
                              hobbies: ["Skateboard", "Music", "Ecology"],
                              chosen_activities: ["Arts", "Sports", "Hanging out"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_aymeric_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_aymeric.jpg'))
 guide_aymeric.photo.attach(io: guide_aymeric_file, filename: 'guide_aymeric.jpg', content_type: 'image/jpg')
@@ -134,7 +134,7 @@ guide_laura = User.create!(first_name: "Laura",
                            languages: ["ES", "GB", "JP"],
                            hobbies: ["Cooking", "Cycling", "Tennis"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
-                           address: "Nantes")
+                           address: "Nantes, Pays-de-la-Loire, France")
 
 guide_laura_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_laura.jpg'))
 guide_laura.photo.attach(io: guide_laura_file, filename: 'guide_laura.jpg', content_type: 'image/jpg')
@@ -152,7 +152,7 @@ guide_marie = User.create!(first_name: "Marie",
                            languages: ["IT", "GB", "ES"],
                            hobbies: ["Football", "Basketball", "Travel"],
                            chosen_activities: ["Arts", "Sports", "Hanging out"],
-                           address: "Nantes")
+                           address: "Nantes, Pays-de-la-Loire, France")
 
 guide_marie_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_marie.jpg'))
 guide_marie.photo.attach(io: guide_marie_file, filename: 'guide_marie.jpg', content_type: 'image/jpg')
@@ -170,7 +170,7 @@ guide_simon = User.create!(first_name: "Simon",
                            languages: ["FR", "GB", "RU"],
                            hobbies: ["Travel", "Music", "Basketball"],
                            chosen_activities: ["Sports", "Music", "Arts"],
-                           address: "Nantes")
+                           address: "Nantes, Pays-de-la-Loire, France")
 
 guide_simon_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_simon.jpg'))
 guide_simon.photo.attach(io: guide_simon_file, filename: 'guide_simon.jpg', content_type: 'image/jpg')
@@ -188,7 +188,7 @@ guide_wilfrid = User.create!(first_name: "Wilfrid",
                              languages: ["FR", "GB", "PT"],
                              hobbies: ["Music", "Surf", "Cooking"],
                              chosen_activities: ["Sports", "Cinema", "Arts"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_wilfrid_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_wilfrid.jpg'))
 guide_wilfrid.photo.attach(io: guide_wilfrid_file, filename: 'guide_wilfrid.jpg', content_type: 'image/jpg')
@@ -206,7 +206,7 @@ guide_mohamed = User.create!(first_name: "Mohamed",
                              languages: ["FR", "GB", "RU"],
                              hobbies: ["Skateboard", "Surf", "Theater"],
                              chosen_activities: ["Sports", "Cinema", "Music"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_mohamed_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_mohamed.jpg'))
 guide_mohamed.photo.attach(io: guide_mohamed_file, filename: 'guide_mohamed.jpg', content_type: 'image/jpg')
@@ -224,7 +224,7 @@ guide_nicolas = User.create!(first_name: "Nicolas",
                              languages: ["FR", "GB", "KR"],
                              hobbies: ["Cooking", "DIY", "Music"],
                              chosen_activities: ["Cinema", "Music", "Arts"],
-                             address: "Nantes")
+                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_nicolas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_nicolas.jpg'))
 guide_nicolas.photo.attach(io: guide_nicolas_file, filename: 'guide_nicolas.jpg', content_type: 'image/jpg')
@@ -242,7 +242,7 @@ guide_james = User.create!(first_name: "James",
                            languages: ["FR", "GB", "DE"],
                            hobbies: ["Travel", "Surf", "Cycling"],
                            chosen_activities: ["Sports", "Cinema", "Arts"],
-                           address: "Nantes")
+                           address: "Nantes, Pays-de-la-Loire, France")
 
 guide_james_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_james.jpg'))
 guide_james.photo.attach(io: guide_james_file, filename: 'guide_james.jpg', content_type: 'image/jpg')
