@@ -94,7 +94,7 @@
       <div class="displayed-activities">
         <% User::ACTIVITIES.each do |activity| %>
           <div class="guide-activities">
-            <%= check_box_tag "activities[]", activity, false, id: "activity-#{activity}", class:"form-checkbox check-hobbies" %>
+            <%= check_box_tag "activities[]", activity, false, id: "activity-#{activity}", class:"form-checkbox check-activities" %>
             <%= label_tag "activity-#{activity}", activity %>
           </div>
         <% end %>
