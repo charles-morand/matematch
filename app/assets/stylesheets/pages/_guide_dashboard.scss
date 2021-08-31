@@ -24,3 +24,13 @@
 .confirm-request-guide {
   display: flex;
 }
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+  border-radius: 1rem;
+  height: 60vh;
+}
