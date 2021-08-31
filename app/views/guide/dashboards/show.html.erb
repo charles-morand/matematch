@@ -7,8 +7,14 @@
       </div>
       <%= link_to profile_path do %>
         <div class="icon-my-profile">
-        <i class="fas fa-user-circle"></i>
-      </div>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      <% end %>
+
+       <%= link_to destroy_user_session_path, method: :delete do %>
+        <div class="icon-my-profile">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
       <% end %>
     </div>
     <div class="guide-current-activities">
