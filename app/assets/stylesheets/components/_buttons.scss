@@ -20,6 +20,7 @@
   }
 }
 
+
 .long-button-black {
   width: 60vw;
   height: 2.5rem;
@@ -40,6 +41,22 @@
   }
 }
 
+.long-button {
+  width: 60vw;
+  font-weight: bolder;
+
+  .guide-profile-button-send .btn {
+    width: 60vw;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    position: absolute;
+    bottom: 2rem;
+    font-weight: bolder;
+    color: white;
+  }
+}
+
 // Boutons de navigation
 // ------------------------Next page--------------------------
 .next-page button{
@@ -49,11 +66,19 @@
   font-size: 3rem;
 }
 // ------------------------Previous page---------------------------
-.previous-page {
-  i {
+
+.fa-arrow-left {
   color: $gold;
-  font-size: 3rem;
-  }
+  font-size: 1.5rem;
+}
+
+.arrow-white {
+  color: white;
+}
+
+.upper-back-arrow {
+  font-weight: lighter;
+  padding: 1.5rem 0 0 1.5rem;
 }
 
 
@@ -64,19 +89,4 @@
   border-radius: 0.63rem;
   color: black;
   font-size: 0.75rem;
-}
-
-.guide-profile-button-send .btn {
-  background-color: black;
-  color: white;
-  border-radius: 1rem;
-  width: 60vw;
-  justify-content: center;
-}
-
-.upper-back-arrow {
-  color: $gold;
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
-  font-weight: lighter;
 }

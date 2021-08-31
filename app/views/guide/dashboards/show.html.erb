@@ -49,31 +49,35 @@
               </div>
             </div>
           </div>
+
           <div class="home-dashboard-requests-card-status">
-            <% if request.status == "pending" %>
-              <div class="icon-request accepted">
-                <%= link_to  accept_guide_contact_request(contact_request), method: :patch, data: { confirm: "Please confirm you want to meet this explorer!" } do %>
-                  <i class="fas fa-check"></i>
+            <% if request.status == "Pending" %>
+              <div class="confirm-request-guide">
+                <%= link_to accept_guide_contact_request_path(request), method: :patch, data: { confirm: "Please confirm you want to meet this explorer!" } do %>
+                  <div class="icon-request accepted">
+                    <i class="fas fa-check"></i>
+                  </div>
                 <% end %>
-              </div>
-              <div class="icon-request declined">
-                <%= link_to  accept_guide_contact_request(contact_request), method: :patch, data: { confirm: "Please confirm you want to delete this demand!" } do %>
-                 <i class="fas fa-times"></i>
+                <%= link_to accept_guide_contact_request_path(request), method: :patch, data: { confirm: "Please confirm you want to delete this demand!" } do %>
+                  <div class="icon-request declined">
+                    <i class="fas fa-times"></i>
+                  </div>
                 <% end %>
               </div>
             <% else %>
-              <% if request.status == "accepted" %>
-                <i class="fas fa-check"></i>
-              <% elsif request.status == "declined" %>
-                <i class="fas fa-times"></i>
+              <% if request.status == "Accepted" %>
+                <div class="icon-request accepted">
+                  <i class="fas fa-check"></i>
+                </div>
+              <% elsif request.status == "Declined" %>
+                <div class="icon-request declined">
+                  <i class="fas fa-times"></i>
+                </div>
               <% end %>
-              <div class="icon-request pending">
-                <i class="fas fa-hourglass"></i>
-              </div>
             <% end %>
           </div>
         </div>
-       <% end %>
+      <% end %>
     </div>
   </div>
 </div>
