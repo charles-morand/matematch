@@ -1,5 +1,5 @@
 class Explorer::DashboardsController < ApplicationController
-  def index
+  def show
     @sent_requests = current_user.contact_requests
   end
 end
