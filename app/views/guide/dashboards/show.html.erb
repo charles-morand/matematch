@@ -23,7 +23,7 @@
   <div class="explorer-home-button-flex">
     <div class="long-button-gold button-home-position">
       <button data-toggle="modal" data-target="#exampleModalCenter">
-        Change activities
+        <p>Change activities</p>
       </button>
     </div>
   </div>
@@ -54,12 +54,12 @@
           <div class="home-dashboard-requests-card-status">
             <% if request.status == "Pending" %>
               <div class="confirm-request-guide">
-                <%= link_to accept_guide_contact_request_path(request), method: :patch, data: { confirm: "Please confirm you want to meet this explorer!" } do %>
+                <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
                   <div class="icon-request accepted">
                     <i class="fas fa-check"></i>
                   </div>
                 <% end %>
-                <%= link_to accept_guide_contact_request_path(request), method: :patch, data: { confirm: "Please confirm you want to delete this demand!" } do %>
+                <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
                   <div class="icon-request declined">
                     <i class="fas fa-times"></i>
                   </div>
