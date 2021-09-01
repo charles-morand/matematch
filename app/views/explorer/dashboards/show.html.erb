@@ -6,15 +6,15 @@
           <%= image_tag "logos/logo-blanc.svg", id:"logo-white", alt:"logo de matematch écrit en blanc" %>
       </div>
 
-      <%= link_to profile_path do %>
-        <div class="icon-my-profile">
-          <i class="fas fa-user-circle"></i>
-        </div>
-      <% end %>
+      <%# <%= link_to profile_path do %>
+        <%# <div class="icon-my-profile"> %>
+          <%# <i class="fas fa-user-circle"></i> %>
+        <%# </div> %>
+      <%# <% end %>
 
       <%= link_to destroy_user_session_path, method: :delete do %>
         <div class="icon-my-profile">
-          <i class="fas fa-sign-out-alt"></i>
+          <i class="fas fa-user-circle"></i>
         </div>
       <% end %>
 
@@ -44,8 +44,13 @@
               <div class="home-dashboard-requests-card-name">
                 <h4><%= request.guide.first_name %></h4>
               </div>
-              <div class="home-dashboard-requests-card-activity">
-                <%= request.activity %>
+              <div class="home-dashboard-requests-card-activity-date">
+                <div class="home-dashboard-requests-card-activity">
+                  <%= request.activity %>
+                </div>
+                <div class="home-dashboard-requests-card-date">
+                  <p><%= duration = (Date.today.mjd - request.created_at.to_date.mjd)%> days ago</p>
+                </div>
               </div>
             </div>
           </div>
