@@ -58,7 +58,7 @@
           </div>
 
           <div class="home-dashboard-requests-card-status">
-            <% if request.status == "Pending" %>
+            <% if request.status == "pending" %>
               <div class="confirm-request-guide">
                 <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
                   <div class="icon-request accepted">
