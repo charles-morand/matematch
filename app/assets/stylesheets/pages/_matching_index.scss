@@ -20,38 +20,54 @@
   margin: 1rem;
   color: black;
   text-decoration: none;
+  padding: .5rem 1rem;
 }
 
 .index-guides-card-infos {
   width: 100%;
   margin: 0.5rem;
+  margin-right: 0;
 }
-
 
 .index-guides-card-infos-name-age {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .index-guides-card-infos-languages {
   text-align: left;
   display: flex;
   margin-bottom: 0.5rem;
+  justify-content: space-between;
 }
 
 .index-guides-card-infos-hobbies {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
+  margin-top: .5rem;
 }
 
 .index-guides-card-infos-language {
   padding-right: 0.5rem;
-  margin-right: 0.5rem;
+
+  &:last-child {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.middle-info {
+  display: flex;
 }
 
 .index-guides-card-infos-hobby {
   padding: 0.5rem;
   margin-right: .5rem;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .index-guides-card-avatar {
