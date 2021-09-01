@@ -1,0 +1,67 @@
+.container-sign-up {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("backgrounds/home-visitor-background.png");
+  background-size: contain;
+  background-repeat: round;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .simple_form {
+    padding: 2rem;
+    width: 100%;
+
+    .form-group {
+      margin-bottom: .5rem;
+
+      label {
+        color: white;
+        margin-bottom: 0;
+      }
+    }
+
+    .long-button-gold {
+      width: 100%;
+      margin: 2rem 0;
+
+      .btn {
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    .log-in-long-button-black {
+      margin-bottom: 1rem;
+    }
+
+    .long-button-black {
+      display: flex !important;
+    }
+
+    .form-actions {
+      text-align: center;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .text-muted {
+    color: white !important;
+  }
+
+  .sign-up-header {
+    padding: 0 3rem;
+    text-align: center;
+
+    .blanc-logo {
+      margin-top: 3rem !important;
+      margin: 0 auto;
+      img {
+        height: 7.19rem;
+      }
+    }
+  }
+}

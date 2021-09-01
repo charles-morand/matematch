@@ -1,0 +1,71 @@
+.container-log-in {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("backgrounds/home-visitor-background.png");
+  background-size: contain;
+  background-repeat: round;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .simple_form {
+    padding: 2rem;
+    width: 100%;
+
+    .form-group {
+      margin-bottom: .5rem;
+
+      label {
+        color: white;
+        margin-bottom: 0;
+      }
+    }
+
+    .long-button-black {
+      width: 100%;
+      margin: 2rem 0;
+
+      .btn {
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    .sign-up-long-button-gold {
+      margin-bottom: 1rem;
+    }
+
+    .long-button-gold {
+      display: flex !important;
+    }
+
+    .form-actions {
+      text-align: center;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .log-in-header {
+    padding: 0 3rem;
+    text-align: center;
+
+    .blanc-logo {
+      margin-top: 3rem !important;
+      margin: 0 auto;
+      img {
+        height: 7.19rem;
+      }
+    }
+
+    .log-in-choice {
+      color: white;
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
