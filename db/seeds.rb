@@ -250,15 +250,15 @@ guide_james.save!
 
 puts "Guides created"
 
-ContactRequest.create(guide: guide_thomas, explorer: explorer_pawel, activity: 'Sports', status: 'pending')
-ContactRequest.create(guide: guide_marie, explorer: explorer_pawel, activity: 'Arts', status: 'Accepted')
-ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'pending')
-ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 'Cinema', status: 'Declined')
+ContactRequest.create(guide: guide_thomas, explorer: explorer_pawel, activity: 'Sports', status: 'pending', created_at: 20210828174407)
+ContactRequest.create(guide: guide_marie, explorer: explorer_pawel, activity: 'Arts', status: 'Accepted', created_at: 20210817174407)
+ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'pending', created_at: 20210805174407)
+ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 'Cinema', status: 'Declined', created_at:20210823174407)
 
 
-ContactRequest.create(guide: guide_thomas, explorer: explorer_dirk, activity: 'Sports', status: 'Accepted')
-ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Travel', status: 'pending')
-ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Hanging out', status: 'pending')
+ContactRequest.create(guide: guide_thomas, explorer: explorer_dirk, activity: 'Sports', status: 'Accepted', created_at:20210830174407)
+ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Travel', status: 'pending', created_at:20210802174407)
+ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Hanging out', status: 'pending', created_at: 20211191174407)
 
 
 puts "ContactRequests created"
