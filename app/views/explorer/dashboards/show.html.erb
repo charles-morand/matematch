@@ -33,7 +33,7 @@
     </div>
 
     <div class="home-dashboard-requests-cards">
-      <% @sent_requests.each do |request|%>
+      <% @sent_requests.sort_by(&:created_at).reverse.each do |request|%>
 
         <div class="home-dashboard-requests-card <%= request.status.downcase %>">
           <div class="home-dashboard-requests-card-infos">
