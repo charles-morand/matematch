@@ -79,7 +79,7 @@ guide_thomas = User.create!(first_name: "Thomas",
                             role: "Guide",
                             languages: ["FR", "GB", "DE"],
                             hobbies: ["Football", "Fitness", "Skateboard"],
-                            chosen_activities: ["Arts", "Sports", "Hanging out"],
+                            chosen_activities: ["Arts", "Sports", "Hang out"],
                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_thomas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_thomas.jpg'))
@@ -97,7 +97,7 @@ guide_julien = User.create!(first_name: "Julien",
                             role: "Guide",
                             languages: ["FR", "GB", "IT"],
                             hobbies: ["Travel", "Ecology", "Cooking"],
-                            chosen_activities: ["Arts", "Sports", "Hanging out"],
+                            chosen_activities: ["Arts", "Sports", "Hang out"],
                             address: "Nantes, Pays-de-la-Loire, France")
 
 guide_julien_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_julien.jpg'))
@@ -115,7 +115,7 @@ guide_aymeric = User.create!(first_name: "Aymeric",
                              role: "Guide",
                              languages: ["FR", "GB", "CN"],
                              hobbies: ["Skateboard", "Music", "Ecology"],
-                             chosen_activities: ["Arts", "Sports", "Hanging out"],
+                             chosen_activities: ["Arts", "Sports", "Hang out"],
                              address: "Nantes, Pays-de-la-Loire, France")
 
 guide_aymeric_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_aymeric.jpg'))
@@ -133,7 +133,7 @@ guide_laura = User.create!(first_name: "Laura",
                            role: "Guide",
                            languages: ["ES", "GB", "JP"],
                            hobbies: ["Cooking", "Cycling", "Tennis"],
-                           chosen_activities: ["Arts", "Sports", "Hanging out"],
+                           chosen_activities: ["Arts", "Sports", "Hang out"],
                            address: "Nantes, Pays-de-la-Loire, France")
 
 guide_laura_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_laura.jpg'))
@@ -151,7 +151,7 @@ guide_marie = User.create!(first_name: "Marie",
                            role: "Guide",
                            languages: ["IT", "GB", "ES"],
                            hobbies: ["Football", "Basketball", "Travel"],
-                           chosen_activities: ["Arts", "Sports", "Hanging out"],
+                           chosen_activities: ["Arts", "Sports", "Hang out"],
                            address: "Nantes, Pays-de-la-Loire, France")
 
 guide_marie_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_marie.jpg'))
@@ -258,7 +258,7 @@ ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 
 
 ContactRequest.create(guide: guide_thomas, explorer: explorer_dirk, activity: 'Sports', status: 'Accepted', created_at: "2021/08/30")
 ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Travel', status: 'pending', created_at: "2021/08/02")
-ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Hanging out', status: 'pending', created_at: "2021/08/19")
+ContactRequest.create(guide: guide_thomas, explorer: explorer_toby, activity: 'Hang out', status: 'pending', created_at: "2021/08/19")
 
 
 puts "ContactRequests created"

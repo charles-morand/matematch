@@ -5,7 +5,7 @@ class User < ApplicationRecord
   ROLES = ["Guide", "Explorer"]
   LANGUAGES = ["GB", "FR", "ES", "DE", "IT", "PT", "NL", "RU", "PL", "CN", "JP", "KR"]
   HOBBIES = ["Culture", "Ecology", "Travel", "DIY", "Cooking", "Drawing", "Music", "Theater", "Hiking", "Cycling", "Surf", "Skateboard", "Football", "Basketball", "Tennis", "Fitness"]
-  ACTIVITIES = ["Arts", "Sports", "Tourism", "Hanging out", "Food", "Cinema", "Music"]
+  ACTIVITIES = ["Arts", "Sports", "Tourism", "Hang out", "Food", "Cinema", "Music"]
 
   has_one_attached :photo
 

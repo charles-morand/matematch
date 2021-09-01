@@ -33,10 +33,20 @@
               </div>
 
               <div class="index-guides-card-infos-languages">
-                <p><% matched_user.languages.each do |language| %></p>
-                  <div class="index-guides-card-infos-language">
-                    <%= flag_icon(language)%>
-                  </div>
+                <div class="d-flex">
+                  <p><% matched_user.languages.each do |language| %></p>
+                    <div class="index-guides-card-infos-language">
+                      <%= flag_icon(language)%>
+                    </div>
+                  <% end %>
+                </div>
+
+                <% if matched_user.gender === "Male" %>
+                  <i class="fas fa-mars"></i>
+                <% elsif matched_user.gender === "Female" %>
+                    <i class="fas fa-venus"></i>
+                <% else %>
+                    <i class="fas fa-venus-mars"></i>
                 <% end %>
               </div>
               <div class="index-guides-card-infos-hobbies">

@@ -37,6 +37,14 @@
     background-color: rgba(227, 169, 109, 0.5);
     border: none;
     opacity: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .confirm-request-guide {
+    display: flex;
+    width: 6rem;
+    justify-content: space-between;
   }
 }
 
@@ -132,11 +140,4 @@
       background-color: black;
     }
   }
-
-  
 }
-.confirm-request-guide {
-    display: flex;
-    width: 4.5rem;
-    justify-content: space-between;
-  }
