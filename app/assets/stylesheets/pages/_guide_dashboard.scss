@@ -6,6 +6,12 @@
     justify-content: center;
   }
 
+  .long-button-gold {
+    .btn {
+      text-decoration: none;
+    }
+  }
+
   .guide-dashboard-activity {
     background: white;
     border: 0.13rem solid rgba(227, 169, 109, 0.2);
