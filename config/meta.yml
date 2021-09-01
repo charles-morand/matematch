@@ -1,5 +1,5 @@
 meta_product_name: "MateMatch"
 meta_title: "MateMatch - Share local experiences!"
 meta_description: "Live the best local experiences"
-meta_image: "app/assets/images/backgrounds/home-background.png" # should exist in `app/assets/images/`
+meta_image: "backgrounds/home-background.png" # should exist in `app/assets/images/`
 twitter_account: "@morand-charles"   # required for Twitter Cards
