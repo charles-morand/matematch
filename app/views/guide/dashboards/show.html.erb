@@ -38,7 +38,7 @@
     </div>
 
     <div class="home-dashboard-requests-cards">
-      <% @received_requests.each do |request|%>
+      <% @received_requests.sort_by(&:created_at).reverse.each do |request|%>
 
         <div class="home-dashboard-requests-card <%= request.status.downcase %>">
           <div class="home-dashboard-requests-card-infos">
@@ -49,8 +49,13 @@
               <div class="home-dashboard-requests-card-name">
                 <h4><%= request.explorer.first_name %></h4>
               </div>
-              <div class="home-dashboard-requests-card-activity">
-                <%= request.activity %>
+              <div class="home-dashboard-requests-card-activity-date">
+                <div class="home-dashboard-requests-card-activity">
+                  <%= request.activity %>
+                </div>
+                <div class="home-dashboard-requests-card-date">
+                  <p><%= duration = (Date.today.mjd - request.created_at.to_date.mjd)%> days ago</p>
+                </div>
               </div>
             </div>
           </div>
