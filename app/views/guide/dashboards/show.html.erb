@@ -27,11 +27,9 @@
   </div>
 
   <div class="explorer-home-button-flex">
-    <div class="long-button-gold button-home-position">
-      <button data-toggle="modal" data-target="#exampleModalCenter">
-        <p>Change activities</p>
+      <button data-toggle="modal" data-target="#exampleModalCenter" class="long-button-gold button-home-position btn text-white">
+        <div>Change activities</div>
       </button>
-    </div>
   </div>
 
   <div class="home-dashboard-requests">
@@ -104,7 +102,7 @@
         <div class="displayed-activities">
           <% User::ACTIVITIES.each do |activity| %>
             <div class="guide-activities">
-              <%= check_box_tag "user[chosen_activities][]", activity, false, id: "activity-#{activity.parameterize}", requrired: true, class:"form-checkbox check-activities" %>
+              <%= check_box_tag "user[chosen_activities][]", activity, false, id: "activity-#{activity.parameterize}", required: true, class:"form-checkbox check-activities", checked: (@current_user.chosen_activities.include? activity) %>
               <%= label_tag "activity-#{activity.parameterize}", activity %>
             </div>
           <% end %>
