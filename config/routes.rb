@@ -1,8 +1,8 @@
-Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
+Rails.application.routes.draw do
   devise_for :users
 
   # unauthenticated :user do
-    root to: 'pages#home'
+  root to: 'pages#home'
   # end
 
   # authenticate :user, ->(user) { user.role == "Explorer" } do

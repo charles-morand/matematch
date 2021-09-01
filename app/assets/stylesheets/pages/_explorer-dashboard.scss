@@ -61,23 +61,34 @@
   background: white;
   border-radius: 0.38rem;
   margin-bottom: 1rem;
+  padding: .5rem;
 }
 
 .home-dashboard-requests-card-name {
   display: grid;
-  place-content: center;
+  place-content: baseline;
 
   h4 {
     margin: 0rem;
   }
 }
 
+.home-dashboard-requests-card-activity-date {
+  display: flex;
+}
+
 .home-dashboard-requests-card-activity {
   color: $gold;
+  margin-right: .5rem;
+}
+
+.home-dashboard-requests-card-date p {
+  margin-bottom: 0;
 }
 
 .home-dashboard-requests-card-infos {
   display: flex;
+  align-items: center;
 }
 
 .home-dashboard-requests-card-name-activity {
@@ -89,24 +100,31 @@
 .home-dashboard-requests-card-status {
   display: grid;
   place-content: center;
-  padding-right: 0.44rem;
 }
 
 
 
 // ---------------------------------Adaptation de la card en fonction de l'état
 .pending {
-  border: 0.19rem solid rgba(227, 169, 109, 0.4);
+  border: 0.19rem solid rgba(227, 169, 109, 0.5);
+
+  .icon-request {
+    background-color: rgba(227, 169, 109, 0.5);
+    border: none;
+  }
 }
 .accepted{
     border: 0.19rem solid $gold;
 }
 .declined {
-  opacity: 40%;
-  border: 0.19rem solid rgba(227, 169, 109, 0.4);
-  margin-left: 0.5rem;
-}
+  opacity: 50%;
+  border: 0.19rem solid rgba(227, 169, 109, 0.5);
 
+  .icon-request {
+    background-color: rgba(227, 169, 109, 0.5);
+    border: none;
+  }
+}
 
 
 
