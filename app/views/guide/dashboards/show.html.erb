@@ -102,7 +102,7 @@
         <div class="displayed-activities">
           <% User::ACTIVITIES.each do |activity| %>
             <div class="guide-activities">
-              <%= check_box_tag "user[chosen_activities][]", activity, false, id: "activity-#{activity.parameterize}", required: true, class:"form-checkbox check-activities", checked: (@current_user.chosen_activities.include? activity) %>
+              <%= check_box_tag "user[chosen_activities][]", activity, false, id: "activity-#{activity.parameterize}", required: true, class:"form-checkbox check-activities", checked: (current_user.chosen_activities.include? activity) %>
               <%= label_tag "activity-#{activity.parameterize}", activity %>
             </div>
           <% end %>
