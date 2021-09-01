@@ -54,7 +54,12 @@
                   <%= request.activity %>
                 </div>
                 <div class="home-dashboard-requests-card-date">
-                  <p><%= duration = (Date.today.mjd - request.created_at.to_date.mjd)%> days ago</p>
+                  <% duration = (Date.today.mjd - request.created_at.to_date.mjd)%>
+                  <% if duration.to_i > 365 %>
+                    <%= request.created_at.strftime("%d/%m/%y") %>
+                  <% else %>
+                    <%= request.created_at.strftime("%d %b") %>
+                  <% end %>
                 </div>
               </div>
             </div>
