@@ -6,11 +6,11 @@
     <% end %>
   </div>
 
-  <div class="index-guides-header-cards">
+  <div class="index-guides-header mt-4">
+    <h3>Find a guide in <%= params[:city] %></h3>
+  </div>
 
-      <div class="index-guides-header mt-4">
-        <h3>Find a guide in <%= params[:city] %></h3>
-      </div>
+  <div class="index-guides-header-cards">
 
     <div class="index-guides-cards">
       <% @matched_users.each do |matched_user| %>
@@ -33,7 +33,7 @@
               </div>
 
               <div class="index-guides-card-infos-languages">
-                <div class="d-flex">
+                <div class="d-flex pl-1">
                   <p><% matched_user.languages.each do |language| %></p>
                     <div class="index-guides-card-infos-language">
                       <%= flag_icon(language)%>
