@@ -59,7 +59,8 @@
   width: 60vw;
   height: 2.5em;
   border-radius: 0.5rem;
-  background-color: $gold;
+  background-color: black;
+  border: 1px solid white;
   font-weight: bolder;
   margin: 0 auto;
 
@@ -81,6 +82,7 @@
   background-color: black;
   font-weight: bolder;
   margin: 0 auto;
+  border: 1px solid white;
 
   a {
     text-decoration: none;
@@ -147,4 +149,27 @@
 
 .log-in-form a {
   color: $gold;
+}
+
+
+.link-gold {
+  width: 60vw;
+  height: 2.5em;
+  border-radius: 0.5rem;
+  background-color: black;
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
+  margin: 0 auto;
+  border: white 1px solid;
+
+  a {
+    text-decoration: none;
+    color: $gold;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    display: grid;
+    place-content: center;
+  }
 }
