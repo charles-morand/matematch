@@ -1,7 +1,7 @@
 .container-log-in {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("backgrounds/home-visitor-background.jpg");
-  background-size: contain;
-  background-repeat: round;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
