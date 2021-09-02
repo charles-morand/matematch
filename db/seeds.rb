@@ -15,7 +15,7 @@ puts "Seeds destroyed"
 explorer_pawel = User.create!(first_name: "Pawel",
                               last_name: "Lewanski",
                               bio: "Hello, my name is Pawel. I come from Poland and I am a student in design. I will be in Nantes for the next year. I like football, let's meet!",
-                              birth_date: "1999-02-20",
+                              birth_date: "1997-10-24",
                               gender: "Male",
                               email: "pawel@example.com",
                               password: "password",
@@ -88,7 +88,7 @@ guide_thomas.save!
 
 guide_charles = User.create!(first_name: "Charles",
                             last_name: "Vincent",
-                            bio: "Hello everyone, my name is Charles. I am a Ruby developper and looking for a job in Nantes. I like cinema, football and protecting the environment. Let's meet!",
+                            bio: "Hi! I am a Ruby developper and looking for a job in Nantes. I like cinema, football and protecting the environment. Let's meet!",
                             birth_date: "1995-03-24",
                             gender: "Male",
                             email: "charles@example.com",
