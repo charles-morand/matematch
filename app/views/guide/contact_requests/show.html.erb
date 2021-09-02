@@ -72,7 +72,7 @@
       </div>
     </div>
   </div>
-  <% if @contact_request.status == "Pending" %>
+  <% if @contact_request.status == "pending" %>
     <div class="actions-on-request">
         <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
           <div class="icon-on-show">
