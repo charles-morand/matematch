@@ -7,7 +7,7 @@ class Guide::ContactRequestsController < ApplicationController
     TwilioClient.messages
                 .create(
                         body: "#{current_user.first_name} accepted your request. His/her number is #{current_user.phone_number}. It's your turn now!",
-                        from: '+14783948317',
+                        from: '+16786733363',
                         to: "#{contact_request.explorer.phone_number}"
                         )
     redirect_to guide_dashboard_path
@@ -20,7 +20,7 @@ class Guide::ContactRequestsController < ApplicationController
     TwilioClient.messages
                 .create(
                         body: "#{current_user.first_name} declined your request... :(",
-                        from: '+14783948317',
+                        from: '+16786733363',
                         to: "#{contact_request.explorer.phone_number}"
                         )
     redirect_to guide_dashboard_path
