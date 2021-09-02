@@ -73,17 +73,19 @@
     </div>
   </div>
 
-  <div class="actions-on-request">
-      <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
-        <div class="icon-on-show">
-          <i class="fas fa-times"></i>
-        </div>
-      <% end %>
+  <% if @contact_request.status == "Pending" %>
+    <div class="actions-on-request">
+        <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
+          <div class="icon-on-show">
+            <i class="fas fa-times"></i>
+          </div>
+        <% end %>
 
-     <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
-        <div class="icon-on-show">
-          <i class="fas fa-check"></i>
-        </div>
-      <% end %>
-  </div>
+      <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
+          <div class="icon-on-show">
+            <i class="fas fa-check"></i>
+          </div>
+        <% end %>
+    </div>
+  <% end %>
 </div>
