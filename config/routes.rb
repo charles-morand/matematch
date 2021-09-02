@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   namespace :guide do
     resource :dashboard, only: [:show]
     resource :chosen_activities, only: [:edit, :update]
-    resources :contact_requests, only: [:index, :show] do
+    resources :contact_requests, only: [:show] do
       member do
         patch :accept
         patch :decline

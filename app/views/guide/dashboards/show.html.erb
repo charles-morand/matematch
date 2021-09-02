@@ -40,61 +40,64 @@
     <div class="home-dashboard-requests-cards">
       <% @received_requests.sort_by(&:created_at).reverse.each do |request|%>
 
-        <div class="home-dashboard-requests-card <%= request.status.downcase %>">
-          <div class="home-dashboard-requests-card-infos">
-            <div class="home-dashboard-requests-card-avatar avatar-request">
-              <%= image_tag(url_for(request.explorer.photo)) %>
-            </div>
-            <div class="home-dashboard-requests-card-name-activity">
-              <div class="home-dashboard-requests-card-name">
-                <h4><%= request.explorer.first_name %></h4>
+
+        <%= link_to guide_contact_request_path(request) do %>
+          <div class="home-dashboard-requests-card <%= request.status.downcase %>">
+            <div class="home-dashboard-requests-card-infos">
+              <div class="home-dashboard-requests-card-avatar avatar-request">
+                <%= image_tag(url_for(request.explorer.photo)) %>
               </div>
-              <div class="home-dashboard-requests-card-activity-date">
-                <div class="home-dashboard-requests-card-activity">
-                  <%= request.activity %>
+              <div class="home-dashboard-requests-card-name-activity">
+                <div class="home-dashboard-requests-card-name">
+                  <h4><%= request.explorer.first_name %></h4>
                 </div>
-                <div class="home-dashboard-requests-card-date">
-                  <% duration = (Date.today.mjd - request.created_at.to_date.mjd)%>
-                  <% if duration.to_i > 365 %>
-                    <%= request.created_at.strftime("%d/%m/%y") %>
-                  <% else %>
-                    <%= request.created_at.strftime("%d %b") %>
+                <div class="home-dashboard-requests-card-activity-date">
+                  <div class="home-dashboard-requests-card-activity">
+                    <%= request.activity %>
+                  </div>
+                  <div class="home-dashboard-requests-card-date">
+                    <% duration = (Date.today.mjd - request.created_at.to_date.mjd)%>
+                    <% if duration.to_i > 365 %>
+                      <%= request.created_at.strftime("%d/%m/%y") %>
+                    <% else %>
+                      <%= request.created_at.strftime("%d %b") %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="home-dashboard-requests-card-status">
+              <% if request.status == "pending" %>
+                <div class="confirm-request-guide">
+                  <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
+                    <div class="icon-request accepted">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  <% end %>
+                  <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
+                    <div class="icon-request declined">
+                      <i class="fas fa-times"></i>
+                    </div>
                   <% end %>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="home-dashboard-requests-card-status">
-            <% if request.status == "pending" %>
-              <div class="confirm-request-guide">
-                <%= link_to accept_guide_contact_request_path(request), method: :patch do %>
-                  <div class="icon-request accepted">
+              <% else %>
+                <% if request.status == "Accepted" %>
+                  <div class="icon-request guide-accepted">
                     <i class="fas fa-check"></i>
                   </div>
-                <% end %>
-                <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
-                  <div class="icon-request declined">
+
+                <% elsif request.status == "Declined" %>
+                  <div class="icon-request guide-declined">
                     <i class="fas fa-times"></i>
                   </div>
                 <% end %>
-              </div>
-<%# ACCEPTE %>
-            <% else %>
-              <% if request.status == "Accepted" %>
-                <div class="icon-request guide-accepted">
-                  <i class="fas fa-check"></i>
-                </div>
-<%# REFUSE %>
-              <% elsif request.status == "Declined" %>
-                <div class="icon-request guide-declined">
-                  <i class="fas fa-times"></i>
-                </div>
-              <% end %>
 
-            <% end %>
+              <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>

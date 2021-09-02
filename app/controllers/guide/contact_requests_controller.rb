@@ -25,4 +25,9 @@ class Guide::ContactRequestsController < ApplicationController
                         )
     redirect_to guide_dashboard_path
   end
+
+  def show
+    @contact_request = ContactRequest.find(params[:id])
+  end
+
 end
