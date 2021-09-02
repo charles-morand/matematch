@@ -1,0 +1,31 @@
+.actions-on-request {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-on-show {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #E3A96D;
+  display: grid;
+  place-content: center;
+  .fa-check {
+    color: white;
+    font-size: 2rem;
+  }
+  .fa-times {
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.home-dashboard-requests-card-name {
+  h4{
+    color: black;
+  }
+}
+
+.home-dashboard-requests-card-date {
+  color: black;
+}
