@@ -6,7 +6,7 @@ class Guide::ContactRequestsController < ApplicationController
     contact_request.save
     TwilioClient.messages
                 .create(
-                        body: "#{current_user.first_name} accepted your request. His/her number is #{current_user.phone_number}",
+                        body: "#{current_user.first_name} accepted your request. His/her number is #{current_user.phone_number}. It's your turn now!",
                         from: '+14783948317',
                         to: "#{contact_request.explorer.phone_number}"
                         )

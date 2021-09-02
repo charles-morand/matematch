@@ -14,7 +14,7 @@ class ContactRequest < ApplicationRecord
   def send_message
     TwilioClient.messages
                 .create(
-                         body: 'An explorer wants to match with you on Matematch!',
+                         body: "#{self.explorer.first_name} wants to match with you on Matematch! Go to http://www.matematch.fr/",
                          from: '+14783948317',
                          to: "#{self.guide.phone_number}"
                        )
