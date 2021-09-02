@@ -86,23 +86,23 @@ guide_thomas_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_thoma
 guide_thomas.photo.attach(io: guide_thomas_file, filename: 'guide_thomas.jpg', content_type: 'image/jpg')
 guide_thomas.save!
 
-guide_julien = User.create!(first_name: "Julien",
+guide_charles = User.create!(first_name: "Charles",
                             last_name: "Vincent",
-                            bio: "Hello everyone, my name is Julien. I study cinema. I like movies, environment and american cuisine. Let's meet!",
-                            birth_date: "1994-08-08",
+                            bio: "Hello everyone, my name is Charles. I am a Ruby developper and looking for a job in Nantes. I like cinema, football and protecting the environment. Let's meet!",
+                            birth_date: "1995-03-24",
                             gender: "Male",
-                            email: "julien@example.com",
+                            email: "charles@example.com",
                             password: "password",
                             phone_number: "+33686830263",
                             role: "Guide",
-                            languages: ["FR", "GB", "IT"],
+                            languages: ["FR", "GB", "CN"],
                             hobbies: ["Travel", "Ecology", "Cooking"],
                             chosen_activities: ["Arts", "Sports", "Hang out"],
                             address: "Nantes, Pays-de-la-Loire, France")
 
-guide_julien_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_julien.jpg'))
-guide_julien.photo.attach(io: guide_julien_file, filename: 'guide_julien.jpg', content_type: 'image/jpg')
-guide_julien.save!
+guide_charles_file = File.open(Rails.root.join('db/seeds/user_avatars/guide_charles.jpg'))
+guide_charles.photo.attach(io: guide_charles_file, filename: 'guide_charles.jpg', content_type: 'image/jpg')
+guide_charles.save!
 
 guide_aymeric = User.create!(first_name: "Aymeric",
                              last_name: "Marcel",
