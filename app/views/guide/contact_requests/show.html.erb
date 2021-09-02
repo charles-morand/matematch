@@ -2,7 +2,7 @@
 
   <div class="orange-background">
     <div class="upper-back-arrow">
-      <%= link_to explorer_matchings_path do %>
+      <%= link_to guide_dashboard_path do %>
         <i class="fas fa-arrow-left arrow-white"></i>
       <% end %>
     </div>
@@ -72,7 +72,6 @@
       </div>
     </div>
   </div>
-
   <% if @contact_request.status == "Pending" %>
     <div class="actions-on-request">
         <%= link_to decline_guide_contact_request_path(request), method: :patch do %>
@@ -88,4 +87,5 @@
         <% end %>
     </div>
   <% end %>
+
 </div>
