@@ -252,7 +252,7 @@ puts "Guides created"
 
 ContactRequest.create(guide: guide_thomas, explorer: explorer_pawel, activity: 'Sports', status: 'pending', created_at: "2021/08/28")
 ContactRequest.create(guide: guide_marie, explorer: explorer_pawel, activity: 'Arts', status: 'Accepted', created_at: "2021/08/17")
-ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'pending', created_at: "2021/08/05")
+ContactRequest.create(guide: guide_james, explorer: explorer_pawel, activity: 'Sports', status: 'Accepted', created_at: "2021/08/05")
 ContactRequest.create(guide: guide_nicolas, explorer: explorer_pawel, activity: 'Cinema', status: 'Declined', created_at: "2021/08/23")
 
 
