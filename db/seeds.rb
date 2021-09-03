@@ -14,7 +14,7 @@ puts "Seeds destroyed"
 
 explorer_pawel = User.create!(first_name: "Pawel",
                               last_name: "Lewanski",
-                              bio: "Hello, my name is Pawel. I come from Poland and I am a student in design. I will be in Nantes for the next year. I like football, let's meet!",
+                              bio: "I'm a Polish student and I just arrived in Nantes. Let's discover the area or play some music together.",
                               birth_date: "1997-10-24",
                               gender: "Male",
                               email: "pawel@example.com",
@@ -88,7 +88,7 @@ guide_thomas.save!
 
 guide_charles = User.create!(first_name: "Charles",
                             last_name: "Vincent",
-                            bio: "Hi! I am a Ruby developper and looking for a job in Nantes. I like cinema, football and protecting the environment. Let's meet!",
+                            bio: "Hi! I am a Ruby developper and looking for a job in Nantes. I like Asian culture, playing football and protecting the environment. Let's meet!",
                             birth_date: "1995-03-24",
                             gender: "Male",
                             email: "charles@example.com",
@@ -96,7 +96,7 @@ guide_charles = User.create!(first_name: "Charles",
                             phone_number: "+33686830263",
                             role: "Guide",
                             languages: ["FR", "GB", "CN"],
-                            hobbies: ["Travel", "Ecology", "Cooking"],
+                            hobbies: ["Travel", "Ecology", "Football"],
                             chosen_activities: ["Arts", "Sports", "Hang out"],
                             address: "Nantes, Pays-de-la-Loire, France")
 
