@@ -14,5 +14,10 @@ module Explorer
         render "explorer/matchings/show"
       end
     end
+
+    def show
+      @contact_request = ContactRequest.find(params[:id])
+    end
+
   end
 end
