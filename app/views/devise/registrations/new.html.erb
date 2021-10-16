@@ -8,6 +8,7 @@
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs">
+    <%# Page 1 %>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
@@ -19,6 +20,37 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+      <%= f.input :phone_number,
+                  required: true,
+                  input_html: { autocomplete: "phone_number" } %>
+                  <%# Page 2 %>
+      <%= f.input :first_name,
+                  required: true,
+                  input_html: { autocomplete: "first_name" } %>
+      <%= f.input :last_name,
+                  required: true,
+                  input_html: { autocomplete: "last_name" } %>
+      <%= f.input :birth_date,
+                  required: true,
+                  input_html: { autocomplete: "birth_date" } %>
+      <% User::ROLES.each do |role| %>
+        <%= check_box_tag "roles[]", role, false, id: "role-#{role}", class:"form-checkbox check-roles" %>
+        <%= label_tag "role-#{role}", role %>
+      <%end %>
+                  <%# Page 3 %>
+      <%= f.input :address,
+                  required: true,
+                  input_html: { autocomplete: "address" } %>
+      <% User::HOBBIES.each do |hobby| %>
+        <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}", class:"form-checkbox check-hobbies" %>
+        <%= label_tag "hobby-#{hobby}", hobby %>
+      <%end %>
+      <%= f.input :languages,
+                  required: true,
+                  input_html: { autocomplete: "languages" } %>
+      <%= f.input :bio,
+                  required: true,
+                  input_html: { autocomplete: "bio" } %>
     </div>
 
     <div class="form-actions">
