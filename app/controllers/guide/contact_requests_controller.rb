@@ -29,5 +29,4 @@ class Guide::ContactRequestsController < ApplicationController
   def show
     @contact_request = ContactRequest.find(params[:id])
   end
-
 end
