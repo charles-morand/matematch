@@ -1,0 +1,81 @@
+<div class="container-explorer-profile">
+
+  <div class="orange-background">
+    <div class="upper-back-arrow">
+      <%if @current_user.role == "Guide" %>
+        <%= link_to guide_dashboard_path do %>
+        <i class="fas fa-arrow-left arrow-white"></i>
+        <% end %>
+      <% elsif @current_user.role == "Explorer"%>
+        <%= link_to explorer_dashboard_path do %>
+        <i class="fas fa-arrow-left arrow-white"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="profile-photo">
+    <div class="avatar-profile place-avatar-profile">
+      <%= image_tag(url_for(@current_user.photo)) %>
+    </div>
+  </div>
+
+  <div class="guide-profile">
+    <div>
+      <div class="guide-name">
+        <h3><%= @current_user.first_name %></h3>
+      </div>
+
+      <div class="guide-age">
+        <div class="first-part-age">
+          <p><%= @current_user.age %></p>
+        </div>
+        <div class="second-part-age">
+          <p>yrs</p>
+        </div>
+      </div>
+
+      <div class="guide-hobbies">
+        <% @current_user.hobbies.each do |hobby| %>
+          <div class="gold-pill profile-page-hobbies">
+            <%= hobby %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="secondary-desc">
+      <div class="guide-bio">
+        <p><%= @current_user.bio %></p>
+      </div>
+
+      <div class="guide-languages">
+        <% @current_user.languages.each do |language|%>
+          <div class="show-guides-card-infos-language">
+            <%= flag_icon(language) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="last-desc">
+      <div class="guide-address">
+        <div class="icon-address">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="text-address">
+          <p>Lives in <strong><%= @current_user.address %></strong></p>
+        </div>
+      </div>
+
+      <div class="guide-gender">
+        <div class="icon-gender">
+          <i class="far fa-user"></i>
+        </div>
+        <div class="text-gender">
+          <%= @current_user.gender %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
