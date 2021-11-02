@@ -29,7 +29,7 @@ class User < ApplicationRecord
            :hobbies_are_included_in_list,
            :chosen_activities_are_included_in_list,
            :selected_number_of_hobbies_between_1_and_3,
-           :selected_number_of_languages_between_1_and_5,
+           :selected_number_of_languages_between_1_and_3,
            :selected_number_of_activities_between_1_and_3
 
   geocoded_by :address
@@ -71,7 +71,7 @@ class User < ApplicationRecord
     end
   end
 
-  def selected_number_of_languages_between_1_and_5
+  def selected_number_of_languages_between_1_and_3
     unless (1..3).include?(languages.count)
       errors.add :languages, "Please choose between 1 and 3 languages"
     end
