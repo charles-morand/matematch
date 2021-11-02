@@ -5,27 +5,99 @@
     </div>
   </div>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
+  <%= form_tag user_session, method: :get do %>
+    <div class="search-form">
+      <div class="search-input">
 
-    <div class="form-actions">
-      <div class="long-button-gold">
-        <%= f.button :submit, "Sign up" %>
+        <div class="picked-languages">
+          <div class="languages-title">
+            <h4>Prefered languages</h4>
+          </div>
+          <div class="displayed-languages">
+            <% User::LANGUAGES.each do |language| %>
+              <%= check_box_tag "languages[]", language, false, id: "language-#{language}", class:"form-checkbox" %>
+              <%= label_tag "language-#{language}", flag_icon(language) %>
+            <% end %>
+          </div>
+        </div>
+
+        <div id="picked-city">
+          <h4>Meeting location</h4>
+          <div id="location-form">
+            <%= text_field_tag :city,
+              params[:city],
+              class: "form-control",
+              id: "chosen-location",
+              placeholder: "Type a city..."%>
+            </div>
+        </div>
+
+
+        <div class="picked-genders">
+          <h4>Gender preferences</h4>
+          <div class="displayed-genders">
+            <% User::GENDERS.each do |gender| %>
+              <%= check_box_tag "genders", gender, false, id: "gender-#{gender}", class:"form-checkbox" %>
+              <% if gender === "Male" %>
+                <%= label_tag "gender-#{gender}", gender do %>
+                <i class="fas fa-mars"></i>
+                <% end %>
+              <% elsif gender === "Female" %>
+                <%= label_tag "gender-#{gender}", gender do %>
+                  <i class="fas fa-venus"></i>
+                <% end %>
+              <% else %>
+                <%= label_tag "gender-#{gender}", gender do %>
+                  <i class="fas fa-venus-mars"></i>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="chosen-age">
+          <h4>Age</h4>
+          <div class="displayed-age">
+
+            <span id="age_display_begin">20</span>
+            <%= number_field_tag "", :ages,
+              type: "range",
+              in: 18..99,
+              step: 1,
+              multiple: true,
+              id: "range" %>
+            <span id="age_display_end">40</span>
+
+            <input type="number" name="age[]" id="age_range_begin" value="18" hidden="true">
+            <input type="number" name="age[]" id="age_range_end" value="99" hidden="true">
+
+          </div>
+        </div>
+
+        <div class="picked-hobbies">
+          <h4>Discussion topics</h4>
+          <div class="displayed-hobbies">
+            <% User::HOBBIES.each do |hobby| %>
+              <%= check_box_tag "hobbies[]", hobby, false, id: "hobby-#{hobby}", class:"form-checkbox check-hobbies" %>
+              <%= label_tag "hobby-#{hobby}", hobby %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="activities-params">
+          <% hidden_field_tag "activities", @selected_activity %>
+        </div>
+
       </div>
-      <%= render "devise/shared/links" %>
+      <div class= "pages-buttons">
+
+        <div class="next-page">
+          <%= button_tag type: 'submit', class: "button postfix" do%>
+            <i class="fas fa-check-circle"></i>
+          <% end %>
+        </div>
+
+      </div>
     </div>
   <% end %>
 </div>
