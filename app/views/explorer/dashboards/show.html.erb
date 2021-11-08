@@ -32,51 +32,54 @@
       <h3>My beloved guides</h3>
     </div>
 
-    <div class="home-dashboard-requests-cards">
-      <% @sent_requests.sort_by(&:created_at).reverse.each do |request|%>
+    <%# <%= link_to explorer_matchings_path[@matched_user] do %>
+    <%# Problème avec l'id lié au matching, comment afficher le guide avec qui nous avons matché %>
+      <div class="home-dashboard-requests-cards">
+        <% @sent_requests.sort_by(&:created_at).reverse.each do |request|%>
 
-        <div class="home-dashboard-requests-card <%= request.status.downcase %>">
-          <div class="home-dashboard-requests-card-infos">
-            <div class="home-dashboard-requests-card-avatar avatar-request">
-              <%= image_tag(url_for(request.guide.photo)) %>
+          <div class="home-dashboard-requests-card <%= request.status.downcase %>">
+            <div class="home-dashboard-requests-card-infos">
+              <div class="home-dashboard-requests-card-avatar avatar-request">
+                <%= image_tag(url_for(request.guide.photo)) %>
+              </div>
+              <div class="home-dashboard-requests-card-name-activity">
+                <div class="home-dashboard-requests-card-name">
+                  <h4><%= request.guide.first_name %></h4>
+                </div>
+                <div class="home-dashboard-requests-card-activity-date">
+                  <div class="home-dashboard-requests-card-activity">
+                    <%= request.activity %>
+                  </div>
+                  <div class="home-dashboard-requests-card-date">
+                    <% duration = (Date.today.mjd - request.created_at.to_date.mjd)%>
+                    <% if duration.to_i > 365 %>
+                      <%= request.created_at.strftime("%d/%m/%y") %>
+                    <% else %>
+                      <%= request.created_at.strftime("%d %b") %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="home-dashboard-requests-card-name-activity">
-              <div class="home-dashboard-requests-card-name">
-                <h4><%= request.guide.first_name %></h4>
-              </div>
-              <div class="home-dashboard-requests-card-activity-date">
-                <div class="home-dashboard-requests-card-activity">
-                  <%= request.activity %>
+            <div class="home-dashboard-requests-card-status">
+              <% if request.status == "Accepted" %>
+                <div class="icon-request accepted">
+                  <i class="fas fa-check"></i>
                 </div>
-                <div class="home-dashboard-requests-card-date">
-                  <% duration = (Date.today.mjd - request.created_at.to_date.mjd)%>
-                  <% if duration.to_i > 365 %>
-                    <%= request.created_at.strftime("%d/%m/%y") %>
-                  <% else %>
-                    <%= request.created_at.strftime("%d %b") %>
-                  <% end %>
+              <% elsif request.status == "Declined" %>
+                <div class="icon-request declined">
+                  <i class="fas fa-times"></i>
                 </div>
-              </div>
+              <% else %>
+                <div class="icon-request pending">
+                  <i class="fas fa-hourglass"></i>
+                </div>
+              <% end %>
             </div>
           </div>
-          <div class="home-dashboard-requests-card-status">
-            <% if request.status == "Accepted" %>
-              <div class="icon-request accepted">
-                <i class="fas fa-check"></i>
-              </div>
-            <% elsif request.status == "Declined" %>
-              <div class="icon-request declined">
-                 <i class="fas fa-times"></i>
-              </div>
-            <% else %>
-              <div class="icon-request pending">
-                <i class="fas fa-hourglass"></i>
-              </div>
-            <% end %>
-          </div>
-        </div>
-       <% end %>
-    </div>
+        <% end %>
+      </div>
+    <%# <% end %>
   </div>
 
 
