@@ -19,6 +19,17 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+      <%= f.input :languages, collection: User::LANGUAGES, as: :check_boxes %>
+      <%= f.input :hobbies, collection: User::HOBBIES, as: :check_boxes %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :bio %>
+      <%= f.input :birth_date %>
+      <%= f.input :gender, collection: User::GENDERS %>
+      <%= f.input :phone_number %>
+      <%= f.input :role, collection: User::ROLES %>
+      <%= f.input :chosen_activities, collection: User::ACTIVITIES, as: :check_boxes %>
+      <%= f.input :address %>
     </div>
 
     <div class="form-actions">
@@ -28,4 +39,3 @@
       <%= render "devise/shared/links" %>
     </div>
   <% end %>
-</div>

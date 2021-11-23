@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
-
+  # devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users
+  # get "sign_up", to: "users/registrations#new"
 
   # unauthenticated :user do
   root to: 'pages#home'
