@@ -22,12 +22,17 @@ class ApplicationController < ActionController::Base
     # devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :address, :bio, :birth_date,
     #                                   :gender, :photo, :phone_number, :role, :languages, :hobbies, :chosen_activities])
 
-    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit({ languages: [], hobbies: [], chosen_activities: [] }, :first_name, :last_name,
-                          :address, :bio, :birth_date, :password, :email, :password_confirmation, :phone_number,
-                          :photo, :role, :gender)
-    end
+    # devise_parameter_sanitizer.permit(:sign_up) do |user_params|
+    #   user_params.permit({ languages: [], hobbies: [], chosen_activities: [] }, :first_name, :last_name,
+    #                       :address, :bio, :birth_date, :password, :email, :password_confirmation, :phone_number,
+    #                       :photo, :role, :gender)
+    # end
 
+    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
+      user_params.permit(:first_name, :last_name,
+                          :address, :bio, :birth_date, :password, :email, :password_confirmation, :phone_number,
+                          :photo, :role, :gender, languages: [], hobbies: [], chosen_activities: [])
+    end
   end
 
   private
