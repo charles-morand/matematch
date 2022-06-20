@@ -28,6 +28,8 @@ class ApplicationController < ActionController::Base
     #                       :photo, :role, :gender)
     # end
 
+    # pushing test
+
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
       user_params.permit(:first_name, :last_name,
                           :address, :bio, :birth_date, :password, :email, :password_confirmation, :phone_number,
