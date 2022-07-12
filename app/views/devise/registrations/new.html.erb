@@ -19,8 +19,8 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :languages, collection: User::LANGUAGES, as: :check_boxes %>
-      <%= f.input :hobbies, collection: User::HOBBIES, as: :check_boxes %>
+      <%= f.input :languages, collection: User::LANGUAGES, as: :check_boxes, include_hidden: false %>
+      <%= f.input :hobbies, collection: User::HOBBIES, as: :check_boxes, include_hidden: false %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :bio %>
@@ -28,7 +28,7 @@
       <%= f.input :gender, collection: User::GENDERS %>
       <%= f.input :phone_number %>
       <%= f.input :role, collection: User::ROLES %>
-      <%= f.input :chosen_activities, collection: User::ACTIVITIES, as: :check_boxes %>
+      <%= f.input :chosen_activities, collection: User::ACTIVITIES, as: :check_boxes, include_hidden: false %>
       <%= f.input :address %>
     </div>
 
